@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sheet xmlns="http://example.org/moja" category="POLISH" sheetName="rth" ifDate="true" ifName="true" ifGrade="true">
+    <title>rt</title>
+    <letters>
+        <letter>rz</letter>
+    </letters>
+    <date>Data: ...................</date>
+    <nameAndSurname>Imie i nazwisko: ................................</nameAndSurname>
+    <addInfo>Uzupelnij brakujace rz w slowach</addInfo>
+    <dictation>
+        <letter>rz</letter>
+        <text>Na D....ewie Alfabetu mieszkaly litery. Żyly szczesliwie i byly zadowolone. Lubily sie wyg....ewac na sloncu i kolysac na wiet....e. Pewnego razu zawierucha stracila je z d....ewa. Litery p....estraszyly sie. Jakis smieszny owad z zóltymi sk....ydelkami, poradzil im, aby nauczyly sie two....yc wyrazy, bo w grupie beda silniejsze. Teraz litery mogly opowiadac o wiet....e, lisciach i owadach, mogly wyrazic rózne wazne ....eczy. Uznaly, ze pokój i szczescie dla wszystkich ludzi sa najwazniejsze na swiecie.</text>
+        <filepath>D:\Izka\STUDIA\Dyplom\dyktando1.txt</filepath>
+    </dictation>
+    <grade>Ocena: ...................</grade>
+</sheet>

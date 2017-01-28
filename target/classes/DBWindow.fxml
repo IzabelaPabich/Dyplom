@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DBWindowController">
+   <center>
+      <TabPane fx:id="DBTabPane" prefHeight="380.0" prefWidth="680.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="polTab" closable="false" text="Polskie słówka">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="358.0" prefWidth="735.0">
+                     <children>
+                        <Label layoutX="26.0" layoutY="14.0" text="Wszystkie słowa w bazie">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="polWordsTable" layoutX="26.0" layoutY="44.0" prefHeight="290.0" prefWidth="213.0">
+                          <columns>
+                            <TableColumn fx:id="polWordCol" prefWidth="149.0" text="Słowo" />
+                            <TableColumn fx:id="letterCol" prefWidth="63.0" text="Litera" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="301.0" layoutY="14.0" text="Wybrane:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="selectedPolWordTxtField" editable="false" layoutX="301.0" layoutY="44.0" />
+                        <TextField fx:id="selectedWordLetterTxtField" editable="false" layoutX="459.0" layoutY="44.0" prefHeight="25.0" prefWidth="45.0" />
+                        <Label layoutX="301.0" layoutY="143.0" text="Dodaj nowe:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="addPolWordTxtField" layoutX="301.0" layoutY="177.0" />
+                        <ComboBox fx:id="lettersCombobox" layoutX="459.0" layoutY="177.0" prefHeight="25.0" prefWidth="45.0" />
+                        <Button fx:id="deletePolWordBtn" layoutX="429.0" layoutY="87.0" mnemonicParsing="false" onAction="#deletePolWord" text="Usuń z bazy" />
+                        <Button fx:id="addPolWordBtn" layoutX="423.0" layoutY="220.0" mnemonicParsing="false" onAction="#addPolWord" text="Dodaj do bazy" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="engTab" closable="false" text="Angielskie słówka">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="26.0" layoutY="14.0" text="Wszystkie słowa w bazie">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="engWordsTable" layoutX="26.0" layoutY="43.0" prefHeight="293.0" prefWidth="331.0">
+                          <columns>
+                            <TableColumn fx:id="onPolCol" prefWidth="93.0" text="Po polsku" />
+                            <TableColumn fx:id="onEngCol" prefWidth="103.0" text="Po angielsku" />
+                              <TableColumn fx:id="catCol" prefWidth="134.0" text="Kategoria" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="374.0" layoutY="14.0" text="Wybrane:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="selectedOnPolTxtField" editable="false" layoutX="374.0" layoutY="43.0" />
+                        <TextField fx:id="selectedOnEngTxtField" editable="false" layoutX="374.0" layoutY="68.0" />
+                        <TextField fx:id="selectedCatTxtField" editable="false" layoutX="374.0" layoutY="93.0" />
+                        <Button fx:id="deleteEngWordBtn" layoutX="562.0" layoutY="93.0" mnemonicParsing="false" onAction="#deleteEngWord" text="Usuń z bazy" />
+                        <Label layoutX="374.0" layoutY="156.0" text="Dodaj nowe:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="374.0" layoutY="190.0" text="Po polsku" />
+                        <Label layoutX="374.0" layoutY="216.0" text="Po angielsku" />
+                        <Label layoutX="374.0" layoutY="241.0" text="Kategoria" />
+                        <TextField fx:id="addOnPolTxtField" layoutX="460.0" layoutY="186.0" />
+                        <TextField fx:id="addOnEngTxtField" layoutX="460.0" layoutY="212.0" />
+                        <ComboBox fx:id="addCatCombobox" layoutX="460.0" layoutY="237.0" prefWidth="150.0" />
+                        <Button fx:id="addEngWordBtn" layoutX="556.0" layoutY="276.0" mnemonicParsing="false" onAction="#addEngWord" text="Dodaj do bazy" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="catTab" closable="false" text="Kategorie (Angielski)">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="26.0" layoutY="14.0" text="Wszystkie kategorie w bazie">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="categoriesListV" layoutX="26.0" layoutY="41.0" prefHeight="245.0" prefWidth="168.0" />
+                        <Label layoutX="259.0" layoutY="41.0" text="Wybrana:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="selectedCategoryTxtField" editable="false" layoutX="259.0" layoutY="70.0" />
+                        <Label layoutX="259.0" layoutY="133.0" text="Dodaj nową:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="addCategoryTxtField" layoutX="259.0" layoutY="163.0" />
+                        <Button fx:id="deleteCatBtn" layoutX="436.0" layoutY="70.0" mnemonicParsing="false" onAction="#deleteCat" text="Usuń z bazy" />
+                        <Button fx:id="addCatBtn" layoutX="436.0" layoutY="163.0" mnemonicParsing="false" onAction="#addCat" text="Dodaj do bazy" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="mathTab" closable="false" text="Litery (Polski)">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="26.0" layoutY="14.0" text="Wszystkie litery w bazie">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="lettersListV" layoutX="26.0" layoutY="45.0" prefHeight="200.0" prefWidth="100.0" />
+                        <Label layoutX="229.0" layoutY="52.0" text="Wybrana:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="229.0" layoutY="135.0" text="Dodaj nową:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="selectedLetterTxtField" editable="false" layoutX="229.0" layoutY="80.0" prefHeight="25.0" prefWidth="80.0" />
+                        <TextField fx:id="addLetterTxtField" layoutX="229.0" layoutY="163.0" prefHeight="25.0" prefWidth="79.0" />
+                        <Button fx:id="deleteLetterBtn" layoutX="326.0" layoutY="80.0" mnemonicParsing="false" onAction="#deleteLetter" text="Usuń z bazy" />
+                        <Button fx:id="addLetterBtn" layoutX="326.0" layoutY="163.0" mnemonicParsing="false" onAction="#addLetter" text="Dodaj do bazy" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <Pane prefHeight="54.0" prefWidth="719.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="closeBtn" layoutX="607.0" layoutY="12.0" mnemonicParsing="false" onAction="#close" text="Wyjdź">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

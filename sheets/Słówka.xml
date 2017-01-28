@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sheet xmlns="http://example.org/moja" category="POLISH" sheetName="Słówka" ifDate="false" ifName="true" ifGrade="true">
+    <title>Słówka</title>
+    <letters>
+        <letter>rz</letter>
+        <letter>ch</letter>
+        <letter>u</letter>
+        <letter>ó</letter>
+    </letters>
+    <nameAndSurname>Imię i nazwisko: ................................</nameAndSurname>
+    <addInfo>Uzupełnij brakujące rz / ch / u / ó w słowach</addInfo>
+    <polishWords numberOfWords="12">
+        <polishWord>
+            <letter>rz</letter>
+            <word>....eka</word>
+        </polishWord>
+        <polishWord>
+            <letter>ó</letter>
+            <word>mr....wka</word>
+        </polishWord>
+        <polishWord>
+            <letter>u</letter>
+            <word>kr....pnik</word>
+        </polishWord>
+        <polishWord>
+            <letter>rz</letter>
+            <word>g....yb</word>
+        </polishWord>
+        <polishWord>
+            <letter>ch</letter>
+            <word>....ory</word>
+        </polishWord>
+        <polishWord>
+            <letter>ch</letter>
+            <word>....rabąszcz</word>
+        </polishWord>
+        <polishWord>
+            <letter>ch</letter>
+            <word>u....o</word>
+        </polishWord>
+        <polishWord>
+            <letter>u</letter>
+            <word>....cho</word>
+        </polishWord>
+        <polishWord>
+            <letter>rz</letter>
+            <word>....epa</word>
+        </polishWord>
+        <polishWord>
+            <letter>rz</letter>
+            <word>....adko</word>
+        </polishWord>
+        <polishWord>
+            <letter>rz</letter>
+            <word>g....anka</word>
+        </polishWord>
+        <polishWord>
+            <letter>ch</letter>
+            <word>....łop</word>
+        </polishWord>
+    </polishWords>
+    <grade>Ocena: ...................</grade>
+</sheet>

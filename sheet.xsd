@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+			targetNamespace="http://example.org/moja" 
+			xmlns:moja="http://example.org/moja" 
+			elementFormDefault="qualified">
+
+	<xsd:annotation>
+		<xsd:documentation xml:lang="pl">
+			Karta pracy
+		</xsd:documentation>
+	</xsd:annotation>	
+
+	<!--Tytuł-->
+	<xsd:element name="title">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:pattern value="([A-ZĘÓŁĄŚŻŹĆŃ][a-zęółąśżźćń]*)" />
+				<xsd:minLength value="1" />
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+
+	<!--Data-->
+	<xsd:element name="date">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:pattern value="([A-ZĘÓŁĄŚŻŹĆŃ][a-zęółąśżźćń]*)" />
+				<xsd:minLength value="1" />
+				<xsd:maxLength value="30" />
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+
+	<!--Imię i nazwisko ucznia-->
+	<xsd:element name="nameAndSurname">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:pattern value="([A-ZĘÓŁĄŚŻŹĆŃ][a-zęółąśżźćń]*)" />
+				<xsd:minLength value="1" />
+				<xsd:maxLength value="30" />
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+
+
+	<!--Ocena-->
+	<xsd:element name="grade">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:pattern value="([A-ZĘÓŁĄŚŻŹĆŃ][a-zęółąśżźćń]*)" />
+				<xsd:minLength value="1" />
+				<xsd:maxLength value="30" />
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	
+
+	<!--Litera-->
+	<xsd:simpleType name="letterType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!--Litery-->
+	<xsd:element name="letters">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="letter" type="moja:letterType" maxOccurs="unbounded" minOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!--Tekst dyktanda-->
+	<xsd:element name="text">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:pattern value="([A-ZĘÓŁĄŚŻŹĆŃ][a-zęółąśżźćń]*)" />
+				<xsd:minLength value="1" />
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+
+	<!--Dyktando-->
+	<xsd:element name="dictation">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="letter" type="moja:letterType" maxOccurs="unbounded" minOccurs="1"/>
+			<xsd:element ref="moja:text" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="filepath" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	</xsd:element>
+
+	<!--Polskie słówko-->
+	<xsd:simpleType name="polishWordType">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="([a-zęółąśżźćń]*)" />
+			<xsd:minLength value="1" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="polishWord">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="letter" type="moja:letterType" maxOccurs="1" minOccurs="1"/>
+				<xsd:element name="word" type="moja:polishWordType" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<!--Polskie słówka-->
+	<xsd:element name="polishWords">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="moja:polishWord" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="columns" type="xsd:string"/>
+		<xsd:attribute name="numberOfWords" type="xsd:string"/>
+	</xsd:complexType>
+	</xsd:element>
+	
+	<!--Kategoria-->
+	<xsd:simpleType name="engCategory">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!--Kategorie-->
+	<xsd:element name="engCategories">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="engCategory" type="moja:engCategory" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<!--Angielskie słówko-->
+	<xsd:element name="engpolWord">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="engCategory" type="moja:engCategory" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="engWord" type="xsd:string"/>
+				<xsd:element name="polWord" type="xsd:string"/>
+				<xsd:element name="imagePath" type="xsd:string"/>
+			</xsd:sequence>
+			<xsd:attribute name="ifToPolish" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="1"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="ifToEnglish" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="1"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="ifImage" type="xsd:boolean" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<!--Angielskie słówka-->
+	<xsd:element name="engpolWords">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="moja:engpolWord" minOccurs="1" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<!--Arkusz-->
+	<xsd:element name="sheet">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="moja:title" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="moja:letters" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="moja:date" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="moja:nameAndSurname" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="addInfo" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="moja:dictation" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="moja:polishWords" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="moja:engCategories" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="moja:engpolWords" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="moja:grade" minOccurs="0" maxOccurs="1"/>
+			</xsd:sequence>
+		<xsd:attribute name="category" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="POLISH"/>
+					<xsd:enumeration value="ENGLISH"/>
+					<xsd:enumeration value="MATH"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="sheetName" type="xsd:string" use="required"/>
+		<xsd:attribute name="ifDate" type="xsd:boolean" use="required" />
+		<xsd:attribute name="ifName" type="xsd:boolean" use="required" />
+		<xsd:attribute name="ifGrade" type="xsd:boolean" use="required" />
+		</xsd:complexType>
+	</xsd:element>
+	
+
+
+
+</xsd:schema>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<TitledPane fx:id="newFormPart1" animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="400.0" text="Nowy arkusz" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NewSheetFormController">
+   <content>
+      <Pane id="sheetHeader" fx:id="sheetHeader" prefHeight="150.0" prefWidth="398.0">
+         <children>
+            <Label alignment="TOP_LEFT" layoutX="46.0" layoutY="57.0" text="Rodzaj arkusza:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="makeNewFormPart1Btn" layoutX="226.0" layoutY="298.0" mnemonicParsing="false" onAction="#displayPart2Form" prefHeight="33.0" prefWidth="65.0" text="Dalej" />
+            <Button fx:id="closeNewFormPart1Btn" layoutX="310.0" layoutY="298.0" mnemonicParsing="false" onAction="#closeNewForm" prefHeight="33.0" prefWidth="64.0" text="Anuluj" />
+            <Label layoutX="46.0" layoutY="15.0" text="Nazwa arkusza:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="sheetName" layoutX="183.0" layoutY="13.0" />
+            <CheckBox fx:id="ifDate" layoutX="51.0" layoutY="184.0" mnemonicParsing="false" text="Miejsce na datę">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ifName" layoutX="51.0" layoutY="217.0" mnemonicParsing="false" text="Miejsce na imię i nazwisko">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ifGrade" layoutX="51.0" layoutY="248.0" mnemonicParsing="false" text="Miejsce na ocenę">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <ComboBox fx:id="sheetCategory" layoutX="184.0" layoutY="55.0" prefWidth="150.0" />
+            <Label fx:id="additionalOptionsLbl" layoutX="46.0" layoutY="109.0" text="Dodatkowe opcje:" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="151.0" text="Tytuł:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="titleTxtField" layoutX="98.0" layoutY="149.0" prefHeight="25.0" prefWidth="278.0" />
+         </children>
+      </Pane>
+   </content>
+</TitledPane>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<fop version="1.0">
+	<base>.</base>
+	<source-resolution>72</source-resolution>
+	<target-resolution>72</target-resolution>
+	<default-page-settings height="297mm" width="210mm"/>
+	<renderers>
+
+		<renderer mime="application/pdf">
+			<filterList>
+				<value>flate</value>
+			</filterList>
+			<fonts>
+
+				<font metrics-url="D:/Izka/STUDIA/Dyplom/src/main/resources/arial.xml" kerning="yes" embed-url="C:/WINDOWS/Fonts/arial.TTF">
+					<font-triplet name="arial" style="normal" weight="normal"/>
+				</font>
+
+				<font metrics-url="D:/Izka/STUDIA/Dyplom/src/main/resources/arialbd.xml" kerning="yes" embed-url="C:/WINDOWS/Fonts/arialbd.TTF">
+					<font-triplet name="arial" style="normal" weight="bold"/>
+				</font>
+
+				<font metrics-url="D:/Izka/STUDIA/Dyplom/src/main/resources/arialbi.xml" kerning="yes" embed-url="C:/WINDOWS/Fonts/arialbi.TTF">
+					<font-triplet name="arial" style="italic" weight="bold"/>
+				</font>
+
+				<font metrics-url="D:/Izka/STUDIA/Dyplom/src/main/resources/ariali.xml" kerning="yes" embed-url="C:/WINDOWS/Fonts/ariali.TTF">
+					<font-triplet name="arial" style="italic" weight="normal"/>
+				</font>
+
+			</fonts>
+		</renderer>
+
+		<renderer mime="application/postscript">
+		</renderer>
+
+		<renderer mime="application/vnd.hp-PCL">
+		</renderer>
+
+		<renderer mime="image/svg+xml">
+			<format type="paginated"/>
+			<link value="true"/>
+			<strokeText value="false"/>
+		</renderer>
+
+		<renderer mime="application/awt">
+		</renderer>
+
+		<renderer mime="image/png">
+		</renderer>
+
+		<renderer mime="image/tiff">
+		</renderer>
+
+		<renderer mime="text/xml">
+		</renderer>
+
+		<renderer mime="text/plain">
+			<pageSize columns="80"/>
+		</renderer>
+	</renderers>
+</fop>

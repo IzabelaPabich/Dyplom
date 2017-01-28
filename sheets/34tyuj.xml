@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sheet xmlns="http://example.org/moja" category="POLISH" sheetName="34tyuj" ifDate="false" ifName="false" ifGrade="false">
+    <title>34t5ytu</title>
+    <letters>
+        <letter>ch</letter>
+        <letter>h</letter>
+    </letters>
+    <addInfo>Uzupelnij brakujace ch / h w slowach</addInfo>
+    <polishWords numberOfWords="4">
+        <polishWord>
+            <letter>ch</letter>
+            <word>....alupa</word>
+        </polishWord>
+        <polishWord>
+            <letter>ch</letter>
+            <word>....lop</word>
+        </polishWord>
+        <polishWord>
+            <letter>h</letter>
+            <word>....arcerz</word>
+        </polishWord>
+        <polishWord>
+            <letter>ch</letter>
+            <word>....ory</word>
+        </polishWord>
+    </polishWords>
+</sheet>

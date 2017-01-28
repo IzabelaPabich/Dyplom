@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="fop">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../fop-2.0-src/fop-2.0/lib/build/fop.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../STUDIA/fop-2.0-src/fop-2.0/lib/build/fop.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

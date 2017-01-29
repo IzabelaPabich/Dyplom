@@ -20,15 +20,15 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="firstComp1" type="{http://example.org/moja}component"/>
- *         &lt;element name="firstOperation" type="{http://example.org/moja}graphMark"/>
+ *         &lt;element name="firstOperation" type="{http://example.org/moja}mark"/>
  *         &lt;element name="firstComp2" type="{http://example.org/moja}component"/>
  *         &lt;element name="operation12" type="{http://example.org/moja}graphMark"/>
  *         &lt;element name="secondComp1" type="{http://example.org/moja}component"/>
- *         &lt;element name="secondOperation" type="{http://example.org/moja}graphMark"/>
+ *         &lt;element name="secondOperation" type="{http://example.org/moja}mark"/>
  *         &lt;element name="secondComp2" type="{http://example.org/moja}component"/>
  *         &lt;element name="operation23" type="{http://example.org/moja}graphMark"/>
  *         &lt;element name="thirdComp1" type="{http://example.org/moja}component"/>
- *         &lt;element name="thirdOperation" type="{http://example.org/moja}graphMark"/>
+ *         &lt;element name="thirdOperation" type="{http://example.org/moja}mark"/>
  *         &lt;element name="thirdComp2" type="{http://example.org/moja}component"/>
  *         &lt;element name="operation31" type="{http://example.org/moja}graphMark"/>
  *       &lt;/sequence>
@@ -61,7 +61,7 @@ public class GraphM {
     @XmlSchemaType(name = "nonNegativeInteger")
     protected int firstComp1;
     @XmlElement(namespace = "http://example.org/moja", required = true)
-    protected GraphMark firstOperation;
+    protected String firstOperation;
     @XmlElement(namespace = "http://example.org/moja")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected int firstComp2;
@@ -71,7 +71,7 @@ public class GraphM {
     @XmlSchemaType(name = "nonNegativeInteger")
     protected int secondComp1;
     @XmlElement(namespace = "http://example.org/moja", required = true)
-    protected GraphMark secondOperation;
+    protected String secondOperation;
     @XmlElement(namespace = "http://example.org/moja")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected int secondComp2;
@@ -81,7 +81,7 @@ public class GraphM {
     @XmlSchemaType(name = "nonNegativeInteger")
     protected int thirdComp1;
     @XmlElement(namespace = "http://example.org/moja", required = true)
-    protected GraphMark thirdOperation;
+    protected String thirdOperation;
     @XmlElement(namespace = "http://example.org/moja")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected int thirdComp2;
@@ -109,10 +109,10 @@ public class GraphM {
      * 
      * @return
      *     possible object is
-     *     {@link GraphMark }
+     *     {@link String }
      *     
      */
-    public GraphMark getFirstOperation() {
+    public String getFirstOperation() {
         return firstOperation;
     }
 
@@ -121,10 +121,10 @@ public class GraphM {
      * 
      * @param value
      *     allowed object is
-     *     {@link GraphMark }
+     *     {@link String }
      *     
      */
-    public void setFirstOperation(GraphMark value) {
+    public void setFirstOperation(String value) {
         this.firstOperation = value;
     }
 
@@ -189,10 +189,10 @@ public class GraphM {
      * 
      * @return
      *     possible object is
-     *     {@link GraphMark }
+     *     {@link String }
      *     
      */
-    public GraphMark getSecondOperation() {
+    public String getSecondOperation() {
         return secondOperation;
     }
 
@@ -201,10 +201,10 @@ public class GraphM {
      * 
      * @param value
      *     allowed object is
-     *     {@link GraphMark }
+     *     {@link String }
      *     
      */
-    public void setSecondOperation(GraphMark value) {
+    public void setSecondOperation(String value) {
         this.secondOperation = value;
     }
 
@@ -269,10 +269,10 @@ public class GraphM {
      * 
      * @return
      *     possible object is
-     *     {@link GraphMark }
+     *     {@link String }
      *     
      */
-    public GraphMark getThirdOperation() {
+    public String getThirdOperation() {
         return thirdOperation;
     }
 
@@ -281,10 +281,10 @@ public class GraphM {
      * 
      * @param value
      *     allowed object is
-     *     {@link GraphMark }
+     *     {@link String }
      *     
      */
-    public void setThirdOperation(GraphMark value) {
+    public void setThirdOperation(String value) {
         this.thirdOperation = value;
     }
 

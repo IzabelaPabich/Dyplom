@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-			targetNamespace="http://example.org/moja" 
-			xmlns:moja="http://example.org/moja" 
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://example.org/moja"
+			xmlns:moja="http://example.org/moja"
 			elementFormDefault="qualified">
 
 	<xsd:annotation>
 		<xsd:documentation xml:lang="pl">
 			Karta pracy
 		</xsd:documentation>
-	</xsd:annotation>	
+	</xsd:annotation>
 
 	<!--Tytuł-->
 	<xsd:element name="title">
@@ -54,7 +54,7 @@
 			</xsd:restriction>
 		</xsd:simpleType>
 	</xsd:element>
-	
+
 
 	<!--Litera-->
 	<xsd:simpleType name="letterType">
@@ -63,7 +63,7 @@
 			<xsd:maxLength value="2"/>
 		</xsd:restriction>
 	</xsd:simpleType>
-	
+
 	<!--Litery-->
 	<xsd:element name="letters">
 		<xsd:complexType>
@@ -85,13 +85,13 @@
 
 	<!--Dyktando-->
 	<xsd:element name="dictation">
-	<xsd:complexType>
-		<xsd:sequence>
-			<xsd:element name="letter" type="moja:letterType" maxOccurs="unbounded" minOccurs="1"/>
-			<xsd:element ref="moja:text" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="filepath" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-		</xsd:sequence>
-	</xsd:complexType>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="letter" type="moja:letterType" maxOccurs="unbounded" minOccurs="1"/>
+				<xsd:element ref="moja:text" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="filepath" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
 	</xsd:element>
 
 	<!--Polskie słówko-->
@@ -101,7 +101,7 @@
 			<xsd:minLength value="1" />
 		</xsd:restriction>
 	</xsd:simpleType>
-	
+
 	<xsd:element name="polishWord">
 		<xsd:complexType>
 			<xsd:sequence>
@@ -110,18 +110,18 @@
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
-	
+
 	<!--Polskie słówka-->
 	<xsd:element name="polishWords">
-	<xsd:complexType>
-		<xsd:sequence>
-			<xsd:element ref="moja:polishWord" minOccurs="0" maxOccurs="unbounded"/>
-		</xsd:sequence>
-		<xsd:attribute name="columns" type="xsd:string"/>
-		<xsd:attribute name="numberOfWords" type="xsd:string"/>
-	</xsd:complexType>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="moja:polishWord" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="columns" type="xsd:string"/>
+			<xsd:attribute name="numberOfWords" type="xsd:string"/>
+		</xsd:complexType>
 	</xsd:element>
-	
+
 	<!--Kategoria-->
 	<xsd:simpleType name="engCategory">
 		<xsd:restriction base="xsd:string">
@@ -129,7 +129,7 @@
 			<xsd:maxLength value="50"/>
 		</xsd:restriction>
 	</xsd:simpleType>
-	
+
 	<!--Kategorie-->
 	<xsd:element name="engCategories">
 		<xsd:complexType>
@@ -138,7 +138,7 @@
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
-	
+
 	<!--Angielskie słówko-->
 	<xsd:element name="engpolWord">
 		<xsd:complexType>
@@ -165,7 +165,7 @@
 			<xsd:attribute name="ifImage" type="xsd:boolean" use="required"/>
 		</xsd:complexType>
 	</xsd:element>
-	
+
 	<!--Angielskie słówka-->
 	<xsd:element name="engpolWords">
 		<xsd:complexType>
@@ -174,7 +174,113 @@
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
-	
+
+	<!--Typ składnika-->
+	<xsd:simpleType name="component">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:minInclusive value="1"/>
+			<xsd:maxInclusive value="100"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!--Znaki-->
+	<xsd:simpleType name="mark">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="+"/>
+			<xsd:enumeration value="-"/>
+			<xsd:enumeration value="*"/>
+			<xsd:enumeration value=":"/>
+			<xsd:enumeration value="="/>
+			<xsd:enumeration value="&lt;"/>
+			<xsd:enumeration value="&gt;"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!--Równanie-->
+	<xsd:element name="equation">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="firstComp" type="moja:component" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="operation" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="secondComp" type="moja:component" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="equationMark" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="result" type="moja:component" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!--Równanie z nierównościami-->
+	<xsd:element name="equationM">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="firstComp1" type="moja:component" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="firstOperation" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="firstComp2" type="moja:component" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="equationMark" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="secondComp1" type="moja:component" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="secondOperation" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="secondComp2" type="moja:component" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!--Graf-->
+	<xsd:element name="graph">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="firstComp" type="moja:component" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="operation12" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="secondComp" type="moja:component" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="operation23" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="thirdComp" type="moja:component" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="operation31" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!--Graf z nierównościami-->
+	<xsd:element name="graphM">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="firstComp1" type="moja:component" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="firstOperation" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="firstComp2" type="moja:component" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="operation12" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="secondComp1" type="moja:component" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="secondOperation" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="secondComp2" type="moja:component" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="operation23" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="thirdComp1" type="moja:component" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="thirdOperation" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="thirdComp2" type="moja:component" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="operation31" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!--Zadania tekstowe-->
+	<xsd:element name="textTask">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="task" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="answer" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!--Matematyczne zadania-->
+	<xsd:element name="mathTasks">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="moja:equation" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="moja:equationM" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="moja:graph" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="moja:graphM" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="moja:textTask" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
 	<!--Arkusz-->
 	<xsd:element name="sheet">
 		<xsd:complexType>
@@ -188,24 +294,25 @@
 				<xsd:element ref="moja:polishWords" minOccurs="0" maxOccurs="1"/>
 				<xsd:element ref="moja:engCategories" minOccurs="0" maxOccurs="1"/>
 				<xsd:element ref="moja:engpolWords" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="moja:mathTasks" minOccurs="0" maxOccurs="1"/>
 				<xsd:element ref="moja:grade" minOccurs="0" maxOccurs="1"/>
 			</xsd:sequence>
-		<xsd:attribute name="category" use="required">
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:string">
-					<xsd:enumeration value="POLISH"/>
-					<xsd:enumeration value="ENGLISH"/>
-					<xsd:enumeration value="MATH"/>
-				</xsd:restriction>
-			</xsd:simpleType>
-		</xsd:attribute>
-		<xsd:attribute name="sheetName" type="xsd:string" use="required"/>
-		<xsd:attribute name="ifDate" type="xsd:boolean" use="required" />
-		<xsd:attribute name="ifName" type="xsd:boolean" use="required" />
-		<xsd:attribute name="ifGrade" type="xsd:boolean" use="required" />
+			<xsd:attribute name="category" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="POLISH"/>
+						<xsd:enumeration value="ENGLISH"/>
+						<xsd:enumeration value="MATH"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="sheetName" type="xsd:string" use="required"/>
+			<xsd:attribute name="ifDate" type="xsd:boolean" use="required" />
+			<xsd:attribute name="ifName" type="xsd:boolean" use="required" />
+			<xsd:attribute name="ifGrade" type="xsd:boolean" use="required" />
 		</xsd:complexType>
 	</xsd:element>
-	
+
 
 
 

@@ -97,6 +97,16 @@ public class NewSheetMathController implements IController {
         formName.setText(name);
         newSheet = sheet;
         previousScene = scene;
+        mathGraphController = new MathGraphController();
+        mathGraphController.init();
+        mathGraphMController = new MathGraphMController();
+        mathGraphMController.init();
+        mathEquationController = new MathEquationController();
+        mathEquationController.init();
+        mathEquationMController = new MathEquationMController();
+        mathEquationMController.init();
+        mathTextTaskController = new MathTextTaskController();
+        mathTextTaskController.init();
 
         //checkbox listeners
         changeTabState(graphsOpCheckBox, graphsOpTab);

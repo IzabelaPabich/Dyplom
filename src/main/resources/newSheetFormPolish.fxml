@@ -123,7 +123,7 @@
                </font>
             </Label>
             <TextArea fx:id="fileTextArea" editable="false" layoutX="418.0" layoutY="45.0" prefHeight="336.0" prefWidth="345.0" visible="false" wrapText="true" />
-            <CheckBox fx:id="textNotFromFileCheckBox" disable="true" layoutX="59.0" layoutY="103.0" mnemonicParsing="false" text="Wpisz swój tekst">
+            <CheckBox fx:id="textNotFromFileCheckBox" layoutX="59.0" layoutY="103.0" mnemonicParsing="false" text="Wpisz swój tekst">
                <font>
                   <Font size="14.0" />
                </font>

@@ -21,4 +21,8 @@ public class MathTextTaskController {
 
     @FXML
     TextField ttTxtField;
+
+    public void init() {
+
+    }
 }

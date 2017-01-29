@@ -21,4 +21,8 @@ public class MathGraphMController {
 
     @FXML
     TextField gmTxtField;
+
+    public void init() {
+
+    }
 }

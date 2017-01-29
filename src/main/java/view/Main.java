@@ -7,11 +7,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import javax.xml.transform.TransformerException;
-import java.io.IOException;
-import org.apache.fop.apps.*;
-import utils.FileUtils;
-
 public class Main extends Application {
 
     @Override

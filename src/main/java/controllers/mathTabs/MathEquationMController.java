@@ -21,4 +21,8 @@ public class MathEquationMController {
 
     @FXML
     TextField emTxtField;
+
+    public void init() {
+
+    }
 }

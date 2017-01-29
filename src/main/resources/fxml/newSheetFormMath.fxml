@@ -92,27 +92,27 @@
           </Tab>
            <Tab fx:id="graphsOpTab" closable="false" disable="true" text="Grafy (działania)">
               <content>
-                 <fx:include fx:id="graphsOpTab" source="mathGraphTab.fxml" />
+                 <fx:include fx:id="mathGraphTab" source="mathTabs/mathGraphTab.fxml" />
               </content>
            </Tab>
            <Tab fx:id="graphsOpMTab" closable="false" disable="true" text="Grafy (działania + znaki nierówności)">
               <content>
-                 <fx:include fx:id="graphsOpMTab" source="mathGraphMTab.fxml" />
+                 <fx:include fx:id="mathGraphMTab" source="mathTabs/mathGraphMTab.fxml" />
               </content>
            </Tab>
            <Tab fx:id="equOpTab" closable="false" disable="true" text="Równania (działania)">
               <content>
-                 <fx:include fx:id="equOpTab" source="mathEquationTab.fxml" />
+                 <fx:include fx:id="mathEquationTab" source="mathTabs/mathEquationTab.fxml" />
               </content>
            </Tab>
            <Tab fx:id="equOpMTab" closable="false" disable="true" text="Równania (działa + znaki nierówności">
               <content>
-                 <fx:include fx:id="equOpMTab" source="mathEquationMTab.fxml" />
+                 <fx:include fx:id="mathEquationMTab" source="mathTabs/mathEquationMTab.fxml" />
               </content>
            </Tab>
            <Tab fx:id="textTaskTab" closable="false" disable="true" text="Zadania tekstowe">
               <content>
-                 <fx:include fx:id="textTaskTab" source="mathTextTaskTab.fxml" />
+                 <fx:include fx:id="mathTextTaskTab" source="mathTabs/mathTextTaskTab.fxml" />
               </content>
            </Tab>
         </tabs>

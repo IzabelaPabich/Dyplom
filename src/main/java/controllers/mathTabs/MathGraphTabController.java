@@ -9,18 +9,18 @@ import javafx.scene.control.ToggleGroup;
 /**
  * Created by Alebazi on 2017-01-28.
  */
-public class MathEquationMController {
+public class MathGraphTabController {
 
     private NewSheetMathController newSheetMathController;
 
     @FXML
-    private ToggleGroup emChoice = new ToggleGroup();
+    private ToggleGroup gChoice = new ToggleGroup();
 
     @FXML
-    RadioButton emFromDBRadioBtn, emManualRadioBtn;
+    RadioButton gFromDBRadioBtn, gManualRadioBtn;
 
     @FXML
-    TextField emTxtField;
+    TextField gTxtField;
 
     public void init() {
 

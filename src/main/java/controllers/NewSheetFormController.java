@@ -48,21 +48,21 @@ public class NewSheetFormController implements IController {
             case ("Język polski"): {
                 initSheet(EnumSheetCategory.POLISH);
                 NewSheetPolishController newSheetPolishController = new NewSheetPolishController();
-                openSheetFormX((Stage) makeNewFormPart1Btn.getScene().getWindow(), "/newSheetFormPolish.fxml",
+                openSheetFormX((Stage) makeNewFormPart1Btn.getScene().getWindow(), "/fxml/newSheetFormPolish.fxml",
                                     newSheetPolishController);
                 break;
             }
             case ("Matematyka"): {
                 initSheet(EnumSheetCategory.MATH);
                 NewSheetMathController newSheetMathController = new NewSheetMathController();
-                openSheetFormX((Stage) makeNewFormPart1Btn.getScene().getWindow(), "/newSheetFormMath.fxml",
+                openSheetFormX((Stage) makeNewFormPart1Btn.getScene().getWindow(), "/fxml/newSheetFormMath.fxml",
                                     newSheetMathController);
                 break;
             }
             case ("Język angielski"): {
                 initSheet(EnumSheetCategory.ENGLISH);
                 NewSheetEnglishController newSheetEnglishController = new NewSheetEnglishController();
-                openSheetFormX((Stage) makeNewFormPart1Btn.getScene().getWindow(), "/newSheetFormEnglish.fxml",
+                openSheetFormX((Stage) makeNewFormPart1Btn.getScene().getWindow(), "/fxml/newSheetFormEnglish.fxml",
                                     newSheetEnglishController);
                 break;
             }

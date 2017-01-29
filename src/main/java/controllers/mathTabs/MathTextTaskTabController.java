@@ -9,7 +9,7 @@ import javafx.scene.control.ToggleGroup;
 /**
  * Created by Alebazi on 2017-01-28.
  */
-public class MathTextTaskController {
+public class MathTextTaskTabController {
 
     private NewSheetMathController newSheetMathController;
 

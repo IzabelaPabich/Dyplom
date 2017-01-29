@@ -63,7 +63,7 @@ public class MainWindowController {
 
     @FXML protected void showNewSheetForm() throws SQLException, ClassNotFoundException {
         newSheetFlag = true;
-        openWindow("/newSheetFormPart1.fxml", new String());
+        openWindow("/fxml/newSheetFormPart1.fxml", new String());
     }
 
     @FXML
@@ -92,7 +92,7 @@ public class MainWindowController {
 
     @FXML protected void manageDB() throws SQLException, ClassNotFoundException {
         dbFlag = true;
-        openWindow("/DBWindow.fxml", new String());
+        openWindow("/fxml/DBWindow.fxml", new String());
     }
 
     private void setPageOnScrollPane() {
@@ -120,7 +120,7 @@ public class MainWindowController {
 
     @FXML protected void editSheet(ActionEvent e) throws SQLException, ClassNotFoundException {
         newSheetFlag = false;
-        openWindow("/editSheetWindow.fxml", sheetToOpen.getParent());
+        openWindow("/fxml/editSheetWindow.fxml", sheetToOpen.getParent());
     }
 
     @FXML protected void closeSheet(ActionEvent e) {

@@ -1,18 +1,12 @@
 package controllers;
 
-import com.sun.corba.se.impl.oa.toa.TOA;
 import controllers.mathTabs.*;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import model.sheet.Sheet;
-import utils.SheetCommonUtils;
 import utils.ViewUtils;
 
 import java.sql.SQLException;
@@ -27,11 +21,12 @@ public class NewSheetMathController implements IController {
     private MainWindowController mainWindowController;
 
     @FXML private ToggleGroup range = new ToggleGroup();
-    @FXML private MathGraphController mathGraphController;
-    @FXML private MathGraphMController mathGraphMController;
-    @FXML private MathEquationController mathEquationController;
-    @FXML private MathEquationMController mathEquationMController;
-    @FXML private MathTextTaskController mathTextTaskController;
+
+    @FXML private MathGraphTabController mathGraphTabController;
+    @FXML private MathGraphMTabController mathGraphMTabController;
+    @FXML private MathEquationTabController mathEquationTabController;
+    @FXML private MathEquationMTabController mathEquationMTabController;
+    @FXML private MathTextTaskTabController mathTextTaskTabController;
 
     @FXML
     CheckBox graphsOpCheckBox, graphsOpMCheckBox, equOpCheckBox, equOpMCheckBox, textTaskCheckBox;
@@ -45,11 +40,13 @@ public class NewSheetMathController implements IController {
     @FXML
     ImageView exampleImView;
 
-//    @FXML TabPane mathTabPane;
-
     @FXML Tab mainTab, graphsOpTab, graphsOpMTab, equOpTab, equOpMTab, textTaskTab;
 
     @FXML Button createSheetBtn, closeMathSheetBtn, graphsOpExBtn, graphsOpMExBtn, equOpExBtn, equOpMExBtn, textTaskExBtn;
+
+    @FXML private void initialize() {
+        mathEquationTabController.setMainController(this);
+    }
 
     @FXML protected void goBackToPart1() {
         Stage stage = (Stage) closeMathSheetBtn.getScene().getWindow();
@@ -97,16 +94,11 @@ public class NewSheetMathController implements IController {
         formName.setText(name);
         newSheet = sheet;
         previousScene = scene;
-        mathGraphController = new MathGraphController();
-        mathGraphController.init();
-        mathGraphMController = new MathGraphMController();
-        mathGraphMController.init();
-        mathEquationController = new MathEquationController();
-        mathEquationController.init();
-        mathEquationMController = new MathEquationMController();
-        mathEquationMController.init();
-        mathTextTaskController = new MathTextTaskController();
-        mathTextTaskController.init();
+//        mathGraphTabController.init();
+//        mathGraphMTabController.init();
+//        mathEquationTabController.init(this);
+//        mathEquationMTabController.init();
+//        mathTextTaskTabController.init();
 
         //checkbox listeners
         changeTabState(graphsOpCheckBox, graphsOpTab);

@@ -196,6 +196,14 @@
 		</xsd:restriction>
 	</xsd:simpleType>
 
+	<!--Operacje grafów-->
+	<xsd:complexType name="graphMark">
+		<xsd:sequence>
+			<xsd:element name="operation" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="value" type="moja:component" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
 	<!--Równanie-->
 	<xsd:element name="equation">
 		<xsd:complexType>
@@ -229,11 +237,11 @@
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element name="firstComp" type="moja:component" minOccurs="1" maxOccurs="1"/>
-				<xsd:element name="operation12" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="operation12" type="moja:graphMark" minOccurs="1" maxOccurs="1"/>
 				<xsd:element name="secondComp" type="moja:component" minOccurs="1" maxOccurs="1"/>
-				<xsd:element name="operation23" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="operation23" type="moja:graphMark" minOccurs="1" maxOccurs="1"/>
 				<xsd:element name="thirdComp" type="moja:component" minOccurs="1" maxOccurs="1"/>
-				<xsd:element name="operation31" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="operation31" type="moja:graphMark" minOccurs="1" maxOccurs="1"/>
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
@@ -243,17 +251,17 @@
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element name="firstComp1" type="moja:component" minOccurs="1" maxOccurs="1"/>
-				<xsd:element name="firstOperation" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="firstOperation" type="moja:graphMark" minOccurs="1" maxOccurs="1"/>
 				<xsd:element name="firstComp2" type="moja:component" minOccurs="1" maxOccurs="1"/>
-				<xsd:element name="operation12" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="operation12" type="moja:graphMark" minOccurs="1" maxOccurs="1"/>
 				<xsd:element name="secondComp1" type="moja:component" minOccurs="1" maxOccurs="1"/>
-				<xsd:element name="secondOperation" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="secondOperation" type="moja:graphMark" minOccurs="1" maxOccurs="1"/>
 				<xsd:element name="secondComp2" type="moja:component" minOccurs="1" maxOccurs="1"/>
-				<xsd:element name="operation23" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="operation23" type="moja:graphMark" minOccurs="1" maxOccurs="1"/>
 				<xsd:element name="thirdComp1" type="moja:component" minOccurs="1" maxOccurs="1"/>
-				<xsd:element name="thirdOperation" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="thirdOperation" type="moja:graphMark" minOccurs="1" maxOccurs="1"/>
 				<xsd:element name="thirdComp2" type="moja:component" minOccurs="1" maxOccurs="1"/>
-				<xsd:element name="operation31" type="moja:mark" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="operation31" type="moja:graphMark" minOccurs="1" maxOccurs="1"/>
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
@@ -312,8 +320,5 @@
 			<xsd:attribute name="ifGrade" type="xsd:boolean" use="required" />
 		</xsd:complexType>
 	</xsd:element>
-
-
-
 
 </xsd:schema>

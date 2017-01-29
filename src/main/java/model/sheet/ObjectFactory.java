@@ -86,6 +86,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GraphMark }
+     * 
+     */
+    public GraphMark createGraphMark() {
+        return new GraphMark();
+    }
+
+    /**
      * Create an instance of {@link MathTasks }
      * 
      */

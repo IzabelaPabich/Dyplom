@@ -2,45 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fac089ce-78fd-491a-b0e9-4d64d1d888ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathTextTaskTab.fxml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/mathTextTaskTab.fxml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/DBWindowController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/DBWindowController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/EditSheetWindowController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/EditSheetWindowController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/NewSheetEnglishController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/NewSheetEnglishController.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/DBWindow.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/editSheetWindow.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/mainWindow.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newSheetFormEnglish.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newSheetFormPart1.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/newSheetFormPolish.fxml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/MainWindowController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/MainWindowController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/NewSheetFormController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/NewSheetFormController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/NewSheetMathController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/NewSheetMathController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/NewSheetPolishController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/NewSheetPolishController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/mathTabs/MathEquationController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/mathTabs/MathEquationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/mathTabs/MathEquationMController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/mathTabs/MathEquationMController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/mathTabs/MathGraphController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/mathTabs/MathGraphController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/mathTabs/MathGraphMController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/mathTabs/MathGraphMController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/mathTabs/MathTextTaskController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/mathTabs/MathTextTaskController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/view/Main.class" afterPath="$PROJECT_DIR$/target/classes/view/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/NewSheetFormController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/NewSheetFormController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/NewSheetEnglishController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/NewSheetEnglishController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/view/Main.java" afterPath="$PROJECT_DIR$/src/main/java/view/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mathEquationMTab.fxml" afterPath="$PROJECT_DIR$/target/classes/mathEquationMTab.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mathEquationTab.fxml" afterPath="$PROJECT_DIR$/target/classes/mathEquationTab.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mathGraphMTab.fxml" afterPath="$PROJECT_DIR$/target/classes/mathGraphMTab.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mathGraphTab.fxml" afterPath="$PROJECT_DIR$/target/classes/mathGraphTab.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mathTextTaskTab.fxml" afterPath="$PROJECT_DIR$/target/classes/mathTextTaskTab.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/newSheetFormMath.fxml" afterPath="$PROJECT_DIR$/target/classes/newSheetFormMath.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationTabController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationMController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationMTabController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphTabController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphMController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphMTabController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathTextTaskController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathTextTaskTabController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/DBWindow.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/DBWindow.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/editSheetWindow.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/editSheetWindow.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/mainWindow.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mainWindow.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/mathEquationMTab.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathEquationMTab.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/mathEquationTab.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathEquationTab.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/mathGraphMTab.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathGraphMTab.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/mathGraphTab.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathGraphTab.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/newSheetFormEnglish.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/newSheetFormEnglish.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/newSheetFormMath.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/newSheetFormMath.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/newSheetFormPart1.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/newSheetFormPart1.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/newSheetFormPolish.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/newSheetFormPolish.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationTabController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationTabController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathEquationTab.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathEquationTab.fxml" />
     </list>
     <ignored path="Dyplom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,18 +43,34 @@
       <file leaf-file-name="NewSheetMathController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <state relative-caret-position="100">
+              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1457#1458#0" expanded="true" />
                 <element signature="e#1522#1523#0" expanded="true" />
-                <marker date="1485704873678" expanded="true" signature="2480:2610" ph="..." />
+                <marker date="1485705045185" expanded="true" signature="2480:2610" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newSheetFormMath.fxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MathEquationTabController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationTabController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="362">
+              <caret line="51" column="67" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
+              <folding>
+                <element signature="e#1264#1265#0" expanded="true" />
+                <element signature="e#1338#1339#0" expanded="true" />
+                <element signature="e#1410#1411#0" expanded="true" />
+                <element signature="e#1466#1467#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newSheetFormMath.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/newSheetFormMath.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
@@ -111,7 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/model/sheetPolish/SheetPolish.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/sheetPolish/PolishWord.java" />
         <option value="$PROJECT_DIR$/sheetPolish.xsd" />
         <option value="$PROJECT_DIR$/src/main/java/utils/DBUtils.java" />
@@ -134,7 +125,6 @@
         <option value="$PROJECT_DIR$/src/main/java/controllers/DBWindowController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/SheetCommonUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/NewSheetEnglishController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/NewSheetFormController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mathGraphTab.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/mathGraphMTab.fxml" />
@@ -162,6 +152,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/newSheetFormMath.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathEquationTab.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationTabController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/NewSheetEnglishController.java" />
       </list>
     </option>
   </component>
@@ -976,7 +968,7 @@
       <workItem from="1485365976543" duration="998000" />
       <workItem from="1485419754883" duration="1027000" />
       <workItem from="1485597377278" duration="18698000" />
-      <workItem from="1485624449534" duration="11139000" />
+      <workItem from="1485624449534" duration="12238000" />
     </task>
     <task id="LOCAL-00001" summary="adding math sheet elements">
       <created>1485687379056</created>
@@ -1041,11 +1033,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485700103675</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="working with tabs controllers&#10;">
+      <created>1485704960327</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1485704960327</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="265406000" />
+    <option name="totallyTimeSpent" value="266505000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1108,7 +1107,8 @@
     <MESSAGE value="new DAO classes&#10;" />
     <MESSAGE value="relocate font&#10;" />
     <MESSAGE value="init method in all maths controllers&#10;dictation checkbox disable=false&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="init method in all maths controllers&#10;dictation checkbox disable=false&#10;" />
+    <MESSAGE value="working with tabs controllers&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="working with tabs controllers&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1155,8 +1155,14 @@
           <properties />
           <option name="timeStamp" value="104" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java</url>
+          <line>98</line>
+          <properties />
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="105" />
+      <option name="time" value="106" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1165,24 +1171,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="167" column="109" selection-start-line="167" selection-start-column="109" selection-end-line="167" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/sheet/Sheet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-          <folding>
-            <element signature="e#9408#9409#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathGraphMTab.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1528,14 +1516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetEnglishController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetFormController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -1600,24 +1580,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java">
+    <entry file="file://$PROJECT_DIR$/target/classes/controllers/EditSheetWindowController.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1522#1523#0" expanded="true" />
-            <marker date="1485704873678" expanded="true" signature="2480:2610" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationTabController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding>
-            <element signature="e#1616#1617#0" expanded="true" />
+            <element signature="e#0#18244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1630,6 +1598,51 @@
         <state relative-caret-position="85">
           <caret line="92" column="38" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#1522#1523#0" expanded="true" />
+            <marker date="1485705045185" expanded="true" signature="2480:2610" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/newSheetFormEnglish.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetEnglishController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="199" column="48" selection-start-line="199" selection-start-column="48" selection-end-line="199" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationTabController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="51" column="67" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
+          <folding>
+            <element signature="e#1264#1265#0" expanded="true" />
+            <element signature="e#1338#1339#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
+            <element signature="e#1466#1467#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

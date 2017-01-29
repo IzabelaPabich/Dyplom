@@ -191,10 +191,10 @@ public class NewSheetEnglishController implements IController {
         catComboBox.setItems(selectedCategories);
         addWordBtn.setVisible(true);
         deleteWordBtn.setVisible(true);
+        selectedWordsTable.setPlaceholder(new Label("Brak elementów"));
         selectedWordsTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if(selectedWordsTable.getSelectionModel().getSelectedItems().isEmpty()) {
                 deleteWordBtn.setDisable(true);
-                selectedWordsTable.setPlaceholder(new Label("Brak elementów"));
             }
             else {
                 deleteWordBtn.setDisable(false);

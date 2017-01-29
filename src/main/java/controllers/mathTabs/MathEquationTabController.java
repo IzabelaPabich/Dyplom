@@ -37,7 +37,8 @@ public class MathEquationTabController {
     }
 
     @FXML protected void enableShowTableBtn() {
-        if(!eTxtField.getText().isEmpty() && eTxtField.getText().compareTo("0") != 0) {
+        if(!eTxtField.getText().isEmpty() && eTxtField.getText().compareTo("0") != 0
+                && (eFromDBRadioBtn.isSelected() || eManualRadioBtn.isSelected())) {
             showTableBtn.setDisable(false);
         } else {
             showTableBtn.setDisable(true);
@@ -48,11 +49,7 @@ public class MathEquationTabController {
     }
 
     public void init() {
-        equationsTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            if(equationsTable.getSelectionModel().getSelectedItems().isEmpty()) {
-                equationsTable.setPlaceholder(new Label("Brak elementów"));
-            }
-        });
+        equationsTable.setPlaceholder(new Label("Brak elementów"));
     }
 
     public void setMainController(NewSheetMathController controller) {

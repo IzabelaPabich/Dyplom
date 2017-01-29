@@ -5,9 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="mathEquationTab" minHeight="0.0" minWidth="0.0" prefHeight="344.0" prefWidth="857.0"
-            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controllers.mathTabs.MathEquationTabController">
+<AnchorPane fx:id="mathEquationTab" minHeight="0.0" minWidth="0.0" prefHeight="344.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.mathTabs.MathEquationTabController">
    <children>
       <Label layoutX="30.0" layoutY="25.0" text="Ilość:">
          <font>
@@ -15,7 +13,7 @@
          </font>
       </Label>
       <TextField fx:id="eTxtField" layoutX="77.0" layoutY="23.0" onAction="#enableShowTableBtn" prefHeight="25.0" prefWidth="50.0" />
-      <RadioButton fx:id="eFromDBRadioBtn" layoutX="30.0" layoutY="70.0" mnemonicParsing="false" text="Wylosuj z bazy">
+      <RadioButton fx:id="eFromDBRadioBtn" layoutX="30.0" layoutY="70.0" mnemonicParsing="false" onAction="#enableShowTableBtn" text="Wylosuj z bazy">
          <font>
             <Font size="14.0" />
          </font>
@@ -23,7 +21,7 @@
             <ToggleGroup fx:id="eChoice" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="eManualRadioBtn" layoutX="30.0" layoutY="100.0" mnemonicParsing="false" text="Własne wpisy" toggleGroup="$eChoice">
+      <RadioButton fx:id="eManualRadioBtn" layoutX="30.0" layoutY="100.0" mnemonicParsing="false" onAction="#enableShowTableBtn" text="Własne wpisy" toggleGroup="$eChoice">
          <font>
             <Font size="14.0" />
          </font>

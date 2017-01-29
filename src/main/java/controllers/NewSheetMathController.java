@@ -94,11 +94,11 @@ public class NewSheetMathController implements IController {
         formName.setText(name);
         newSheet = sheet;
         previousScene = scene;
-//        mathGraphTabController.init();
-//        mathGraphMTabController.init();
-//        mathEquationTabController.init(this);
-//        mathEquationMTabController.init();
-//        mathTextTaskTabController.init();
+        mathGraphTabController.init();
+        mathGraphMTabController.init();
+        mathEquationTabController.init();
+        mathEquationMTabController.init();
+        mathTextTaskTabController.init();
 
         //checkbox listeners
         changeTabState(graphsOpCheckBox, graphsOpTab);

@@ -28,6 +28,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element ref="{http://example.org/moja}polishWords" minOccurs="0"/>
  *         &lt;element ref="{http://example.org/moja}engCategories" minOccurs="0"/>
  *         &lt;element ref="{http://example.org/moja}engpolWords" minOccurs="0"/>
+ *         &lt;element ref="{http://example.org/moja}mathTasks" minOccurs="0"/>
  *         &lt;element ref="{http://example.org/moja}grade" minOccurs="0"/>
  *       &lt;/sequence>
  *       &lt;attribute name="category" use="required">
@@ -61,6 +62,7 @@ import javax.xml.bind.annotation.XmlType;
     "polishWords",
     "engCategories",
     "engpolWords",
+    "mathTasks",
     "grade"
 })
 @XmlRootElement(name = "sheet", namespace = "http://example.org/moja")
@@ -84,6 +86,8 @@ public class Sheet {
     protected EngCategories engCategories;
     @XmlElement(namespace = "http://example.org/moja")
     protected EngpolWords engpolWords;
+    @XmlElement(namespace = "http://example.org/moja")
+    protected MathTasks mathTasks;
     @XmlElement(namespace = "http://example.org/moja")
     protected String grade;
     @XmlAttribute(name = "category", required = true)
@@ -311,6 +315,30 @@ public class Sheet {
      */
     public void setEngpolWords(EngpolWords value) {
         this.engpolWords = value;
+    }
+
+    /**
+     * Gets the value of the mathTasks property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link MathTasks }
+     *     
+     */
+    public MathTasks getMathTasks() {
+        return mathTasks;
+    }
+
+    /**
+     * Sets the value of the mathTasks property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link MathTasks }
+     *     
+     */
+    public void setMathTasks(MathTasks value) {
+        this.mathTasks = value;
     }
 
     /**

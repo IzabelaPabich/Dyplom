@@ -1,8 +1,6 @@
 
 package model.sheet;
 
-import javafx.collections.ObservableList;
-
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -70,7 +68,4 @@ public class EngpolWords {
         return this.engpolWord;
     }
 
-    public void setEngpolWord(List<EngpolWord> engpolWord) {
-        this.engpolWord = engpolWord;
-    }
 }

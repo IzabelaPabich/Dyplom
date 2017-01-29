@@ -18,8 +18,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="letter" type="{http://example.org/moja}letterType"/>
- *         &lt;element name="word" type="{http://example.org/moja}polishWordType"/>
+ *         &lt;element name="task" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="answer" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -30,78 +30,63 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "letter",
-    "word"
+    "task",
+    "answer"
 })
-@XmlRootElement(name = "polishWord", namespace = "http://example.org/moja")
-public class PolishWord {
+@XmlRootElement(name = "textTask", namespace = "http://example.org/moja")
+public class TextTask {
 
     @XmlElement(namespace = "http://example.org/moja", required = true)
-    protected String letter;
+    protected String task;
     @XmlElement(namespace = "http://example.org/moja", required = true)
-    protected String word;
+    protected String answer;
 
     /**
-     * Gets the value of the letter property.
+     * Gets the value of the task property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getLetter() {
-        return letter;
+    public String getTask() {
+        return task;
     }
 
     /**
-     * Sets the value of the letter property.
+     * Sets the value of the task property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setLetter(String value) {
-        this.letter = value;
+    public void setTask(String value) {
+        this.task = value;
     }
 
     /**
-     * Gets the value of the word property.
+     * Gets the value of the answer property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getWord() {
-        return word;
+    public String getAnswer() {
+        return answer;
     }
 
     /**
-     * Sets the value of the word property.
+     * Sets the value of the answer property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setWord(String value) {
-        this.word = value;
-    }
-
-    @Override
-    public boolean equals(Object v) {
-        boolean retVal = false;
-
-        if(v instanceof PolishWord) {
-            PolishWord toCheck = (PolishWord) v;
-            if(this.getLetter().compareTo(toCheck.getLetter()) == 0
-                    && this.getWord().compareTo(toCheck.getWord()) == 0) {
-                retVal = true;
-            }
-        }
-
-        return retVal;
+    public void setAnswer(String value) {
+        this.answer = value;
     }
 
 }

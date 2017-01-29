@@ -123,7 +123,4 @@ public class PolishWords {
         this.numberOfWords = value;
     }
 
-    public void setWords(List<PolishWord> words) {
-        this.polishWord = words;
-    }
 }

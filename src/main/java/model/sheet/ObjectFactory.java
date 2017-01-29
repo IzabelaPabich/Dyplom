@@ -62,11 +62,59 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Equation }
+     * 
+     */
+    public Equation createEquation() {
+        return new Equation();
+    }
+
+    /**
      * Create an instance of {@link EngpolWords }
      * 
      */
     public EngpolWords createEngpolWords() {
         return new EngpolWords();
+    }
+
+    /**
+     * Create an instance of {@link GraphM }
+     * 
+     */
+    public GraphM createGraphM() {
+        return new GraphM();
+    }
+
+    /**
+     * Create an instance of {@link MathTasks }
+     * 
+     */
+    public MathTasks createMathTasks() {
+        return new MathTasks();
+    }
+
+    /**
+     * Create an instance of {@link EquationM }
+     * 
+     */
+    public EquationM createEquationM() {
+        return new EquationM();
+    }
+
+    /**
+     * Create an instance of {@link Graph }
+     * 
+     */
+    public Graph createGraph() {
+        return new Graph();
+    }
+
+    /**
+     * Create an instance of {@link TextTask }
+     * 
+     */
+    public TextTask createTextTask() {
+        return new TextTask();
     }
 
     /**

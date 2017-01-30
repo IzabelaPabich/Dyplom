@@ -1,9 +1,20 @@
 package controllers.mathTabs;
 
 import controllers.NewSheetMathController;
+import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.CheckBoxListCell;
+import javafx.scene.control.cell.CheckBoxTableCell;
+import javafx.scene.control.cell.PropertyValueFactory;
+import model.DAO.EquationsDAO;
+import model.mathTables.EquationTable;
+import model.sheet.Equation;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Alebazi on 2017-01-28.
@@ -29,7 +40,7 @@ public class MathEquationTabController {
 
     @FXML TableColumn firstCol, firstCheckCol, ICol,ICheckCol, secondCol,secondCheckCol, IICol, IICheckCol, thirdCol, thirdCheckCol;
 
-    @FXML protected void showTable() {
+    @FXML protected void showTable() throws SQLException, ClassNotFoundException {
         equationsTable.setVisible(true);
         if(eFromDBRadioBtn.isSelected()) {
             getDataFromDB();
@@ -45,14 +56,68 @@ public class MathEquationTabController {
         }
     }
 
-    private void getDataFromDB() {
+    private void getDataFromDB() throws SQLException, ClassNotFoundException {
+        List<Equation> equations = EquationsDAO.searchEquationsWithAmount(Integer.parseInt(eTxtField.getText()));
+        if(equations.size() != 0) {
+            List<EquationTable> tableEquations = new ArrayList<>();
+            EquationTable tempEquation;
+            for(int i = 0; i < equations.size(); i++) {
+                tempEquation = new EquationTable(equations.get(i).getFirstComp(), equations.get(i).getOperation(),
+                        equations.get(i).getSecondComp(), equations.get(i).getEquationMark(), equations.get(i).getResult(),
+                        false, false, false, false, false);
+                tableEquations.add(tempEquation);
+            }
+            equationsTable.setItems(FXCollections.observableArrayList(tableEquations));
+        }
     }
 
     public void init() {
         equationsTable.setPlaceholder(new Label("Brak elementów"));
+
+        //firstCol, firstCheckCol, ICol, ICheckCol, secondCol, secondCheckCol, IICol, IICheckCol, thirdCol, thirdCheckCol
+        firstCol.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("firstComp"));
+        firstCheckCol.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("firstColChecked"));
+        firstCheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
+        ICol.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("operation"));
+        ICheckCol.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("IColChecked"));
+        ICheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
+        secondCol.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("secondComp"));
+        secondCheckCol.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("secondColChecked"));
+        secondCheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
+        IICol.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("equationMark"));
+        IICheckCol.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("IIColChecked"));
+        IICheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
+        thirdCol.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("result"));
+        thirdCheckCol.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("thirdColChecked"));
+        thirdCheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
+
+//        EquationTable equation = new EquationTable();
+//        equation.setFirstComp(1);
+//        equation.setOperation("+");
+//        equation.setSecondComp(1);
+//        equation.setEquationMark("=");
+//        equation.setResult(2);
+//
+//        List<EquationTable> list = new ArrayList<>();
+//        list.add(equation);
+//        equationsTable.setItems(FXCollections.observableArrayList(list));
+//        getFinalEquations();
+
     }
 
     public void setMainController(NewSheetMathController controller) {
         this.newSheetMathController = controller;
+    }
+
+    public List<Equation> getFinalEquations() {
+        List<Equation> finalEquations = new ArrayList<>();
+        EquationTable tempEquation;
+        for(int i = 0; i < equationsTable.getItems().size(); i++) {
+            tempEquation = (EquationTable) equationsTable.getItems().get(i);
+            boolean a = tempEquation.getIColChecked();
+            boolean b = tempEquation.getFirstColChecked();
+        }
+
+        return finalEquations;
     }
 }

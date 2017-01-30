@@ -95,10 +95,14 @@ public class PolishWordsDAO {
             tempWord.setLetter(rsWords.getString("WORD_ID").trim());
             tempWords.add(tempWord);
         }
-        for(int i = 0; i < amount; i++) {
-            currRandom = random.nextInt(tempWords.size());
-            polWords.add(tempWords.get(currRandom).getWord());
-            tempWords.remove(currRandom);
+        if(tempWords.size() < amount) {
+            ViewUtils.showErrorAlert("Nie ma tylu słów w bazie");
+        } else {
+            for (int i = 0; i < amount; i++) {
+                currRandom = random.nextInt(tempWords.size());
+                polWords.add(tempWords.get(currRandom).getWord());
+                tempWords.remove(currRandom);
+            }
         }
 
         return polWords;

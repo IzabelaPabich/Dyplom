@@ -6,10 +6,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import model.sheet.Equation;
 import model.sheet.Sheet;
 import utils.ViewUtils;
 
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * Created by Alebazi on 2017-01-28.
@@ -58,7 +60,7 @@ public class NewSheetMathController implements IController {
     }
 
     @FXML protected void createSheet() {
-
+        List<Equation> finalEquations = mathEquationTabController.getFinalEquations();
     }
 
     @FXML protected void showGraphsOpEx() {

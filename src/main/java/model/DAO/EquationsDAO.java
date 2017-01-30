@@ -42,23 +42,27 @@ public class EquationsDAO {
         Random random = new Random();
         int currRandom;
         List<Equation> equations = new ArrayList<>();
-        boolean ifInRange;
         while(rsWords.next()) {
             switch (range) {
                 case ONE_TEN:
-                    ifInRange = rsWords.getBoolean("IF_ONE_TEN");
-                    if(!ifInRange) {
+                    if(!rsWords.getBoolean("IF_ONE_TEN")) {
                         continue;
                     }
                     break;
                 case ONE_TWENTY:
-                    ifInRange = rsWords.getBoolean("IF_ONE_TWENTY");
+                    if(!rsWords.getBoolean("IF_ONE_TWENTY")) {
+                        continue;
+                    }
                     break;
                 case ONE_FIFTY:
-                    ifInRange = rsWords.getBoolean("IF_ONE_FIFTY");
+                    if(!rsWords.getBoolean("IF_ONE_FIFTY")) {
+                        continue;
+                    }
                     break;
                 case ONE_HUNDRED:
-                    ifInRange = rsWords.getBoolean("IF_ONE_HUNDRED");
+                    if(!rsWords.getBoolean("IF_ONE_HUNDRED")) {
+                        continue;
+                    }
                     break;
             }
             tempEquation = new Equation();

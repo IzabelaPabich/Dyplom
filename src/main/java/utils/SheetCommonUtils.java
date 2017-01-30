@@ -9,8 +9,11 @@ import javafx.stage.Stage;
 import model.DAO.EnglishWordsDao;
 import model.DAO.PolishWordsDAO;
 import model.sheet.*;
+import org.apache.avalon.framework.configuration.ConfigurationException;
+import org.xml.sax.SAXException;
 
 import javax.xml.bind.JAXBException;
+import javax.xml.transform.TransformerException;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -273,11 +276,24 @@ public class SheetCommonUtils {
         return text;
     }
 
-    public static void setNewSheetOnMainWindow(MainWindowController controller, File file, String sheetName) throws IOException, JAXBException {
+    public static void setNewSheetOnMainWindow(MainWindowController controller, File file, String sheetName)
+            throws IOException, JAXBException {
         controller.setOpenNewSheetFlag(true);
         controller.setSheetToOpen(new File(file.toString() + "\\" + sheetName + ".pdf"));
         controller.openExistingSheet();
         controller.setOpenNewSheetFlag(false);
+    }
+
+    public static String replaceMathComponentWithDots() {
+        return "....";
+    }
+
+    public static void saveSheetInDirectory(Sheet sheet, File directoryToSave, MainWindowController mainController, Button createButton)
+            throws IOException, TransformerException, SAXException, ConfigurationException, JAXBException {
+        FileUtils.createSheet(sheet, directoryToSave);
+        ViewUtils.showInfoAlert("Utworzono plik: " + sheet.getSheetName() + ".pdf w folderze:  " + directoryToSave.toString());
+        SheetCommonUtils.setNewSheetOnMainWindow(mainController, directoryToSave, sheet.getSheetName());
+        ((Stage) createButton.getScene().getWindow()).close();
     }
 
 }

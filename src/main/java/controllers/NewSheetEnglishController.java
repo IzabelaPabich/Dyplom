@@ -142,10 +142,9 @@ public class NewSheetEnglishController implements IController {
         SheetCommonUtils.replaceAllPolishCharacters(newSheet);
 
         directoryToSave = FileUtils.chooseDirectorForPDFFile((Stage) createEnglishSheetBtn.getScene().getWindow());
-        FileUtils.createSheet(newSheet, directoryToSave);
-        ViewUtils.showInfoAlert("Utworzono plik: " + newSheet.getSheetName() + ".pdf w folderze:  " + directoryToSave.toString());
-        SheetCommonUtils.setNewSheetOnMainWindow(mainWindowController, directoryToSave, newSheet.getSheetName());
-        ((Stage) createEnglishSheetBtn.getScene().getWindow()).close();
+        if(directoryToSave != null) {
+            SheetCommonUtils.saveSheetInDirectory(newSheet, directoryToSave, mainWindowController, createEnglishSheetBtn);
+        }
     }
 
     @FXML protected void showOptions(ActionEvent e) {

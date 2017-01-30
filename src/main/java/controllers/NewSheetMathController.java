@@ -106,10 +106,9 @@ public class NewSheetMathController implements IController {
         newSheet.setAddInfo("Rozwiaz zadania"); //Rozwiąż zadania
 
         directoryToSave = FileUtils.chooseDirectorForPDFFile((Stage) createMathSheetBtn.getScene().getWindow());
-        FileUtils.createSheet(newSheet, directoryToSave);
-        ViewUtils.showInfoAlert("Utworzono plik: " + newSheet.getSheetName() + ".pdf w folderze:  " + directoryToSave.toString());
-        SheetCommonUtils.setNewSheetOnMainWindow(mainWindowController, directoryToSave, newSheet.getSheetName());
-        ((Stage) createMathSheetBtn.getScene().getWindow()).close();
+        if(directoryToSave != null) {
+            SheetCommonUtils.saveSheetInDirectory(newSheet, directoryToSave, mainWindowController, createMathSheetBtn);
+        }
     }
 
     @FXML protected void showGraphsOpEx() {

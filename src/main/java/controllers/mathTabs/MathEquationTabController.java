@@ -11,6 +11,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import model.DAO.EquationsDAO;
 import model.mathTables.EquationTable;
 import model.sheet.Equation;
+import utils.SheetCommonUtils;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -100,14 +101,32 @@ public class MathEquationTabController {
 
     public List<Equation> getFinalEquations() {
         List<Equation> finalEquations = new ArrayList<>();
+        List<EquationTable> erasedEquations = new ArrayList<>();
         EquationTable tempEquation;
         for(int i = 0; i < equationsTable.getItems().size(); i++) {
-            tempEquation = (EquationTable) equationsTable.getItems().get(i);
-            boolean a = tempEquation.getIColChecked();
-            boolean b = tempEquation.getFirstColChecked();
+            finalEquations.add(eraseFieldsFromEquation((EquationTable) equationsTable.getItems().get(i)));
         }
 
         return finalEquations;
+    }
+
+    private Equation eraseFieldsFromEquation(EquationTable equationToErase) {
+        Equation eq = new Equation();
+        eq.setFirstComp(eraseComponent(equationToErase.getFirstColChecked(), equationToErase.getFirstComp()));
+        eq.setOperation(eraseComponent(equationToErase.getIColChecked(), equationToErase.getOperation()));
+        eq.setSecondComp(eraseComponent(equationToErase.getSecondColChecked(), equationToErase.getSecondComp()));
+        eq.setEquationMark(eraseComponent(equationToErase.getIIColChecked(), equationToErase.getEquationMark()));
+        eq.setResult(eraseComponent(equationToErase.getThirdColChecked(), equationToErase.getResult()));
+
+        return eq;
+    }
+
+    private String eraseComponent(boolean checkBoxValue, String component) {
+        if(checkBoxValue) {
+            return SheetCommonUtils.replaceMathComponentWithDots();
+        } else {
+            return component;
+        }
     }
 
     public List<EquationTable> getEquationsTable() {

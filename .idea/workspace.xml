@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fac089ce-78fd-491a-b0e9-4d64d1d888ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/mathTables/GraphTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/NewSheetMathController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/NewSheetMathController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation23.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation31.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationTabController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationTabController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphTabController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphTabController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/DAO/EquationsDAO.java" afterPath="$PROJECT_DIR$/src/main/java/model/DAO/EquationsDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/DAO/GraphsDAO.java" afterPath="$PROJECT_DIR$/src/main/java/model/DAO/GraphsDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathGraphTab.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathGraphTab.fxml" />
     </list>
     <ignored path="Dyplom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MathEquationTabController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MathEquationTabController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationTabController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state relative-caret-position="158">
+              <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="110" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MathGraphTabController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MathGraphTabController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphTabController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+            <state relative-caret-position="296">
+              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -162,8 +158,8 @@
         <option value="$PROJECT_DIR$/src/main/java/model/mathTables/GraphTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/DAO/EquationsDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/DAO/GraphsDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphTabController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationTabController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphTabController.java" />
       </list>
     </option>
   </component>
@@ -1069,7 +1065,7 @@
       <workItem from="1485419754883" duration="1027000" />
       <workItem from="1485597377278" duration="18698000" />
       <workItem from="1485624449534" duration="28188000" />
-      <workItem from="1485783968050" duration="8391000" />
+      <workItem from="1485783968050" duration="9595000" />
     </task>
     <task id="LOCAL-00001" summary="adding math sheet elements">
       <created>1485687379056</created>
@@ -1197,11 +1193,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485795518193</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="graphs DAO + controller set">
+      <created>1485797123636</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1485797123636</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="290846000" />
+    <option name="totallyTimeSpent" value="292050000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1275,7 +1278,8 @@
     <MESSAGE value="saving math equations in xml and pdf&#10;" />
     <MESSAGE value="equationsM added (tableview, dao select with amount, initialization in main math controller)" />
     <MESSAGE value="equationsM added to xslt" />
-    <option name="LAST_COMMIT_MESSAGE" value="equationsM added to xslt" />
+    <MESSAGE value="graphs DAO + controller set" />
+    <option name="LAST_COMMIT_MESSAGE" value="graphs DAO + controller set" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1840,21 +1844,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphTabController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationTabController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state relative-caret-position="158">
+          <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="110" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphTabController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

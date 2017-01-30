@@ -9,6 +9,7 @@ import org.apache.avalon.framework.configuration.Configuration;
 import org.apache.avalon.framework.configuration.ConfigurationException;
 import org.apache.avalon.framework.configuration.DefaultConfigurationBuilder;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.input.ClassLoaderObjectInputStream;
 import org.apache.fop.apps.*;
 import org.apache.fop.apps.FopFactory;
 import org.xml.sax.SAXException;
@@ -27,7 +28,7 @@ public class FileUtils {
     public static void createSheet(Sheet newSheet, File directoryForPDF) throws JAXBException, IOException, SAXException, TransformerException, ConfigurationException {
         //todo - ogarnąć te ścieżkę
 
-        File file = new File("D:\\Izka\\STUDIA\\Dyplom\\sheets" + File.separator + newSheet.getSheetName() + ".xml");
+        File file = new File("sheets" + File.separator + newSheet.getSheetName() + ".xml");
         file.getParentFile().mkdirs();
         file.createNewFile();
         FileOutputStream fout = new FileOutputStream(file, false);
@@ -45,8 +46,12 @@ public class FileUtils {
                 break;
             case "ENGLISH":
                 xslFile = "sheetEnglishT.xsl";
+                break;
+            case "MATH":
+                xslFile = "sheetMathT.xsl";
+                break;
         }
-        createPDFFromXML("sheets/" + newSheet.getSheetName() + ".xml", xslFile,
+        createPDFFromXML("sheets" + File.separator + newSheet.getSheetName() + ".xml", xslFile,
                 directoryForPDF + File.separator + newSheet.getSheetName() + ".pdf");
 
     }
@@ -59,7 +64,7 @@ public class FileUtils {
 
 
         DefaultConfigurationBuilder cfgBuilder = new DefaultConfigurationBuilder();
-        Configuration cfg = cfgBuilder.buildFromFile(new File("D:\\Izka\\STUDIA\\Dyplom\\src\\main\\resources\\mycfg.xml"));
+        Configuration cfg = cfgBuilder.buildFromFile(new File("src/main/resources/font/mycfg.xml"));
         FopFactoryBuilder fopFactoryBuilder = new FopFactoryBuilder(new File(".").toURI()).setConfiguration(cfg);
         FopFactory fopFactory1 = fopFactoryBuilder.build();
 
@@ -84,14 +89,14 @@ public class FileUtils {
     public static File chooseDirectorForPDFFile(Stage stage) {
         DirectoryChooser chooser = new DirectoryChooser();
         chooser.setTitle("Wybierz folder do zapisu");
-        chooser.setInitialDirectory(new File("D:\\Izka\\STUDIA\\Dyplom"));
+        chooser.setInitialDirectory(new File("."));
         File selectedDirectory = chooser.showDialog(stage);
         return selectedDirectory;
     }
 
     public static File readFile(Stage stage, String ext1, String ext2) {
         FileChooser fc = new FileChooser();
-        fc.setInitialDirectory(new File("D:\\Izka\\STUDIA\\Dyplom"));
+        fc.setInitialDirectory(new File("."));
         fc.getExtensionFilters().add(new FileChooser.ExtensionFilter(ext1, ext2));
         File file = fc.showOpenDialog(stage);
         return file;
@@ -100,7 +105,7 @@ public class FileUtils {
     public static Sheet readXMLToSheet(String sheetName) throws JAXBException {
         JAXBContext jc = JAXBContext.newInstance(Sheet.class);
         Unmarshaller unmarshaller = jc.createUnmarshaller();
-        File file = new File("D:\\Izka\\STUDIA\\Dyplom\\sheets" + File.separator + sheetName + ".xml");
+        File file = new File("D:sheets" + File.separator + sheetName + ".xml");
         return (Sheet) unmarshaller.unmarshal(file);
     }
 

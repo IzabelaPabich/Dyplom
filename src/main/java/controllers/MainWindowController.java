@@ -105,9 +105,7 @@ public class MainWindowController {
     private void readPDFToImages() throws IOException {
         PDDocument document = PDDocument.load(sheetToOpen);
         List<PDPage> list = document.getDocumentCatalog().getAllPages();
-        if(pagesAsImages.size() != 0) {
-            pagesAsImages = new ArrayList<>();
-        }
+        pagesAsImages = new ArrayList<>();
         for(int i = 0; i < list.size(); i++) {
             PDPage page = list.get(i);
             pagesAsImages.add(SwingFXUtils.toFXImage(page.convertToImage(), null));

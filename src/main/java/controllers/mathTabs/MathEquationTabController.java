@@ -91,18 +91,6 @@ public class MathEquationTabController {
         thirdCheckCol.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("thirdColChecked"));
         thirdCheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
 
-//        EquationTable equation = new EquationTable();
-//        equation.setFirstComp(1);
-//        equation.setOperation("+");
-//        equation.setSecondComp(1);
-//        equation.setEquationMark("=");
-//        equation.setResult(2);
-//
-//        List<EquationTable> list = new ArrayList<>();
-//        list.add(equation);
-//        equationsTable.setItems(FXCollections.observableArrayList(list));
-//        getFinalEquations();
-
     }
 
     public void setMainController(NewSheetMathController controller) {
@@ -119,5 +107,9 @@ public class MathEquationTabController {
         }
 
         return finalEquations;
+    }
+
+    public List<EquationTable> getEquationsTable() {
+        return equationsTable.getItems();
     }
 }

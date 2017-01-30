@@ -8,8 +8,16 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import model.sheet.Equation;
 import model.sheet.Sheet;
+import org.apache.avalon.framework.configuration.ConfigurationException;
+import org.xml.sax.SAXException;
+import utils.FileUtils;
+import utils.SheetCommonUtils;
 import utils.ViewUtils;
 
+import javax.xml.bind.JAXBException;
+import javax.xml.transform.TransformerException;
+import java.io.File;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -21,6 +29,7 @@ public class NewSheetMathController implements IController {
     private Sheet newSheet = new Sheet();
     private Scene previousScene;
     private MainWindowController mainWindowController;
+    private File directoryToSave;
 
     @FXML private ToggleGroup range = new ToggleGroup();
 
@@ -44,7 +53,7 @@ public class NewSheetMathController implements IController {
 
     @FXML Tab mainTab, graphsOpTab, graphsOpMTab, equOpTab, equOpMTab, textTaskTab;
 
-    @FXML Button createSheetBtn, closeMathSheetBtn, graphsOpExBtn, graphsOpMExBtn, equOpExBtn, equOpMExBtn, textTaskExBtn;
+    @FXML Button createMathSheetBtn, closeMathSheetBtn, graphsOpExBtn, graphsOpMExBtn, equOpExBtn, equOpMExBtn, textTaskExBtn;
 
     @FXML private void initialize() {
         mathEquationTabController.setMainController(this);
@@ -59,8 +68,36 @@ public class NewSheetMathController implements IController {
         }
     }
 
-    @FXML protected void createSheet() {
+    @FXML protected void createSheet() throws IOException, TransformerException, SAXException, ConfigurationException, JAXBException {
+        if(graphsOpCheckBox.isSelected()) {
+
+        }
+        if(graphsOpMCheckBox.isSelected()) {
+
+        }
+        if(equOpCheckBox.isSelected()) {
+            if(mathEquationTabController.getEquationsTable().size() != 0) {
+                List<Equation> finalEquations = mathEquationTabController.getFinalEquations();
+            } else {
+                ViewUtils.showErrorAlert("Checkbox 'Równania' zaznaczony. Lista równań pusta.");
+                return;
+            }
+        }
+        if(equOpMCheckBox.isSelected()) {
+
+        }
+        if(textTaskCheckBox.isSelected()) {
+
+        }
         List<Equation> finalEquations = mathEquationTabController.getFinalEquations();
+
+        newSheet.setAddInfo("Rozwiaz zadania"); //Rozwiąż zadania
+
+        directoryToSave = FileUtils.chooseDirectorForPDFFile((Stage) createMathSheetBtn.getScene().getWindow());
+        FileUtils.createSheet(newSheet, directoryToSave);
+        ViewUtils.showInfoAlert("Utworzono plik: " + newSheet.getSheetName() + ".pdf w folderze:  " + directoryToSave.toString());
+        SheetCommonUtils.setNewSheetOnMainWindow(mainWindowController, directoryToSave, newSheet.getSheetName());
+        ((Stage) createMathSheetBtn.getScene().getWindow()).close();
     }
 
     @FXML protected void showGraphsOpEx() {

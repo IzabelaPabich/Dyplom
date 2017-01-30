@@ -277,6 +277,7 @@ public class SheetCommonUtils {
         controller.setOpenNewSheetFlag(true);
         controller.setSheetToOpen(new File(file.toString() + "\\" + sheetName + ".pdf"));
         controller.openExistingSheet();
+        controller.setOpenNewSheetFlag(false);
     }
 
 }

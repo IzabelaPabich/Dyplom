@@ -62,11 +62,11 @@ public class EquationsDAO {
                     break;
             }
             tempEquation = new Equation();
-            tempEquation.setFirstComp(rsWords.getInt("FIRST_COMP"));
+            tempEquation.setFirstComp(String.valueOf(rsWords.getInt("FIRST_COMP")));
             tempEquation.setOperation(rsWords.getString("OPERATION"));
-            tempEquation.setSecondComp(rsWords.getInt("SECOND_COMP"));
+            tempEquation.setSecondComp(String.valueOf(rsWords.getInt("SECOND_COMP")));
             tempEquation.setEquationMark(rsWords.getString("EQUATION_MARK"));
-            tempEquation.setResult(rsWords.getInt("RESULT"));
+            tempEquation.setResult(String.valueOf(rsWords.getInt("RESULT")));
             tempEquations.add(tempEquation);
         }
         if(tempEquations.size() < amount) {

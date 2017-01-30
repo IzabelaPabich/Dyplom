@@ -5,7 +5,6 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -45,35 +44,40 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "graph", namespace = "http://example.org/moja")
 public class Graph {
 
-    @XmlElement(namespace = "http://example.org/moja")
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected int firstComp;
+    @XmlElement(namespace = "http://example.org/moja", required = true)
+    protected String firstComp;
     @XmlElement(namespace = "http://example.org/moja", required = true)
     protected GraphMark operation12;
-    @XmlElement(namespace = "http://example.org/moja")
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected int secondComp;
+    @XmlElement(namespace = "http://example.org/moja", required = true)
+    protected String secondComp;
     @XmlElement(namespace = "http://example.org/moja", required = true)
     protected GraphMark operation23;
-    @XmlElement(namespace = "http://example.org/moja")
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected int thirdComp;
+    @XmlElement(namespace = "http://example.org/moja", required = true)
+    protected String thirdComp;
     @XmlElement(namespace = "http://example.org/moja", required = true)
     protected GraphMark operation31;
 
     /**
      * Gets the value of the firstComp property.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public int getFirstComp() {
+    public String getFirstComp() {
         return firstComp;
     }
 
     /**
      * Sets the value of the firstComp property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFirstComp(int value) {
+    public void setFirstComp(String value) {
         this.firstComp = value;
     }
 
@@ -104,16 +108,24 @@ public class Graph {
     /**
      * Gets the value of the secondComp property.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public int getSecondComp() {
+    public String getSecondComp() {
         return secondComp;
     }
 
     /**
      * Sets the value of the secondComp property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSecondComp(int value) {
+    public void setSecondComp(String value) {
         this.secondComp = value;
     }
 
@@ -144,16 +156,24 @@ public class Graph {
     /**
      * Gets the value of the thirdComp property.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public int getThirdComp() {
+    public String getThirdComp() {
         return thirdComp;
     }
 
     /**
      * Sets the value of the thirdComp property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setThirdComp(int value) {
+    public void setThirdComp(String value) {
         this.thirdComp = value;
     }
 

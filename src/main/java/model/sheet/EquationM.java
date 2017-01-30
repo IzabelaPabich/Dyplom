@@ -5,7 +5,6 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -47,38 +46,42 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "equationM", namespace = "http://example.org/moja")
 public class EquationM {
 
-    @XmlElement(namespace = "http://example.org/moja")
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected int firstComp1;
+    @XmlElement(namespace = "http://example.org/moja", required = true)
+    protected String firstComp1;
     @XmlElement(namespace = "http://example.org/moja", required = true)
     protected String firstOperation;
-    @XmlElement(namespace = "http://example.org/moja")
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected int firstComp2;
+    @XmlElement(namespace = "http://example.org/moja", required = true)
+    protected String firstComp2;
     @XmlElement(namespace = "http://example.org/moja", required = true)
     protected String equationMark;
-    @XmlElement(namespace = "http://example.org/moja")
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected int secondComp1;
+    @XmlElement(namespace = "http://example.org/moja", required = true)
+    protected String secondComp1;
     @XmlElement(namespace = "http://example.org/moja", required = true)
     protected String secondOperation;
-    @XmlElement(namespace = "http://example.org/moja")
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected int secondComp2;
+    @XmlElement(namespace = "http://example.org/moja", required = true)
+    protected String secondComp2;
 
     /**
      * Gets the value of the firstComp1 property.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public int getFirstComp1() {
+    public String getFirstComp1() {
         return firstComp1;
     }
 
     /**
      * Sets the value of the firstComp1 property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFirstComp1(int value) {
+    public void setFirstComp1(String value) {
         this.firstComp1 = value;
     }
 
@@ -109,16 +112,24 @@ public class EquationM {
     /**
      * Gets the value of the firstComp2 property.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public int getFirstComp2() {
+    public String getFirstComp2() {
         return firstComp2;
     }
 
     /**
      * Sets the value of the firstComp2 property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFirstComp2(int value) {
+    public void setFirstComp2(String value) {
         this.firstComp2 = value;
     }
 
@@ -149,16 +160,24 @@ public class EquationM {
     /**
      * Gets the value of the secondComp1 property.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public int getSecondComp1() {
+    public String getSecondComp1() {
         return secondComp1;
     }
 
     /**
      * Sets the value of the secondComp1 property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSecondComp1(int value) {
+    public void setSecondComp1(String value) {
         this.secondComp1 = value;
     }
 
@@ -189,16 +208,24 @@ public class EquationM {
     /**
      * Gets the value of the secondComp2 property.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public int getSecondComp2() {
+    public String getSecondComp2() {
         return secondComp2;
     }
 
     /**
      * Sets the value of the secondComp2 property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSecondComp2(int value) {
+    public void setSecondComp2(String value) {
         this.secondComp2 = value;
     }
 

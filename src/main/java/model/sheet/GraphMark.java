@@ -4,7 +4,6 @@ package model.sheet;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -38,8 +37,7 @@ public class GraphMark {
     @XmlElement(namespace = "http://example.org/moja", required = true)
     protected String operation;
     @XmlElement(namespace = "http://example.org/moja")
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected Integer value;
+    protected String value;
 
     /**
      * Gets the value of the operation property.
@@ -70,10 +68,10 @@ public class GraphMark {
      * 
      * @return
      *     possible object is
-     *     {@link Integer }
+     *     {@link String }
      *     
      */
-    public Integer getValue() {
+    public String getValue() {
         return value;
     }
 
@@ -82,10 +80,10 @@ public class GraphMark {
      * 
      * @param value
      *     allowed object is
-     *     {@link Integer }
+     *     {@link String }
      *     
      */
-    public void setValue(Integer value) {
+    public void setValue(String value) {
         this.value = value;
     }
 

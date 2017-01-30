@@ -5,7 +5,6 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -43,33 +42,38 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "equation", namespace = "http://example.org/moja")
 public class Equation {
 
-    @XmlElement(namespace = "http://example.org/moja")
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected int firstComp;
+    @XmlElement(namespace = "http://example.org/moja", required = true)
+    protected String firstComp;
     @XmlElement(namespace = "http://example.org/moja", required = true)
     protected String operation;
-    @XmlElement(namespace = "http://example.org/moja")
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected int secondComp;
+    @XmlElement(namespace = "http://example.org/moja", required = true)
+    protected String secondComp;
     @XmlElement(namespace = "http://example.org/moja", required = true)
     protected String equationMark;
-    @XmlElement(namespace = "http://example.org/moja")
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected int result;
+    @XmlElement(namespace = "http://example.org/moja", required = true)
+    protected String result;
 
     /**
      * Gets the value of the firstComp property.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public int getFirstComp() {
+    public String getFirstComp() {
         return firstComp;
     }
 
     /**
      * Sets the value of the firstComp property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFirstComp(int value) {
+    public void setFirstComp(String value) {
         this.firstComp = value;
     }
 
@@ -100,16 +104,24 @@ public class Equation {
     /**
      * Gets the value of the secondComp property.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public int getSecondComp() {
+    public String getSecondComp() {
         return secondComp;
     }
 
     /**
      * Sets the value of the secondComp property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSecondComp(int value) {
+    public void setSecondComp(String value) {
         this.secondComp = value;
     }
 
@@ -140,16 +152,24 @@ public class Equation {
     /**
      * Gets the value of the result property.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public int getResult() {
+    public String getResult() {
         return result;
     }
 
     /**
      * Sets the value of the result property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setResult(int value) {
+    public void setResult(String value) {
         this.result = value;
     }
 

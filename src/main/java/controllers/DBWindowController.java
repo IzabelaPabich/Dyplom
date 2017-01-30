@@ -1,7 +1,6 @@
 package controllers;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
@@ -9,7 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.DAO.CategoriesDAO;
-import model.DAO.EnglishWordsDao;
+import model.DAO.EnglishWordsDAO;
 import model.DAO.LettersDAO;
 import model.DAO.PolishWordsDAO;
 import model.sheet.EngpolWord;
@@ -101,7 +100,7 @@ public class DBWindowController implements IController {
         newWord.setEngWord(addOnEngTxtField.getText());
         newWord.setEngCategory(addCatCombobox.getSelectionModel().getSelectedItem().toString());
         if(!engWordsTable.getItems().contains(newWord)) {
-            EnglishWordsDao.insertEnglishWord(newWord);
+            EnglishWordsDAO.insertEnglishWord(newWord);
             ViewUtils.showInfoAlert("Słowo " + newWord.getPolWord() + " - " + newWord.getEngWord()
                     + " z kategorii " + newWord.getEngCategory() + " zostało dodane do bazy");
             engWordsTable.getItems().add(newWord);
@@ -118,7 +117,7 @@ public class DBWindowController implements IController {
         oldWord.setPolWord(selectedOnPolTxtField.getText());
         oldWord.setEngWord(selectedOnEngTxtField.getText());
         oldWord.setEngCategory(selectedCatTxtField.getText());
-        EnglishWordsDao.deleteEnglishWord(oldWord);
+        EnglishWordsDAO.deleteEnglishWord(oldWord);
         ViewUtils.showInfoAlert("Słowo " + oldWord.getPolWord() + " - " + oldWord.getEngWord()
                 + " z kategorii " + oldWord.getEngCategory() + " zostało usunięte z bazy");
         engWordsTable.getItems().remove(oldWord);
@@ -194,7 +193,7 @@ public class DBWindowController implements IController {
         setListeners();
         //todo-pobranie wszystkiego z bazy
         polishWords = PolishWordsDAO.getAllPolishWords();
-        englishWords = EnglishWordsDao.getAllEnglishWords();
+        englishWords = EnglishWordsDAO.getAllEnglishWords();
         letters = LettersDAO.searchLetters();
         categories = CategoriesDAO.searchCategories();
         List<String> ewe = new ArrayList<>();

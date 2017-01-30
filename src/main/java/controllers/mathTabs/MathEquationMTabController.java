@@ -94,7 +94,7 @@ public class MathEquationMTabController {
             EquationMTable tempEquation;
             for(int i = 0; i < equations.size(); i++) {
                 tempEquation = new EquationMTable(equations.get(i).getFirstComp1(), equations.get(i).getFirstOperation(),
-                        equations.get(i).getFirstComp1(), equations.get(i).getEquationMark(), equations.get(i).getSecondComp1(),
+                        equations.get(i).getFirstComp2(), equations.get(i).getEquationMark(), equations.get(i).getSecondComp1(),
                         equations.get(i).getSecondOperation(), equations.get(i).getSecondComp2(),
                         false, false, false, false, false, false, false);
                 tableEquations.add(tempEquation);
@@ -115,11 +115,13 @@ public class MathEquationMTabController {
 
     private EquationM eraseFieldsFromEquation(EquationMTable equationToErase) {
         EquationM eq = new EquationM();
-//        eq.setFirstComp(eraseComponent(equationToErase.getFirstColChecked(), equationToErase.getFirstComp()));
-//        eq.setOperation(eraseComponent(equationToErase.getIColChecked(), equationToErase.getOperation()));
-//        eq.setSecondComp(eraseComponent(equationToErase.getSecondColChecked(), equationToErase.getSecondComp()));
-//        eq.setEquationMark(eraseComponent(equationToErase.getIIColChecked(), equationToErase.getEquationMark()));
-//        eq.setResult(eraseComponent(equationToErase.getThirdColChecked(), equationToErase.getResult()));
+        eq.setFirstComp1(eraseComponent(equationToErase.getFirstCol1Checked(), equationToErase.getFirstComp1()));
+        eq.setFirstOperation(eraseComponent(equationToErase.getIColChecked(), equationToErase.getFirstOperation()));
+        eq.setFirstComp2(eraseComponent(equationToErase.getFirstCol2Checked(), equationToErase.getFirstComp2()));
+        eq.setEquationMark(eraseComponent(equationToErase.getIIIColChecked(), equationToErase.getEquationMark()));
+        eq.setSecondComp1(eraseComponent(equationToErase.getSecondCol1Checked(), equationToErase.getSecondComp1()));
+        eq.setSecondOperation(eraseComponent(equationToErase.getIIColChecked(), equationToErase.getSecondOperation()));
+        eq.setSecondComp2(eraseComponent(equationToErase.getSecondCol2Checked(), equationToErase.getSecondComp2()));
 
         return eq;
     }

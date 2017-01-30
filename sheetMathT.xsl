@@ -68,6 +68,12 @@
 				<xsl:value-of select="concat(n:firstComp, ' ', n:operation, ' ', n:secondComp, ' ', n:equationMark, ' ', n:result)"/>
 			</fo:block>
 		</xsl:for-each>
+		<xsl:for-each select="n:equationM">
+			<fo:block font-size="16pt" space-after="5mm" text-align="left">
+				<xsl:value-of select="concat(n:firstComp1, ' ', n:firstOperation, ' ', n:firstComp2, ' ', n:equationMark, ' ', 
+										' ', n:secondComp1, ' ', n:secondOperation, ' ', n:secondComp2)"/>
+			</fo:block>
+		</xsl:for-each>
 	</xsl:template>
 
 

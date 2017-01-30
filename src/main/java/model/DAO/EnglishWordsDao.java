@@ -14,7 +14,7 @@ import java.util.Random;
 /**
  * Created by Alebazi on 2017-01-03.
  */
-public class EnglishWordsDao {
+public class EnglishWordsDAO {
 
     public static void insertEnglishWord(EngpolWord newWord) {
         String insertStmt = "INSERT INTO english_words (WORD_ENG, CATEGORY, WORD_POL) " +

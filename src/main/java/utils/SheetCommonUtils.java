@@ -3,10 +3,9 @@ package utils;
 import controllers.MainWindowController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import model.DAO.EnglishWordsDao;
+import model.DAO.EnglishWordsDAO;
 import model.DAO.PolishWordsDAO;
 import model.sheet.*;
 import org.apache.avalon.framework.configuration.ConfigurationException;
@@ -114,8 +113,8 @@ public class SheetCommonUtils {
         if(!tableView.getItems().contains(newWord)) {
             tableView.getItems().add(newWord);
             ViewUtils.showInfoAlert("Dodano do listy słowo: " + newWord.getPolWord() + " - " + newWord.getPolWord());
-            if(EnglishWordsDao.searchEnglishWord(newWord).getEngWord() == null) {
-                EnglishWordsDao.insertEnglishWord(newWord);
+            if(EnglishWordsDAO.searchEnglishWord(newWord).getEngWord() == null) {
+                EnglishWordsDAO.insertEnglishWord(newWord);
             }
         } else {
             ViewUtils.showErrorAlert("Słowo już jest na liście");

@@ -9,10 +9,9 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.DAO.CategoriesDAO;
-import model.DAO.EnglishWordsDao;
+import model.DAO.EnglishWordsDAO;
 import model.sheet.EngCategories;
 import model.sheet.EngpolWord;
-import model.sheet.EngpolWords;
 import model.sheet.Sheet;
 import org.apache.avalon.framework.configuration.ConfigurationException;
 import org.xml.sax.SAXException;
@@ -91,7 +90,7 @@ public class NewSheetEnglishController implements IController {
         } else {
             initWordsManager();
             selectedWordsTable.setItems(FXCollections.observableArrayList(
-                    EnglishWordsDao.searchEnglishWordsWithAmount(Integer.parseInt(howManyEPTxtField.getText()),
+                    EnglishWordsDAO.searchEnglishWordsWithAmount(Integer.parseInt(howManyEPTxtField.getText()),
                             Integer.parseInt(howManyPETxtField.getText()), selectedCategories)));
         }
     }

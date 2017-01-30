@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fac089ce-78fd-491a-b0e9-4d64d1d888ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/mathTables/EquationMTable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/utils/DAOCommonUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/NewSheetMathController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/NewSheetMathController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/DBWindowController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/DBWindowController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/EditSheetWindowController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/EditSheetWindowController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/NewSheetEnglishController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/NewSheetEnglishController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/DAO/EnglishWordsDao.class" afterPath="$PROJECT_DIR$/target/classes/model/DAO/EnglishWordsDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/utils/SheetCommonUtils.class" afterPath="$PROJECT_DIR$/target/classes/utils/SheetCommonUtils.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sheetMathT.xsl" afterPath="$PROJECT_DIR$/sheetMathT.xsl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/DBWindowController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/DBWindowController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/NewSheetEnglishController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/NewSheetEnglishController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationMTabController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationMTabController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/DAO/EquationsDAO.java" afterPath="$PROJECT_DIR$/src/main/java/model/DAO/EquationsDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/DAO/EquationsMDAO.java" afterPath="$PROJECT_DIR$/src/main/java/model/DAO/EquationsMDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/sheet/MathTasks.java" afterPath="$PROJECT_DIR$/src/main/java/model/sheet/MathTasks.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathEquationMTab.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathEquationMTab.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/DAO/EnglishWordsDao.java" afterPath="$PROJECT_DIR$/src/main/java/model/DAO/EnglishWordsDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/SheetCommonUtils.java" afterPath="$PROJECT_DIR$/src/main/java/utils/SheetCommonUtils.java" />
     </list>
     <ignored path="Dyplom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,11 +41,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NewSheetMathController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewSheetMathController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="64" column="57" selection-start-line="64" selection-start-column="57" selection-end-line="64" selection-end-column="57" />
+            <state relative-caret-position="125">
+              <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileUtils.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/FileUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EquationsMDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/DAO/EquationsMDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-340">
+              <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,11 +90,11 @@
       <file leaf-file-name="MathEquationMTabController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationMTabController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+            <state relative-caret-position="-191">
+              <caret line="101" column="88" selection-start-line="101" selection-start-column="88" selection-end-line="101" selection-end-column="88" />
               <folding>
-                <element signature="e#6255#6256#0" expanded="true" />
-                <element signature="e#6311#6312#0" expanded="true" />
+                <element signature="e#6508#6509#0" expanded="true" />
+                <element signature="e#6564#6565#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,9 +168,9 @@
         <option value="$PROJECT_DIR$/src/main/java/model/sheet/MathTasks.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/DAO/EquationsDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/DAOCommonUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationMTabController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/DAO/EquationsMDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationMTabController.java" />
       </list>
     </option>
   </component>
@@ -1051,7 +1076,7 @@
       <workItem from="1485419754883" duration="1027000" />
       <workItem from="1485597377278" duration="18698000" />
       <workItem from="1485624449534" duration="28188000" />
-      <workItem from="1485783968050" duration="6002000" />
+      <workItem from="1485783968050" duration="6783000" />
     </task>
     <task id="LOCAL-00001" summary="adding math sheet elements">
       <created>1485687379056</created>
@@ -1165,11 +1190,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485792322337</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="equationsM added (tableview, dao select with amount, initialization in main math controller)">
+      <created>1485794755926</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1485794755926</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="288457000" />
+    <option name="totallyTimeSpent" value="289238000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1191,18 +1223,18 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46345514" sideWeight="0.5091603" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27986908" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27986908" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38625205" sideWeight="0.49694657" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22163388" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22163388" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46317512" sideWeight="0.4908397" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.492635" sideWeight="0.4908397" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1241,20 +1273,21 @@
     <MESSAGE value="change xsd int -&gt; string (because of replacing with dots)" />
     <MESSAGE value="replacing components with dots in equations + common method for saving sheet" />
     <MESSAGE value="saving math equations in xml and pdf&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="saving math equations in xml and pdf&#10;" />
+    <MESSAGE value="equationsM added (tableview, dao select with amount, initialization in main math controller)" />
+    <option name="LAST_COMMIT_MESSAGE" value="equationsM added (tableview, dao select with amount, initialization in main math controller)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java</url>
-          <line>229</line>
+          <line>228</line>
           <properties />
           <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controllers/NewSheetEnglishController.java</url>
-          <line>207</line>
+          <line>206</line>
           <properties />
           <option name="timeStamp" value="98" />
         </line-breakpoint>
@@ -1270,8 +1303,14 @@
           <properties />
           <option name="timeStamp" value="114" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java</url>
+          <line>115</line>
+          <properties />
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="122" />
+      <option name="time" value="124" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1615,14 +1654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/FileUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetPolishController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1752,20 +1783,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationMTabController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding>
-            <element signature="e#6255#6256#0" expanded="true" />
-            <element signature="e#6311#6312#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/DAO/EquationsMDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-276">
+        <state relative-caret-position="-340">
           <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1773,13 +1793,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationMTabController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-191">
+          <caret line="101" column="88" selection-start-line="101" selection-start-column="88" selection-end-line="101" selection-end-column="88" />
+          <folding>
+            <element signature="e#6508#6509#0" expanded="true" />
+            <element signature="e#6564#6565#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="64" column="57" selection-start-line="64" selection-start-column="57" selection-end-line="64" selection-end-column="57" />
+        <state relative-caret-position="125">
+          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

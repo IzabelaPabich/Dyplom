@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import model.DAO.EnglishWordsDao;
+import model.DAO.EnglishWordsDAO;
 import model.sheet.*;
 import org.apache.avalon.framework.configuration.ConfigurationException;
 import org.xml.sax.SAXException;
@@ -22,7 +22,6 @@ import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -293,9 +292,9 @@ public class EditSheetWindowController implements IController {
         polCats = polCats.substring(0, polCats.length() - 3) + ")";
         engWords = engWords.substring(0, engWords.length() - 3) + ")";
         engCats = engCats.substring(0, engCats.length() - 3) + ")";
-        ObservableList<EngpolWord> list = FXCollections.observableList(EnglishWordsDao.
+        ObservableList<EngpolWord> list = FXCollections.observableList(EnglishWordsDAO.
                 searchEnglishWordsInTable(toPol, "word_eng", polWords, polCats));
-        list.addAll(FXCollections.observableList(EnglishWordsDao.
+        list.addAll(FXCollections.observableList(EnglishWordsDAO.
                 searchEnglishWordsInTable(toEng, "word_pol", engWords, engCats)));
         return list;
     }

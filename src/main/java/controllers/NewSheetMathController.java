@@ -62,6 +62,7 @@ public class NewSheetMathController implements IController {
 
     @FXML private void initialize() {
         mathEquationTabController.setMainController(this);
+        mathEquationMTabController.setMainController(this);
 
         rangeString = tenRadioBtn.getText();
         range.selectedToggleProperty().addListener((ov, old_toggle, new_toggle) -> {
@@ -101,7 +102,12 @@ public class NewSheetMathController implements IController {
             }
         }
         if(equOpMCheckBox.isSelected()) {
-
+            if(mathEquationMTabController.getEquationsMTable().size() != 0) {
+                mathTasks.setEquationM(mathEquationMTabController.getFinalEquationsM());
+            } else {
+                ViewUtils.showErrorAlert("Checkbox" + equOpMCheckBox.getText() + " zaznaczony. Lista równań pusta.");
+                return;
+            }
         }
         if(textTaskCheckBox.isSelected()) {
 

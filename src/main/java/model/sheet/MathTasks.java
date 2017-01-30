@@ -203,4 +203,8 @@ public class MathTasks {
     public void setEquation(List<Equation> equation) {
         this.equation = equation;
     }
+
+    public void setEquationM(List<EquationM> equationM) {
+        this.equationM = equationM;
+    }
 }

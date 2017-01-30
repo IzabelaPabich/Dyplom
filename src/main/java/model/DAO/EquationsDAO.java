@@ -2,6 +2,7 @@ package model.DAO;
 
 import model.sheet.Equation;
 import model.sheet.PolishWord;
+import utils.DAOCommonUtils;
 import utils.DBUtils;
 import utils.ViewUtils;
 
@@ -43,35 +44,15 @@ public class EquationsDAO {
         int currRandom;
         List<Equation> equations = new ArrayList<>();
         while(rsWords.next()) {
-            switch (range) {
-                case ONE_TEN:
-                    if(!rsWords.getBoolean("IF_ONE_TEN")) {
-                        continue;
-                    }
-                    break;
-                case ONE_TWENTY:
-                    if(!rsWords.getBoolean("IF_ONE_TWENTY")) {
-                        continue;
-                    }
-                    break;
-                case ONE_FIFTY:
-                    if(!rsWords.getBoolean("IF_ONE_FIFTY")) {
-                        continue;
-                    }
-                    break;
-                case ONE_HUNDRED:
-                    if(!rsWords.getBoolean("IF_ONE_HUNDRED")) {
-                        continue;
-                    }
-                    break;
+            if(DAOCommonUtils.checkIfInRange(rsWords, range)) {
+                tempEquation = new Equation();
+                tempEquation.setFirstComp(String.valueOf(rsWords.getInt("FIRST_COMP")));
+                tempEquation.setOperation(rsWords.getString("OPERATION"));
+                tempEquation.setSecondComp(String.valueOf(rsWords.getInt("SECOND_COMP")));
+                tempEquation.setEquationMark(rsWords.getString("EQUATION_MARK"));
+                tempEquation.setResult(String.valueOf(rsWords.getInt("RESULT")));
+                tempEquations.add(tempEquation);
             }
-            tempEquation = new Equation();
-            tempEquation.setFirstComp(String.valueOf(rsWords.getInt("FIRST_COMP")));
-            tempEquation.setOperation(rsWords.getString("OPERATION"));
-            tempEquation.setSecondComp(String.valueOf(rsWords.getInt("SECOND_COMP")));
-            tempEquation.setEquationMark(rsWords.getString("EQUATION_MARK"));
-            tempEquation.setResult(String.valueOf(rsWords.getInt("RESULT")));
-            tempEquations.add(tempEquation);
         }
         if(tempEquations.size() < amount) {
             ViewUtils.showErrorAlert("Nie ma tylu działań w bazie");

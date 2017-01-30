@@ -119,7 +119,7 @@ public class MathGraphTabController {
         }
     }
 
-    public List<GraphTable> getGraphTable() {
+    public List<GraphTable> getGraphsTable() {
         return graphsTable.getItems();
     }
 

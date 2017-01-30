@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fac089ce-78fd-491a-b0e9-4d64d1d888ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation23.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operation31.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/NewSheetMathController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/NewSheetMathController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphTabController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphTabController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/sheet/MathTasks.java" afterPath="$PROJECT_DIR$/src/main/java/model/sheet/MathTasks.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathGraphTab.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathGraphTab.fxml" />
     </list>
     <ignored path="Dyplom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,8 +37,8 @@
       <file leaf-file-name="NewSheetMathController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1573">
-              <caret line="69" column="52" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
+            <state relative-caret-position="-152">
+              <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,9 +61,21 @@
       <file leaf-file-name="MathGraphTabController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphTabController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+            <state relative-caret-position="316">
+              <caret line="70" column="43" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GraphTable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/mathTables/GraphTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-61">
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,15 +163,15 @@
         <option value="$PROJECT_DIR$/src/main/java/utils/SheetCommonUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/NewSheetPolishController.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/mathTables/EquationMTable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/sheet/MathTasks.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/DAOCommonUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/DAO/EquationsMDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationMTabController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/mathTables/GraphTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/DAO/EquationsDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/DAO/GraphsDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationTabController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/sheet/MathTasks.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphTabController.java" />
       </list>
     </option>
@@ -1065,7 +1078,7 @@
       <workItem from="1485419754883" duration="1027000" />
       <workItem from="1485597377278" duration="18698000" />
       <workItem from="1485624449534" duration="28188000" />
-      <workItem from="1485783968050" duration="9595000" />
+      <workItem from="1485783968050" duration="10096000" />
     </task>
     <task id="LOCAL-00001" summary="adding math sheet elements">
       <created>1485687379056</created>
@@ -1200,11 +1213,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485797123636</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="getting final graphs for xml in controller">
+      <created>1485798406865</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1485798406865</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="292050000" />
+    <option name="totallyTimeSpent" value="292551000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1279,7 +1299,8 @@
     <MESSAGE value="equationsM added (tableview, dao select with amount, initialization in main math controller)" />
     <MESSAGE value="equationsM added to xslt" />
     <MESSAGE value="graphs DAO + controller set" />
-    <option name="LAST_COMMIT_MESSAGE" value="graphs DAO + controller set" />
+    <MESSAGE value="getting final graphs for xml in controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="getting final graphs for xml in controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1310,12 +1331,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java</url>
-          <line>116</line>
+          <line>121</line>
           <properties />
           <option name="timeStamp" value="123" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="124" />
+      <option name="time" value="125" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1684,17 +1705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/sheet/MathTasks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="200" column="5" selection-start-line="200" selection-start-column="5" selection-end-line="200" selection-end-column="5" />
-          <folding>
-            <element signature="e#6068#6069#0" expanded="true" />
-            <element signature="e#6110#6111#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/SheetCommonUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2907">
@@ -1742,77 +1752,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1573">
-          <caret line="69" column="52" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/sheet/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
           <caret line="49" column="23" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/mathTables/GraphTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1595#1596#0" expanded="true" />
-            <element signature="e#1651#1652#0" expanded="true" />
-            <element signature="e#1689#1690#0" expanded="true" />
-            <element signature="e#1752#1753#0" expanded="true" />
-            <element signature="e#1809#1810#0" expanded="true" />
-            <element signature="e#1848#1849#0" expanded="true" />
-            <element signature="e#1888#1889#0" expanded="true" />
-            <element signature="e#1940#1941#0" expanded="true" />
-            <element signature="e#1974#1975#0" expanded="true" />
-            <element signature="e#2029#2030#0" expanded="true" />
-            <element signature="e#2078#2079#0" expanded="true" />
-            <element signature="e#2122#2123#0" expanded="true" />
-            <element signature="e#2167#2168#0" expanded="true" />
-            <element signature="e#2224#2225#0" expanded="true" />
-            <element signature="e#2263#2264#0" expanded="true" />
-            <element signature="e#2328#2329#0" expanded="true" />
-            <element signature="e#2387#2388#0" expanded="true" />
-            <element signature="e#2427#2428#0" expanded="true" />
-            <element signature="e#2468#2469#0" expanded="true" />
-            <element signature="e#2521#2522#0" expanded="true" />
-            <element signature="e#2556#2557#0" expanded="true" />
-            <element signature="e#2613#2614#0" expanded="true" />
-            <element signature="e#2664#2665#0" expanded="true" />
-            <element signature="e#2707#2708#0" expanded="true" />
-            <element signature="e#2751#2752#0" expanded="true" />
-            <element signature="e#2807#2808#0" expanded="true" />
-            <element signature="e#2845#2846#0" expanded="true" />
-            <element signature="e#2908#2909#0" expanded="true" />
-            <element signature="e#2965#2966#0" expanded="true" />
-            <element signature="e#3006#3007#0" expanded="true" />
-            <element signature="e#3048#3049#0" expanded="true" />
-            <element signature="e#3102#3103#0" expanded="true" />
-            <element signature="e#3138#3139#0" expanded="true" />
-            <element signature="e#3197#3198#0" expanded="true" />
-            <element signature="e#3250#3251#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/DAO/GraphsDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1854,10 +1798,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/sheet/MathTasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="211" column="27" selection-start-line="211" selection-start-column="27" selection-end-line="211" selection-end-column="27" />
+          <folding>
+            <element signature="e#6157#6158#0" expanded="true" />
+            <element signature="e#6191#6192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-152">
+          <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/DAO/GraphsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-182">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/mathTables/GraphTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-61">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphTabController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+        <state relative-caret-position="316">
+          <caret line="70" column="43" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
           <folding />
         </state>
       </provider>

@@ -207,4 +207,8 @@ public class MathTasks {
     public void setEquationM(List<EquationM> equationM) {
         this.equationM = equationM;
     }
+
+    public void setGraph(List<Graph> graph) {
+        this.graph = graph;
+    }
 }

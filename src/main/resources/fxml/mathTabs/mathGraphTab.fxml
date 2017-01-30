@@ -43,7 +43,7 @@
             <TableColumn fx:id="thirdCol" prefWidth="29.0" text="3" />
             <TableColumn fx:id="thirdCheckCol" prefWidth="25.0" />
             <TableColumn fx:id="IIICol" prefWidth="75.0" text="III" />
-            <TableColumn fx:id="IIIColCheck" prefWidth="75.0" />
+            <TableColumn fx:id="IIICheckCol" prefWidth="75.0" />
          </columns>
       </TableView>
       <Button fx:id="showTableBtn" disable="true" layoutX="188.0" layoutY="88.0" mnemonicParsing="false" onAction="#showTable" text="Wykonaj" />

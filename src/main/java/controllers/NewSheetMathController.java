@@ -89,7 +89,12 @@ public class NewSheetMathController implements IController {
         MathTasks mathTasks = new MathTasks();
 
         if(graphsOpCheckBox.isSelected()) {
-
+            if(mathGraphTabController.getGraphsTable().size() != 0) {
+                mathTasks.setGraph(mathGraphTabController.getFinalGraphs());
+            } else {
+                ViewUtils.showErrorAlert("Checkbox" + graphsOpCheckBox.getText() + " zaznaczony. Lista równań pusta.");
+                return;
+            }
         }
         if(graphsOpMCheckBox.isSelected()) {
 

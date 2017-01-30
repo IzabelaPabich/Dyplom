@@ -101,8 +101,7 @@ public class MathEquationTabController {
 
     public List<Equation> getFinalEquations() {
         List<Equation> finalEquations = new ArrayList<>();
-        List<EquationTable> erasedEquations = new ArrayList<>();
-        EquationTable tempEquation;
+
         for(int i = 0; i < equationsTable.getItems().size(); i++) {
             finalEquations.add(eraseFieldsFromEquation((EquationTable) equationsTable.getItems().get(i)));
         }

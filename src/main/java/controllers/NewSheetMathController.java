@@ -9,6 +9,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import model.sheet.Equation;
+import model.sheet.MathTasks;
 import model.sheet.Sheet;
 import org.apache.avalon.framework.configuration.ConfigurationException;
 import org.apache.fop.fonts.base14.Symbol;
@@ -81,6 +82,10 @@ public class NewSheetMathController implements IController {
     }
 
     @FXML protected void createSheet() throws IOException, TransformerException, SAXException, ConfigurationException, JAXBException {
+        SheetCommonUtils.setSheetCommonData(newSheet);
+
+        MathTasks mathTasks = new MathTasks();
+
         if(graphsOpCheckBox.isSelected()) {
 
         }
@@ -89,9 +94,9 @@ public class NewSheetMathController implements IController {
         }
         if(equOpCheckBox.isSelected()) {
             if(mathEquationTabController.getEquationsTable().size() != 0) {
-                List<Equation> finalEquations = mathEquationTabController.getFinalEquations();
+                mathTasks.setEquation(mathEquationTabController.getFinalEquations());
             } else {
-                ViewUtils.showErrorAlert("Checkbox 'Równania' zaznaczony. Lista równań pusta.");
+                ViewUtils.showErrorAlert("Checkbox" + equOpCheckBox.getText() + " zaznaczony. Lista równań pusta.");
                 return;
             }
         }
@@ -101,9 +106,12 @@ public class NewSheetMathController implements IController {
         if(textTaskCheckBox.isSelected()) {
 
         }
-        List<Equation> finalEquations = mathEquationTabController.getFinalEquations();
+
+        newSheet.setMathTasks(mathTasks);
 
         newSheet.setAddInfo("Rozwiaz zadania"); //Rozwiąż zadania
+
+        SheetCommonUtils.replaceAllPolishCharacters(newSheet);
 
         directoryToSave = FileUtils.chooseDirectorForPDFFile((Stage) createMathSheetBtn.getScene().getWindow());
         if(directoryToSave != null) {

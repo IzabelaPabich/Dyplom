@@ -200,4 +200,7 @@ public class MathTasks {
         return this.textTask;
     }
 
+    public void setEquation(List<Equation> equation) {
+        this.equation = equation;
+    }
 }

@@ -53,10 +53,21 @@
 					<fo:block font-size="20pt" space-before="20mm" space-after="20mm" text-align="center" font-family="arial">
 						<xsl:value-of select="n:addInfo"/>
 					</fo:block>
+					<fo:block font-size="16pt">
+						<xsl:apply-templates select="n:mathTasks"/>
+					</fo:block>
 				</fo:flow>
 			</fo:page-sequence>
 
 		</fo:root>
+	</xsl:template>
+	
+	<xsl:template match="n:mathTasks">
+		<xsl:for-each select="n:equation">
+			<fo:block font-size="16pt" space-after="5mm" text-align="left">
+				<xsl:value-of select="concat(n:firstComp, ' ', n:operation, ' ', n:secondComp, ' ', n:equationMark, ' ', n:result)"/>
+			</fo:block>
+		</xsl:for-each>
 	</xsl:template>
 
 

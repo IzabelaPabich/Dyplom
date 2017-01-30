@@ -17,11 +17,6 @@ import java.util.Random;
  */
 public class EquationsDAO {
 
-    private final static String ONE_TEN = "1 - 10";
-    private final static String ONE_TWENTY = "1 - 20";
-    private final static String ONE_FIFTY = "1 - 50";
-    private final static String ONE_HUNDRED = "1 - 100";
-
     public static List<Equation> searchEquationsWithAmount(int amount, String range) throws ClassNotFoundException, SQLException {
         String selectStmt = "SELECT DISTINCT * FROM equations";
 

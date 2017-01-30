@@ -63,6 +63,7 @@ public class NewSheetMathController implements IController {
     @FXML private void initialize() {
         mathEquationTabController.setMainController(this);
         mathEquationMTabController.setMainController(this);
+        mathGraphTabController.setMainController(this);
 
         rangeString = tenRadioBtn.getText();
         range.selectedToggleProperty().addListener((ov, old_toggle, new_toggle) -> {

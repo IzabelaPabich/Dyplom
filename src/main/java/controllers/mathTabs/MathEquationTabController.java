@@ -73,28 +73,6 @@ public class MathEquationTabController {
         }
     }
 
-    public void init() {
-        equationsTable.setPlaceholder(new Label("Brak elementów"));
-
-        //firstCol, firstCheckCol, ICol, ICheckCol, secondCol, secondCheckCol, IICol, IICheckCol, thirdCol, thirdCheckCol
-        firstCol.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("firstComp"));
-        firstCheckCol.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("firstColChecked"));
-        firstCheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
-        ICol.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("operation"));
-        ICheckCol.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("IColChecked"));
-        ICheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
-        secondCol.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("secondComp"));
-        secondCheckCol.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("secondColChecked"));
-        secondCheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
-        IICol.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("equationMark"));
-        IICheckCol.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("IIColChecked"));
-        IICheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
-        thirdCol.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("result"));
-        thirdCheckCol.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("thirdColChecked"));
-        thirdCheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
-
-    }
-
     public void setMainController(NewSheetMathController controller) {
         this.newSheetMathController = controller;
     }
@@ -130,5 +108,27 @@ public class MathEquationTabController {
 
     public List<EquationTable> getEquationsTable() {
         return equationsTable.getItems();
+    }
+
+    public void init() {
+        equationsTable.setPlaceholder(new Label("Brak elementów"));
+
+        //firstCol, firstCheckCol, ICol, ICheckCol, secondCol, secondCheckCol, IICol, IICheckCol, thirdCol, thirdCheckCol
+        firstCol.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("firstComp"));
+        firstCheckCol.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("firstColChecked"));
+        firstCheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
+        ICol.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("operation"));
+        ICheckCol.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("IColChecked"));
+        ICheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
+        secondCol.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("secondComp"));
+        secondCheckCol.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("secondColChecked"));
+        secondCheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
+        IICol.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("equationMark"));
+        IICheckCol.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("IIColChecked"));
+        IICheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
+        thirdCol.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("result"));
+        thirdCheckCol.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("thirdColChecked"));
+        thirdCheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
+
     }
 }

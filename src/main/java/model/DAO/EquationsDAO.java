@@ -16,13 +16,18 @@ import java.util.Random;
  */
 public class EquationsDAO {
 
-    public static List<Equation> searchEquationsWithAmount (int amount) throws ClassNotFoundException, SQLException {
+    private final static String ONE_TEN = "1 - 10";
+    private final static String ONE_TWENTY = "1 - 20";
+    private final static String ONE_FIFTY = "1 - 50";
+    private final static String ONE_HUNDRED = "1 - 100";
+
+    public static List<Equation> searchEquationsWithAmount(int amount, String range) throws ClassNotFoundException, SQLException {
         String selectStmt = "SELECT DISTINCT * FROM equations";
 
         try {
             ResultSet rsWords = DBUtils.dbExecuteQuery(selectStmt);
 
-            List<Equation> equations = getEquationAmountFromResultSet(rsWords, amount);
+            List<Equation> equations = getEquationAmountFromResultSet(rsWords, amount, range);
 
             return equations;
         } catch (SQLException e) {
@@ -31,13 +36,31 @@ public class EquationsDAO {
         }
     }
 
-    private static List<Equation> getEquationAmountFromResultSet(ResultSet rsWords, int amount) throws SQLException {
+    private static List<Equation> getEquationAmountFromResultSet(ResultSet rsWords, int amount, String range) throws SQLException {
         List<Equation> tempEquations = new ArrayList<>();
         Equation tempEquation;
         Random random = new Random();
         int currRandom;
         List<Equation> equations = new ArrayList<>();
+        boolean ifInRange;
         while(rsWords.next()) {
+            switch (range) {
+                case ONE_TEN:
+                    ifInRange = rsWords.getBoolean("IF_ONE_TEN");
+                    if(!ifInRange) {
+                        continue;
+                    }
+                    break;
+                case ONE_TWENTY:
+                    ifInRange = rsWords.getBoolean("IF_ONE_TWENTY");
+                    break;
+                case ONE_FIFTY:
+                    ifInRange = rsWords.getBoolean("IF_ONE_FIFTY");
+                    break;
+                case ONE_HUNDRED:
+                    ifInRange = rsWords.getBoolean("IF_ONE_HUNDRED");
+                    break;
+            }
             tempEquation = new Equation();
             tempEquation.setFirstComp(rsWords.getInt("FIRST_COMP"));
             tempEquation.setOperation(rsWords.getString("OPERATION"));
@@ -47,7 +70,7 @@ public class EquationsDAO {
             tempEquations.add(tempEquation);
         }
         if(tempEquations.size() < amount) {
-            ViewUtils.showErrorAlert("Nie ma tylu słów w bazie");
+            ViewUtils.showErrorAlert("Nie ma tylu działań w bazie");
         } else {
             for (int i = 0; i < amount; i++) {
                 currRandom = random.nextInt(tempEquations.size());

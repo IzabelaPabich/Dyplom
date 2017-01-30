@@ -57,7 +57,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <RadioButton fx:id="tenRadioBtn" layoutX="40.0" layoutY="270.0" mnemonicParsing="false" text="1 - 10">
+                        <RadioButton fx:id="tenRadioBtn" layoutX="40.0" layoutY="270.0" mnemonicParsing="false" selected="true" text="1 - 10">
                            <font>
                               <Font size="14.0" />
                            </font>

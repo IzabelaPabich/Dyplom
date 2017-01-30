@@ -57,7 +57,8 @@ public class MathEquationTabController {
     }
 
     private void getDataFromDB() throws SQLException, ClassNotFoundException {
-        List<Equation> equations = EquationsDAO.searchEquationsWithAmount(Integer.parseInt(eTxtField.getText()));
+        String range = newSheetMathController.getRangeString();
+        List<Equation> equations = EquationsDAO.searchEquationsWithAmount(Integer.parseInt(eTxtField.getText()), range);
         if(equations.size() != 0) {
             List<EquationTable> tableEquations = new ArrayList<>();
             EquationTable tempEquation;

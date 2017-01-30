@@ -1,6 +1,8 @@
 package controllers;
 
 import controllers.mathTabs.*;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -9,6 +11,7 @@ import javafx.stage.Stage;
 import model.sheet.Equation;
 import model.sheet.Sheet;
 import org.apache.avalon.framework.configuration.ConfigurationException;
+import org.apache.fop.fonts.base14.Symbol;
 import org.xml.sax.SAXException;
 import utils.FileUtils;
 import utils.SheetCommonUtils;
@@ -30,6 +33,7 @@ public class NewSheetMathController implements IController {
     private Scene previousScene;
     private MainWindowController mainWindowController;
     private File directoryToSave;
+    private String rangeString;
 
     @FXML private ToggleGroup range = new ToggleGroup();
 
@@ -57,6 +61,14 @@ public class NewSheetMathController implements IController {
 
     @FXML private void initialize() {
         mathEquationTabController.setMainController(this);
+
+        rangeString = tenRadioBtn.getText();
+        range.selectedToggleProperty().addListener((ov, old_toggle, new_toggle) -> {
+            if (range.getSelectedToggle() != null) {
+                RadioButton tmp = (RadioButton) range.getSelectedToggle();
+                rangeString = tmp.getText();
+            }
+        });
     }
 
     @FXML protected void goBackToPart1() {
@@ -155,5 +167,9 @@ public class NewSheetMathController implements IController {
                 tab.setDisable(true);
             }
         });
+    }
+
+    public String getRangeString() {
+        return rangeString;
     }
 }

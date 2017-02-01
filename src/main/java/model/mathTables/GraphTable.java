@@ -16,6 +16,9 @@ public class GraphTable extends Graph{
     private BooleanProperty IIColChecked;
     private BooleanProperty thirdColChecked;
     private BooleanProperty IIIColChecked;
+    private String operation12String;
+    private String operation23String;
+    private String operation31String;
 
     public GraphTable(String firstComp, GraphMark operation12, String secondComp, GraphMark operation23, String thirdComp,
                       GraphMark operation31, boolean firstColCheck, boolean IColCheck, boolean secondColCheck, boolean IIColCheck,
@@ -32,6 +35,9 @@ public class GraphTable extends Graph{
         this.IIColChecked = new SimpleBooleanProperty(IIColCheck);
         this.thirdColChecked = new SimpleBooleanProperty(thirdColCheck);
         this.IIIColChecked = new SimpleBooleanProperty(IIIColCheck);
+        this.operation12String = operation12.toString();
+        this.operation23String = operation23.toString();
+        this.operation31String = operation31.toString();
     }
 
     public boolean getFirstColChecked() {
@@ -104,5 +110,29 @@ public class GraphTable extends Graph{
 
     public void setIIIColChecked(boolean IIIColChecked) {
         this.IIIColChecked.set(IIIColChecked);
+    }
+
+    public String getOperation12String() {
+        return operation12String;
+    }
+
+    public void setOperation12String(String operation12String) {
+        this.operation12String = operation12String;
+    }
+
+    public String getOperation23String() {
+        return operation23String;
+    }
+
+    public void setOperation23String(String operation23String) {
+        this.operation23String = operation23String;
+    }
+
+    public String getOperation31String() {
+        return operation31String;
+    }
+
+    public void setOperation31String(String operation31String) {
+        this.operation31String = operation31String;
     }
 }

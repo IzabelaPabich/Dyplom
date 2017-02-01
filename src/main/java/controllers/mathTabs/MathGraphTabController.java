@@ -130,7 +130,7 @@ public class MathGraphTabController {
         firstCheckCol.setCellValueFactory(new PropertyValueFactory<GraphTable, Boolean>("firstColChecked"));
         firstCheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
 
-        ICol.setCellValueFactory(new PropertyValueFactory<GraphTable, String>("operation12"));
+        ICol.setCellValueFactory(new PropertyValueFactory<GraphTable, String>("operation12String"));
         ICheckCol.setCellValueFactory(new PropertyValueFactory<GraphTable, Boolean>("IColChecked"));
         ICheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
 
@@ -138,7 +138,7 @@ public class MathGraphTabController {
         secondCheckCol.setCellValueFactory(new PropertyValueFactory<GraphTable, Boolean>("secondColChecked"));
         secondCheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
 
-        IICol.setCellValueFactory(new PropertyValueFactory<GraphTable, String>("operation23"));
+        IICol.setCellValueFactory(new PropertyValueFactory<GraphTable, String>("operation23String"));
         IICheckCol.setCellValueFactory(new PropertyValueFactory<GraphTable, Boolean>("IIColChecked"));
         IICheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
 
@@ -146,7 +146,7 @@ public class MathGraphTabController {
         thirdCheckCol.setCellValueFactory(new PropertyValueFactory<GraphTable, Boolean>("thirdColChecked"));
         thirdCheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
 
-        IIICol.setCellValueFactory(new PropertyValueFactory<GraphTable, String>("operation31"));
+        IIICol.setCellValueFactory(new PropertyValueFactory<GraphTable, String>("operation31String"));
         IIICheckCol.setCellValueFactory(new PropertyValueFactory<GraphTable, Boolean>("IIIColChecked"));
         IIICheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
     }

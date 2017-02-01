@@ -74,6 +74,136 @@
 										' ', n:secondComp1, ' ', n:secondOperation, ' ', n:secondComp2)"/>
 			</fo:block>
 		</xsl:for-each>
+		<xsl:for-each select="n:graph">
+			<fo:table>
+			<fo:table-column column-width="15mm"/>
+            <fo:table-column column-width="15mm"/>
+            <fo:table-column column-width="30mm"/>
+            <fo:table-column column-width="15mm"/>
+            <fo:table-column column-width="15mm"/>
+			
+			<fo:table-body>
+				<fo:table-row>
+					<fo:table-cell padding="1mm">
+                        <fo:block>
+							<xsl:text> </xsl:text>
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm">
+                        <fo:block>
+							<xsl:text> </xsl:text>
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm" text-align="center">
+                        <fo:block>
+							<xsl:for-each select="n:operation12">
+								<xsl:value-of select="concat(n:operation, n:value)"/>
+							</xsl:for-each>
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm">
+                        <fo:block>
+							<xsl:text> </xsl:text>
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm">
+                        <fo:block>
+							<xsl:text> </xsl:text>
+                        </fo:block>
+                    </fo:table-cell>
+				</fo:table-row>
+				
+				<fo:table-row>
+					<fo:table-cell padding="1mm">
+                        <fo:block>
+							<xsl:text> </xsl:text>
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm" text-align="center">
+                        <fo:block>
+							<xsl:value-of select="n:firstComp"/>
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm" text-align="center">
+                        <fo:block>
+                            <fo:external-graphic src="url(/operation12.png)"/>
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm" text-align="center">
+                        <fo:block>
+                            <xsl:value-of select="n:secondComp"/>
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm">
+                        <fo:block>
+							<xsl:text> </xsl:text>
+                        </fo:block>
+                    </fo:table-cell>
+				</fo:table-row>
+				
+				<fo:table-row>
+					<fo:table-cell padding="1mm" text-align="center">
+                        <fo:block>
+							<xsl:for-each select="n:operation31">
+								<xsl:value-of select="concat(n:operation, n:value)"/>
+							</xsl:for-each>
+						</fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm" text-align="center">
+                        <fo:block>
+							<xsl:text> </xsl:text><!--Strzałka-->
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm">
+                        <fo:block>
+							<xsl:text> </xsl:text>
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm" text-align="center">
+                        <fo:block>
+                            <xsl:text> </xsl:text><!--Strzałka-->
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm" text-align="center">
+                        <fo:block>
+							<xsl:for-each select="n:operation23">
+								<xsl:value-of select="concat(n:operation, n:value)"/>
+							</xsl:for-each>
+                        </fo:block>
+                    </fo:table-cell>
+				</fo:table-row>
+				
+				<fo:table-row>
+					<fo:table-cell padding="1mm">
+                        <fo:block>
+							<xsl:text> </xsl:text>
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm">
+                        <fo:block>
+							<xsl:text> </xsl:text>
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm" text-align="center">
+                        <fo:block>
+                            <xsl:value-of select="n:thirdComp"/>
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm">
+                        <fo:block>
+							<xsl:text> </xsl:text>
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm">
+                        <fo:block>
+							<xsl:text> </xsl:text>
+                        </fo:block>
+                    </fo:table-cell>
+				</fo:table-row>
+			</fo:table-body>
+			
+			</fo:table>
+		</xsl:for-each>
 	</xsl:template>
 
 

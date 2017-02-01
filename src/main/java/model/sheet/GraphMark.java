@@ -87,4 +87,10 @@ public class GraphMark {
         this.value = value;
     }
 
+
+    @Override
+    public String toString() {
+        return this.getOperation() + getValue();
+    }
+
 }

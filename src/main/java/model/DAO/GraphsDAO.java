@@ -46,7 +46,7 @@ public class GraphsDAO {
                 String operation;
                 tempGraph.setFirstComp(String.valueOf(rsWords.getInt("FIRST_COMP")));
                 tempGraph.setSecondComp(String.valueOf(rsWords.getInt("SECOND_COMP")));
-                tempGraph.setSecondComp(String.valueOf(rsWords.getInt("THIRD_COMP")));
+                tempGraph.setThirdComp(String.valueOf(rsWords.getInt("THIRD_COMP")));
 
                 operation = new String(rsWords.getString("OPERATION12"));
                 tempGraphMark.setOperation(operation.substring(0,1));

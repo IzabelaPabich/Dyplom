@@ -57,6 +57,9 @@ public class DBWindowController implements IController {
     @FXML
     ListView categoriesListV, lettersListV;
 
+    public DBWindowController(){
+    }
+
     @FXML
     protected void close(ActionEvent e) {
         Stage stage = (Stage) closeBtn.getScene().getWindow();

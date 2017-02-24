@@ -30,6 +30,9 @@ public class NewSheetFormController implements IController {
     @FXML CheckBox ifDate, ifGrade, ifName;
     @FXML Button closeNewFormPart1Btn, makeNewFormPart1Btn;
 
+    public NewSheetFormController() {
+    }
+
     public void initialize() {
         sheetCategory.setItems(FXCollections.observableArrayList
                 ("Język polski", "Matematyka", "Język angielski"));

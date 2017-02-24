@@ -57,6 +57,8 @@ public class EditSheetWindowController implements IController {
 
     @FXML private RadioButton polEngRadioBtn, engPolRadioBtn;
 
+    public EditSheetWindowController() {
+    }
 
     @FXML protected void addWord(ActionEvent e) throws SQLException, ClassNotFoundException {
         SheetCommonUtils.addWordToListFromTxtField(wordsList, thingsList,addWordTxtField);

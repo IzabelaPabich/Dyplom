@@ -46,6 +46,9 @@ public class MainWindowController {
     @FXML private ScrollPane sheetScrollPane;
     @FXML private Button editSheetBtn, nextPageBtn, previousPageBtn, closeSheetBtn;
 
+    public MainWindowController(){
+    }
+
     public void initialize() {
         System.out.println("Start aplikacji");
         //newSheetFormController.init(this);

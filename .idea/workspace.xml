@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fac089ce-78fd-491a-b0e9-4d64d1d888ee" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/controllers/MathEquationTabController.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/DBWindowController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/DBWindowController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/NewSheetFormController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/NewSheetFormController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathEquationMTab.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathEquationMTab.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathEquationTab.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathEquationTab.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathGraphMTab.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathGraphMTab.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathGraphTab.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathGraphTab.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathTextTaskTab.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathTextTaskTab.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/MathEquationMTabController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathEquationMTabController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/MathEquationTabController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathEquationTabController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/MathGraphMTabController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathGraphMTabController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/MathGraphTabController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathGraphTabController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/MathTextTaskTabController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathTextTaskTabController.java" />
     </list>
     <ignored path="Dyplom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,6 +50,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="NewSheetMathController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewSheetFormController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetFormController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainWindowController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MathGraphTabController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathGraphTabController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -67,7 +90,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MathTextTaskTabController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MathTextTaskTabController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathTextTaskTabController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -84,135 +107,111 @@
               <ID>JAVA</ID>
               <OriginalElement>controllers</OriginalElement>
               <nodes>
-                <node x="231.0" y="469.0">controllers.mathTabsControllers</node>
-                <node x="0.0" y="90.0">controllers.NewSheetEnglishController</node>
-                <node x="0.0" y="187.0">controllers.mathTabsControllers.MathEquationMTabController</node>
-                <node x="784.0" y="90.0">controllers.NewSheetPolishController</node>
-                <node x="230.0" y="101.0">controllers.EditSheetWindowController</node>
-                <node x="332.0" y="328.0">controllers.mathTabsControllers.MathGraphTabController</node>
-                <node x="224.0" y="610.0">controllers.mathTabsControllers.MathGraphMTabController</node>
-                <node x="430.0" y="90.0">controllers.NewSheetMathController</node>
-                <node x="0.0" y="469.0">controllers.MainWindowController</node>
-                <node x="0.0" y="610.0">controllers.mathTabsControllers.MathTextTaskTabController</node>
-                <node x="0.0" y="328.0">controllers.mathTabsControllers.MathEquationTabController</node>
-                <node x="618.0" y="101.0">controllers.DBWindowController</node>
-                <node x="1008.0" y="101.0">controllers.NewSheetFormController</node>
-                <node x="557.5" y="0.0">controllers.IController</node>
+                <node x="256.5" y="176.0">controllers.NewSheetEnglishController</node>
+                <node x="32.5" y="176.0">controllers.NewSheetPolishController</node>
+                <node x="840.5" y="187.0">controllers.EditSheetWindowController</node>
+                <node x="486.5" y="176.0">controllers.NewSheetMathController</node>
+                <node x="8.0" y="0.0">controllers.MainWindowController</node>
+                <node x="674.5" y="187.0">controllers.DBWindowController</node>
+                <node x="69.0" y="288.0">controllers.NewSheetFormController</node>
+                <node x="627.1666666666666" y="33.0">controllers.IController</node>
               </nodes>
               <notes />
               <edges>
-                <edge source="controllers.NewSheetMathController" target="controllers.mathTabsControllers.MathGraphMTabController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
                 <edge source="controllers.NewSheetEnglishController" target="controllers.MainWindowController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="controllers.mathTabsControllers.MathGraphMTabController" target="controllers.NewSheetMathController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
+                  <point x="-52.5" y="-26.0" />
+                  <point x="309.0" y="126.0" />
+                  <point x="147.5" y="126.0" />
+                  <point x="46.5" y="48.0" />
                 </edge>
                 <edge source="controllers.EditSheetWindowController" target="controllers.IController">
                   <point x="0.0" y="-15.0" />
-                  <point x="320.0" y="60.0" />
-                  <point x="580.0" y="60.0" />
-                  <point x="-22.5" y="15.0" />
-                </edge>
-                <edge source="controllers.NewSheetMathController" target="controllers.mathTabsControllers.MathEquationMTabController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="controllers.NewSheetPolishController" target="controllers.IController">
-                  <point x="0.0" y="-26.0" />
-                  <point x="886.0" y="60.0" />
-                  <point x="625.0" y="60.0" />
+                  <point x="930.5" y="146.0" />
+                  <point x="694.6666666666666" y="146.0" />
                   <point x="22.5" y="15.0" />
                 </edge>
-                <edge source="controllers.NewSheetFormController" target="controllers.MainWindowController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
+                <edge source="controllers.NewSheetPolishController" target="controllers.IController">
+                  <point x="51.0" y="-26.0" />
+                  <point x="185.5" y="136.0" />
+                  <point x="634.6666666666666" y="136.0" />
+                  <point x="-37.5" y="15.0" />
                 </edge>
-                <edge source="controllers.NewSheetMathController" target="controllers.mathTabsControllers.MathEquationTabController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
+                <edge source="controllers.NewSheetFormController" target="controllers.MainWindowController">
+                  <point x="-48.0" y="-15.0" />
+                  <point x="105.0" y="258.0" />
+                  <point x="11.0" y="258.0" />
+                  <point x="11.0" y="136.0" />
+                  <point x="54.5" y="136.0" />
+                  <point x="-46.5" y="48.0" />
                 </edge>
                 <edge source="controllers.NewSheetFormController" target="controllers.IController">
-                  <point x="0.0" y="-15.0" />
-                  <point x="1092.0" y="50.0" />
-                  <point x="640.0" y="50.0" />
+                  <point x="72.0" y="-15.0" />
+                  <point x="225.0" y="268.0" />
+                  <point x="1031.0" y="268.0" />
+                  <point x="1031.0" y="136.0" />
+                  <point x="709.6666666666666" y="136.0" />
                   <point x="37.5" y="15.0" />
                 </edge>
-                <edge source="controllers.NewSheetMathController" target="controllers.mathTabsControllers.MathTextTaskTabController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
                 <edge source="controllers.NewSheetFormController" target="controllers.NewSheetPolishController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="controllers.mathTabsControllers.MathEquationMTabController" target="controllers.NewSheetMathController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="-15.0" />
+                  <point x="153.0" y="268.0" />
+                  <point x="134.5" y="268.0" />
+                  <point x="0.0" y="26.0" />
                 </edge>
                 <edge source="controllers.NewSheetMathController" target="controllers.IController">
-                  <point x="0.0" y="-26.0" />
-                  <point x="514.0" y="70.0" />
-                  <point x="595.0" y="70.0" />
+                  <point x="42.0" y="-26.0" />
+                  <point x="612.5" y="156.0" />
+                  <point x="664.6666666666666" y="156.0" />
                   <point x="-7.5" y="15.0" />
                 </edge>
-                <edge source="controllers.NewSheetMathController" target="controllers.mathTabsControllers.MathGraphTabController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="controllers.mathTabsControllers.MathGraphTabController" target="controllers.NewSheetMathController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
                 <edge source="controllers.NewSheetFormController" target="controllers.NewSheetMathController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
+                  <point x="48.0" y="-15.0" />
+                  <point x="201.0" y="258.0" />
+                  <point x="570.5" y="258.0" />
+                  <point x="0.0" y="26.0" />
                 </edge>
                 <edge source="controllers.NewSheetPolishController" target="controllers.MainWindowController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="controllers.mathTabsControllers.MathEquationTabController" target="controllers.NewSheetMathController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
+                  <point x="-51.0" y="-26.0" />
+                  <point x="83.5" y="156.0" />
+                  <point x="116.5" y="156.0" />
+                  <point x="15.5" y="48.0" />
                 </edge>
                 <edge source="controllers.DBWindowController" target="controllers.IController">
                   <point x="0.0" y="-15.0" />
-                  <point x="691.0" y="70.0" />
-                  <point x="610.0" y="70.0" />
+                  <point x="747.5" y="156.0" />
+                  <point x="679.6666666666666" y="156.0" />
                   <point x="7.5" y="15.0" />
                 </edge>
-                <edge source="controllers.mathTabsControllers.MathTextTaskTabController" target="controllers.NewSheetMathController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
                 <edge source="controllers.NewSheetFormController" target="controllers.NewSheetEnglishController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
+                  <point x="24.0" y="-15.0" />
+                  <point x="177.0" y="248.0" />
+                  <point x="361.5" y="248.0" />
+                  <point x="0.0" y="26.0" />
                 </edge>
                 <edge source="controllers.NewSheetMathController" target="controllers.MainWindowController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
+                  <point x="-42.0" y="-26.0" />
+                  <point x="528.5" y="116.0" />
+                  <point x="178.5" y="116.0" />
+                  <point x="77.5" y="48.0" />
                 </edge>
                 <edge source="controllers.MainWindowController" target="controllers.NewSheetFormController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
+                  <point x="-15.5" y="48.0" />
+                  <point x="85.5" y="146.0" />
+                  <point x="22.0" y="146.0" />
+                  <point x="22.0" y="248.0" />
+                  <point x="129.0" y="248.0" />
+                  <point x="-24.0" y="-15.0" />
                 </edge>
                 <edge source="controllers.NewSheetEnglishController" target="controllers.IController">
-                  <point x="0.0" y="-26.0" />
-                  <point x="105.0" y="50.0" />
-                  <point x="565.0" y="50.0" />
-                  <point x="-37.5" y="15.0" />
+                  <point x="52.5" y="-26.0" />
+                  <point x="414.0" y="146.0" />
+                  <point x="649.6666666666666" y="146.0" />
+                  <point x="-22.5" y="15.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.4939929328621897" x="201.83690987124572" y="308.8369098712457" />
+              <settings layout="Hierarchic Group" zoom="0.9628924833491912" x="239.24901185770753" y="124.20899209486166" />
               <SelectedNodes>
-                <node>controllers.IController</node>
+                <node>controllers.MainWindowController</node>
               </SelectedNodes>
               <Categories>
                 <Category>Constructors</Category>
@@ -224,41 +223,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MathEquationTabController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathEquationTabController.java">
+      <file leaf-file-name="NewSheetEnglishController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetEnglishController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="263">
+              <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="64" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MathGraphMTabController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathGraphMTabController.java">
+      <file leaf-file-name="EditSheetWindowController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="289">
+              <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MathEquationMTabController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathEquationMTabController.java">
+      <file leaf-file-name="DBWindowController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/DBWindowController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="289">
+              <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/Main.java">
+      <file leaf-file-name="NewSheetPolishController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetPolishController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="1496">
+              <caret line="138" column="62" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -284,9 +283,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/mathTextTaskTab.fxml" />
-        <option value="$PROJECT_DIR$/target/classes/newSheetFormMath.fxml" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphMController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationMController.java" />
@@ -299,7 +295,6 @@
         <option value="$PROJECT_DIR$/src/main/java/utils/CheckBoxCellFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/FileUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java" />
         <option value="$PROJECT_DIR$/sheet.xsd" />
         <option value="$PROJECT_DIR$/src/main/java/model/sheet/EngCategories.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/sheet/Dictation.java" />
@@ -318,7 +313,6 @@
         <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationMTabController.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/DAO/EquationsDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationTabController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/sheet/MathTasks.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/sheet/GraphMark.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/mathTables/GraphTable.java" />
@@ -335,6 +329,11 @@
         <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathGraphMTabController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathGraphTabController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathTextTaskTabController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/NewSheetFormController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/DBWindowController.java" />
       </list>
     </option>
   </component>
@@ -1247,7 +1246,7 @@
       <workItem from="1485970534934" duration="6160000" />
       <workItem from="1487011554279" duration="680000" />
       <workItem from="1487587857587" duration="2075000" />
-      <workItem from="1487931661955" duration="2737000" />
+      <workItem from="1487931661955" duration="3653000" />
     </task>
     <task id="LOCAL-00001" summary="adding math sheet elements">
       <created>1485687379056</created>
@@ -1417,11 +1416,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487937137371</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="back to separate package">
+      <created>1487938033622</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1487938033622</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="304262000" />
+    <option name="totallyTimeSpent" value="305178000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1443,12 +1449,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46345514" sideWeight="0.5091603" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30564785" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30564785" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46179402" sideWeight="0.49694657" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22748092" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22748092" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1476,7 +1482,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new xsd schema" />
     <MESSAGE value="workspace.xml update&#10;" />
     <MESSAGE value="fixed setters ang getters&#10;" />
     <MESSAGE value="corrects in graphs schema" />
@@ -1501,14 +1506,15 @@
     <MESSAGE value="init" />
     <MESSAGE value="change package" />
     <MESSAGE value="change package of math controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="change package of math controllers" />
+    <MESSAGE value="back to separate package" />
+    <option name="LAST_COMMIT_MESSAGE" value="back to separate package" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java</url>
-          <line>228</line>
+          <line>230</line>
           <properties />
           <option name="timeStamp" value="81" />
         </line-breakpoint>
@@ -1520,7 +1526,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controllers/NewSheetFormController.java</url>
-          <line>63</line>
+          <line>66</line>
           <properties />
           <option name="timeStamp" value="101" />
         </line-breakpoint>
@@ -1532,7 +1538,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java</url>
-          <line>116</line>
+          <line>119</line>
           <properties />
           <option name="timeStamp" value="123" />
         </line-breakpoint>
@@ -1552,13 +1558,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/javafx-src.zip!/javafx/util/Callback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/javafx-src.zip!/javafx/beans/value/ChangeListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
@@ -1609,13 +1608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/sheet/EngCategories.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -1642,14 +1634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
           <caret line="72" column="40" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1692,21 +1676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="843" column="47" selection-start-line="843" selection-start-column="47" selection-end-line="843" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetEnglishController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="145" column="122" selection-start-line="145" selection-start-column="122" selection-end-line="145" selection-end-column="122" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetPolishController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="138" column="62" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -1926,38 +1895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="91" column="13" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#4741#4742#0" expanded="false" />
-            <element signature="e#4783#4784#0" expanded="false" />
-            <element signature="e#4829#4830#0" expanded="false" />
-            <element signature="e#4872#4873#0" expanded="false" />
-            <element signature="e#4914#4915#0" expanded="false" />
-            <element signature="e#4954#4955#0" expanded="false" />
-            <element signature="e#4997#4998#0" expanded="false" />
-            <element signature="e#5038#5039#0" expanded="false" />
-            <element signature="e#5083#5084#0" expanded="false" />
-            <element signature="e#5126#5127#0" expanded="false" />
-            <element signature="e#6554#6555#0" expanded="false" />
-            <element signature="e#6588#6589#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/SheetCommonUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -2148,151 +2085,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://JAVA/controllers">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>controllers</OriginalElement>
-          <nodes>
-            <node x="231.0" y="469.0">controllers.mathTabsControllers</node>
-            <node x="0.0" y="90.0">controllers.NewSheetEnglishController</node>
-            <node x="0.0" y="187.0">controllers.mathTabsControllers.MathEquationMTabController</node>
-            <node x="784.0" y="90.0">controllers.NewSheetPolishController</node>
-            <node x="230.0" y="101.0">controllers.EditSheetWindowController</node>
-            <node x="332.0" y="328.0">controllers.mathTabsControllers.MathGraphTabController</node>
-            <node x="224.0" y="610.0">controllers.mathTabsControllers.MathGraphMTabController</node>
-            <node x="430.0" y="90.0">controllers.NewSheetMathController</node>
-            <node x="0.0" y="469.0">controllers.MainWindowController</node>
-            <node x="0.0" y="610.0">controllers.mathTabsControllers.MathTextTaskTabController</node>
-            <node x="0.0" y="328.0">controllers.mathTabsControllers.MathEquationTabController</node>
-            <node x="618.0" y="101.0">controllers.DBWindowController</node>
-            <node x="1008.0" y="101.0">controllers.NewSheetFormController</node>
-            <node x="557.5" y="0.0">controllers.IController</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="controllers.NewSheetMathController" target="controllers.mathTabsControllers.MathGraphMTabController">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="controllers.NewSheetEnglishController" target="controllers.MainWindowController">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="controllers.mathTabsControllers.MathGraphMTabController" target="controllers.NewSheetMathController">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="controllers.EditSheetWindowController" target="controllers.IController">
-              <point x="0.0" y="-15.0" />
-              <point x="320.0" y="60.0" />
-              <point x="580.0" y="60.0" />
-              <point x="-22.5" y="15.0" />
-            </edge>
-            <edge source="controllers.NewSheetMathController" target="controllers.mathTabsControllers.MathEquationMTabController">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="controllers.NewSheetPolishController" target="controllers.IController">
-              <point x="0.0" y="-26.0" />
-              <point x="886.0" y="60.0" />
-              <point x="625.0" y="60.0" />
-              <point x="22.5" y="15.0" />
-            </edge>
-            <edge source="controllers.NewSheetFormController" target="controllers.MainWindowController">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="controllers.NewSheetMathController" target="controllers.mathTabsControllers.MathEquationTabController">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="controllers.NewSheetFormController" target="controllers.IController">
-              <point x="0.0" y="-15.0" />
-              <point x="1092.0" y="50.0" />
-              <point x="640.0" y="50.0" />
-              <point x="37.5" y="15.0" />
-            </edge>
-            <edge source="controllers.NewSheetMathController" target="controllers.mathTabsControllers.MathTextTaskTabController">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="controllers.NewSheetFormController" target="controllers.NewSheetPolishController">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="controllers.mathTabsControllers.MathEquationMTabController" target="controllers.NewSheetMathController">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="controllers.NewSheetMathController" target="controllers.IController">
-              <point x="0.0" y="-26.0" />
-              <point x="514.0" y="70.0" />
-              <point x="595.0" y="70.0" />
-              <point x="-7.5" y="15.0" />
-            </edge>
-            <edge source="controllers.NewSheetMathController" target="controllers.mathTabsControllers.MathGraphTabController">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="controllers.mathTabsControllers.MathGraphTabController" target="controllers.NewSheetMathController">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="controllers.NewSheetFormController" target="controllers.NewSheetMathController">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="controllers.NewSheetPolishController" target="controllers.MainWindowController">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="controllers.mathTabsControllers.MathEquationTabController" target="controllers.NewSheetMathController">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="controllers.DBWindowController" target="controllers.IController">
-              <point x="0.0" y="-15.0" />
-              <point x="691.0" y="70.0" />
-              <point x="610.0" y="70.0" />
-              <point x="7.5" y="15.0" />
-            </edge>
-            <edge source="controllers.mathTabsControllers.MathTextTaskTabController" target="controllers.NewSheetMathController">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="controllers.NewSheetFormController" target="controllers.NewSheetEnglishController">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="controllers.NewSheetMathController" target="controllers.MainWindowController">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="controllers.MainWindowController" target="controllers.NewSheetFormController">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="controllers.NewSheetEnglishController" target="controllers.IController">
-              <point x="0.0" y="-26.0" />
-              <point x="105.0" y="50.0" />
-              <point x="565.0" y="50.0" />
-              <point x="-37.5" y="15.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.4939929328621897" x="201.83690987124572" y="308.8369098712457" />
-          <SelectedNodes>
-            <node>controllers.IController</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Constructors</Category>
-            <Category>Properties</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathEquationMTabController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -2329,6 +2121,183 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/controllers">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>controllers</OriginalElement>
+          <nodes>
+            <node x="256.5" y="176.0">controllers.NewSheetEnglishController</node>
+            <node x="32.5" y="176.0">controllers.NewSheetPolishController</node>
+            <node x="840.5" y="187.0">controllers.EditSheetWindowController</node>
+            <node x="486.5" y="176.0">controllers.NewSheetMathController</node>
+            <node x="8.0" y="0.0">controllers.MainWindowController</node>
+            <node x="674.5" y="187.0">controllers.DBWindowController</node>
+            <node x="69.0" y="288.0">controllers.NewSheetFormController</node>
+            <node x="627.1666666666666" y="33.0">controllers.IController</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="controllers.NewSheetEnglishController" target="controllers.MainWindowController">
+              <point x="-52.5" y="-26.0" />
+              <point x="309.0" y="126.0" />
+              <point x="147.5" y="126.0" />
+              <point x="46.5" y="48.0" />
+            </edge>
+            <edge source="controllers.EditSheetWindowController" target="controllers.IController">
+              <point x="0.0" y="-15.0" />
+              <point x="930.5" y="146.0" />
+              <point x="694.6666666666666" y="146.0" />
+              <point x="22.5" y="15.0" />
+            </edge>
+            <edge source="controllers.NewSheetPolishController" target="controllers.IController">
+              <point x="51.0" y="-26.0" />
+              <point x="185.5" y="136.0" />
+              <point x="634.6666666666666" y="136.0" />
+              <point x="-37.5" y="15.0" />
+            </edge>
+            <edge source="controllers.NewSheetFormController" target="controllers.MainWindowController">
+              <point x="-48.0" y="-15.0" />
+              <point x="105.0" y="258.0" />
+              <point x="11.0" y="258.0" />
+              <point x="11.0" y="136.0" />
+              <point x="54.5" y="136.0" />
+              <point x="-46.5" y="48.0" />
+            </edge>
+            <edge source="controllers.NewSheetFormController" target="controllers.IController">
+              <point x="72.0" y="-15.0" />
+              <point x="225.0" y="268.0" />
+              <point x="1031.0" y="268.0" />
+              <point x="1031.0" y="136.0" />
+              <point x="709.6666666666666" y="136.0" />
+              <point x="37.5" y="15.0" />
+            </edge>
+            <edge source="controllers.NewSheetFormController" target="controllers.NewSheetPolishController">
+              <point x="0.0" y="-15.0" />
+              <point x="153.0" y="268.0" />
+              <point x="134.5" y="268.0" />
+              <point x="0.0" y="26.0" />
+            </edge>
+            <edge source="controllers.NewSheetMathController" target="controllers.IController">
+              <point x="42.0" y="-26.0" />
+              <point x="612.5" y="156.0" />
+              <point x="664.6666666666666" y="156.0" />
+              <point x="-7.5" y="15.0" />
+            </edge>
+            <edge source="controllers.NewSheetFormController" target="controllers.NewSheetMathController">
+              <point x="48.0" y="-15.0" />
+              <point x="201.0" y="258.0" />
+              <point x="570.5" y="258.0" />
+              <point x="0.0" y="26.0" />
+            </edge>
+            <edge source="controllers.NewSheetPolishController" target="controllers.MainWindowController">
+              <point x="-51.0" y="-26.0" />
+              <point x="83.5" y="156.0" />
+              <point x="116.5" y="156.0" />
+              <point x="15.5" y="48.0" />
+            </edge>
+            <edge source="controllers.DBWindowController" target="controllers.IController">
+              <point x="0.0" y="-15.0" />
+              <point x="747.5" y="156.0" />
+              <point x="679.6666666666666" y="156.0" />
+              <point x="7.5" y="15.0" />
+            </edge>
+            <edge source="controllers.NewSheetFormController" target="controllers.NewSheetEnglishController">
+              <point x="24.0" y="-15.0" />
+              <point x="177.0" y="248.0" />
+              <point x="361.5" y="248.0" />
+              <point x="0.0" y="26.0" />
+            </edge>
+            <edge source="controllers.NewSheetMathController" target="controllers.MainWindowController">
+              <point x="-42.0" y="-26.0" />
+              <point x="528.5" y="116.0" />
+              <point x="178.5" y="116.0" />
+              <point x="77.5" y="48.0" />
+            </edge>
+            <edge source="controllers.MainWindowController" target="controllers.NewSheetFormController">
+              <point x="-15.5" y="48.0" />
+              <point x="85.5" y="146.0" />
+              <point x="22.0" y="146.0" />
+              <point x="22.0" y="248.0" />
+              <point x="129.0" y="248.0" />
+              <point x="-24.0" y="-15.0" />
+            </edge>
+            <edge source="controllers.NewSheetEnglishController" target="controllers.IController">
+              <point x="52.5" y="-26.0" />
+              <point x="414.0" y="146.0" />
+              <point x="649.6666666666666" y="146.0" />
+              <point x="-22.5" y="15.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.9628924833491912" x="239.24901185770753" y="124.20899209486166" />
+          <SelectedNodes>
+            <node>controllers.MainWindowController</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Constructors</Category>
+            <Category>Properties</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetEnglishController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="64" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetPolishController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="138" column="62" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/DBWindowController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
           <folding />
         </state>
       </provider>

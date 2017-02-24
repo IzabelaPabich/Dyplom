@@ -55,6 +55,9 @@ public class NewSheetMathController implements IController {
 
     @FXML Button createMathSheetBtn, closeMathSheetBtn, graphsOpExBtn, graphsOpMExBtn, equOpExBtn, equOpMExBtn, textTaskExBtn;
 
+    public NewSheetMathController() throws SQLException, ClassNotFoundException {
+    }
+
     @FXML private void initialize() {
         mathEquationTabController.setMainController(this);
         mathEquationMTabController.setMainController(this);

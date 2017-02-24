@@ -104,7 +104,7 @@ public class MathGraphTabController {
         if(checkBoxValue) {
             GraphMark tempMark = new GraphMark();
             tempMark.setOperation(SheetCommonUtils.replaceMathComponentWithDots());
-            tempMark.setValue(SheetCommonUtils.replaceMathComponentWithDots());
+            tempMark.setValue("");
             return tempMark;
         } else {
             return graphMark;

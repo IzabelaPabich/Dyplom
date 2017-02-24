@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sheet xmlns="http://example.org/moja" category="MATH" sheetName="Matma" ifDate="true" ifName="true" ifGrade="true">
+    <title>ŚŁŻŹÓ</title>
+    <date>Data: ...................</date>
+    <nameAndSurname>Imię i nazwisko: ................................</nameAndSurname>
+    <addInfo>Rozwiaz zadania</addInfo>
+    <mathTasks>
+        <equation>
+            <firstComp>....</firstComp>
+            <operation>-</operation>
+            <secondComp>5</secondComp>
+            <equationMark>=</equationMark>
+            <result>1</result>
+        </equation>
+        <equation>
+            <firstComp>2</firstComp>
+            <operation>....</operation>
+            <secondComp>5</secondComp>
+            <equationMark>=</equationMark>
+            <result>7</result>
+        </equation>
+        <equation>
+            <firstComp>3</firstComp>
+            <operation>+</operation>
+            <secondComp>6</secondComp>
+            <equationMark>=</equationMark>
+            <result>....</result>
+        </equation>
+    </mathTasks>
+    <grade>Ocena: ...................</grade>
+</sheet>

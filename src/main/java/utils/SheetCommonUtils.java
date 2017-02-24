@@ -284,7 +284,7 @@ public class SheetCommonUtils {
     }
 
     public static String replaceMathComponentWithDots() {
-        return "....";
+        return "........";
     }
 
     public static void saveSheetInDirectory(Sheet sheet, File directoryToSave, MainWindowController mainController, Button createButton)

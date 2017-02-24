@@ -76,11 +76,11 @@
 		</xsl:for-each>
 		<xsl:for-each select="n:graph">
 			<fo:table>
-			<fo:table-column column-width="15mm"/>
-            <fo:table-column column-width="15mm"/>
-            <fo:table-column column-width="30mm"/>
-            <fo:table-column column-width="15mm"/>
-            <fo:table-column column-width="15mm"/>
+			<fo:table-column column-width="10mm"/>
+            <fo:table-column column-width="10mm"/>
+            <fo:table-column column-width="25mm"/>
+            <fo:table-column column-width="10mm"/>
+            <fo:table-column column-width="10mm"/>
 			
 			<fo:table-body>
 				<fo:table-row>
@@ -126,7 +126,8 @@
                     </fo:table-cell>
 					<fo:table-cell padding="1mm" text-align="center">
                         <fo:block>
-                            <fo:external-graphic src="url(/operation12.png)"/>
+                            <fo:external-graphic src="url(operation12.png)" width="100%" content-height="100%" content-width="scale-to-fit"
+													scaling="uniform"/>
                         </fo:block>
                     </fo:table-cell>
 					<fo:table-cell padding="1mm" text-align="center">
@@ -151,7 +152,8 @@
                     </fo:table-cell>
 					<fo:table-cell padding="1mm" text-align="center">
                         <fo:block>
-							<xsl:text> </xsl:text><!--Strzałka-->
+							<fo:external-graphic src="url(operation31.png)" width="100%" content-height="100%" content-width="scale-down-to-fit"
+												scaling="uniform"/>
                         </fo:block>
                     </fo:table-cell>
 					<fo:table-cell padding="1mm">
@@ -161,7 +163,8 @@
                     </fo:table-cell>
 					<fo:table-cell padding="1mm" text-align="center">
                         <fo:block>
-                            <xsl:text> </xsl:text><!--Strzałka-->
+                            <fo:external-graphic src="url(operation23.png)" width="100%" content-height="100%" content-width="scale-down-to-fit"
+												scaling="uniform"/>
                         </fo:block>
                     </fo:table-cell>
 					<fo:table-cell padding="1mm" text-align="center">
@@ -200,9 +203,38 @@
                         </fo:block>
                     </fo:table-cell>
 				</fo:table-row>
+				
+				<fo:table-row>
+					<fo:table-cell padding="1mm">
+                        <fo:block>
+							<xsl:text> </xsl:text>
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm">
+                        <fo:block>
+							<xsl:text> </xsl:text>
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm" text-align="center">
+                        <fo:block>
+                            <xsl:text> </xsl:text>
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm">
+                        <fo:block>
+							<xsl:text> </xsl:text>
+                        </fo:block>
+                    </fo:table-cell>
+					<fo:table-cell padding="1mm">
+                        <fo:block>
+							<xsl:text> </xsl:text>
+                        </fo:block>
+                    </fo:table-cell>
+				</fo:table-row>
 			</fo:table-body>
 			
 			</fo:table>
+			<xsl:text> </xsl:text>
 		</xsl:for-each>
 	</xsl:template>
 

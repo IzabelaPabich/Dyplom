@@ -1,4 +1,4 @@
-package controllers;
+package controllers.mathTabsControllers;
 
 import controllers.NewSheetMathController;
 import javafx.collections.FXCollections;

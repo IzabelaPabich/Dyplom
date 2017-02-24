@@ -1,4 +1,4 @@
-package controllers;
+package controllers.mathTabsControllers;
 
 import controllers.NewSheetMathController;
 import javafx.fxml.FXML;
@@ -9,18 +9,18 @@ import javafx.scene.control.ToggleGroup;
 /**
  * Created by Alebazi on 2017-01-28.
  */
-public class MathGraphMTabController {
+public class MathTextTaskTabController {
 
     private NewSheetMathController newSheetMathController;
 
     @FXML
-    private ToggleGroup gmChoice = new ToggleGroup();
+    private ToggleGroup ttChoice = new ToggleGroup();
 
     @FXML
-    RadioButton gmFromDBRadioBtn, gmManualRadioBtn;
+    RadioButton ttFromDBRadioBtn, ttManualRadioBtn;
 
     @FXML
-    TextField gmTxtField;
+    TextField ttTxtField;
 
     public void init() {
 

@@ -1,4 +1,4 @@
-package controllers.mathTabs;
+package controllers;
 
 import controllers.NewSheetMathController;
 import javafx.beans.property.ReadOnlyStringWrapper;

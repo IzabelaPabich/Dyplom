@@ -1,18 +1,13 @@
 package controllers;
 
-import controllers.mathTabs.*;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import model.sheet.Equation;
 import model.sheet.MathTasks;
 import model.sheet.Sheet;
 import org.apache.avalon.framework.configuration.ConfigurationException;
-import org.apache.fop.fonts.base14.Symbol;
 import org.xml.sax.SAXException;
 import utils.FileUtils;
 import utils.SheetCommonUtils;
@@ -23,7 +18,6 @@ import javax.xml.transform.TransformerException;
 import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.List;
 
 /**
  * Created by Alebazi on 2017-01-28.

@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fac089ce-78fd-491a-b0e9-4d64d1d888ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controllers/HelpWindowController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/DBWindowController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/DBWindowController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/EditSheetWindowController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/EditSheetWindowController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/MainWindowController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/MainWindowController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/NewSheetFormController$1.class" afterPath="$PROJECT_DIR$/target/classes/controllers/NewSheetFormController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/NewSheetFormController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/NewSheetFormController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/NewSheetMathController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/NewSheetMathController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/mainWindow.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mainWindow.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/HelpWindowController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/HelpWindowController.java" />
     </list>
     <ignored path="Dyplom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,27 +46,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NewSheetMathController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="NewSheetFormController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetFormController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="304">
               <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainWindowController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainWindowController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -84,73 +66,102 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="helpWindow.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/helpWindow.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelpWindowController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/HelpWindowController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MathTextTaskTabController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathTextTaskTabController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JAVA/model.sheet" pinned="false" current-in-tab="false">
-        <entry file="uml://JAVA/model.sheet">
+      <file leaf-file-name="JAVA/controllers" pinned="false" current-in-tab="true">
+        <entry file="uml://JAVA/controllers">
           <provider selected="true" editor-type-id="UmlEditorProvider">
             <state>
               <ID>JAVA</ID>
-              <OriginalElement>model.sheet</OriginalElement>
+              <OriginalElement>controllers</OriginalElement>
               <nodes>
-                <node x="705.5641025641028" y="180.0">model.sheet.PolishWords</node>
-                <node x="575.5641025641028" y="180.0">model.sheet.EngCategories</node>
-                <node x="109.5" y="80.0">model.sheet.Equation</node>
-                <node x="825.5641025641028" y="180.0">model.sheet.Letters</node>
-                <node x="322.5" y="80.0">model.sheet.Graph</node>
-                <node x="776.4252136752139" y="80.0">model.sheet.PolishWord</node>
-                <node x="408.5" y="80.0">model.sheet.GraphM</node>
-                <node x="10.5" y="80.0">model.sheet.TextTask</node>
-                <node x="304.7254273504276" y="0.0">model.sheet.GraphMark</node>
-                <node x="943.1752136752139" y="80.0">model.sheet.EngpolWord</node>
-                <node x="915.5641025641028" y="180.0">model.sheet.EngpolWords</node>
-                <node x="663.1752136752139" y="280.0">model.sheet.Sheet</node>
-                <node x="473.56410256410277" y="180.0">model.sheet.Dictation</node>
-                <node x="210.5" y="80.0">model.sheet.EquationM</node>
-                <node x="0.0" y="507.0">model.sheet.FlagType</node>
-                <node x="427.25" y="410.0">model.sheet.ObjectFactory</node>
-                <node x="319.6752136752138" y="180.0">model.sheet.MathTasks</node>
+                <node x="473.0" y="101.5">controllers.NewSheetEnglishController</node>
+                <node x="242.95108885524633" y="100.42511936648421">controllers.NewSheetPolishController</node>
+                <node x="808.514380959663" y="181.57496068120648">controllers.EditSheetWindowController</node>
+                <node x="0.0" y="90.0">controllers.NewSheetMathController</node>
+                <node x="455.0595488708334" y="239.60859438686384">controllers.MainWindowController</node>
+                <node x="713.4895615866388" y="103.90866388308979">controllers.HelpWindowController</node>
+                <node x="927.8340487891775" y="105.74877552583294">controllers.DBWindowController</node>
+                <node x="159.81549352648358" y="235.29879056242817">controllers.NewSheetFormController</node>
+                <node x="533.0" y="0.0">controllers.IController</node>
               </nodes>
               <notes />
-              <edges />
-              <settings layout="Hierarchic Group" zoom="0.8868940754039497" x="522.0" y="269.0" />
-              <SelectedNodes>
-                <node>model.sheet.PolishWords</node>
-              </SelectedNodes>
+              <edges>
+                <edge source="controllers.NewSheetEnglishController" target="controllers.MainWindowController">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="controllers.EditSheetWindowController" target="controllers.IController">
+                  <point x="0.0" y="-26.0" />
+                  <point x="914.7637155914938" y="93.12200956937798" />
+                  <point x="549.83223209539" y="90.66852737905369" />
+                  <point x="-25.714285714285666" y="15.0" />
+                </edge>
+                <edge source="controllers.NewSheetPolishController" target="controllers.IController">
+                  <point x="0.0" y="-26.0" />
+                  <point x="345.448049636373" y="61.55062808320196" />
+                  <point x="590.8571428571428" y="61.36914052556443" />
+                  <point x="12.85714285714289" y="15.0" />
+                </edge>
+                <edge source="controllers.NewSheetFormController" target="controllers.MainWindowController">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="controllers.NewSheetFormController" target="controllers.NewSheetPolishController">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="controllers.NewSheetFormController" target="controllers.IController">
+                  <point x="-25.0" y="-26.0" />
+                  <point x="234.6253056946547" y="71.07488063351579" />
+                  <point x="565.1428571428571" y="70.0" />
+                  <point x="-12.85714285714289" y="15.0" />
+                </edge>
+                <edge source="controllers.NewSheetMathController" target="controllers.IController">
+                  <point x="0.0" y="-37.5" />
+                  <point x="110.0" y="50.0" />
+                  <point x="539.4285714285714" y="50.0" />
+                  <point x="-38.571428571428555" y="15.0" />
+                </edge>
+                <edge source="controllers.HelpWindowController" target="controllers.IController">
+                  <point x="0.0" y="-15.0" />
+                  <point x="806.2679425837322" y="75.33426368952684" />
+                  <point x="602.4875446191235" y="74.1075225943647" />
+                  <point x="25.714285714285666" y="15.0" />
+                </edge>
+                <edge source="controllers.NewSheetPolishController" target="controllers.MainWindowController">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="controllers.NewSheetFormController" target="controllers.NewSheetMathController">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="controllers.DBWindowController" target="controllers.IController">
+                  <point x="0.0" y="-26.0" />
+                  <point x="1015.9626528442318" y="50.0" />
+                  <point x="616.5714285714286" y="50.0" />
+                  <point x="38.571428571428555" y="15.0" />
+                </edge>
+                <edge source="controllers.NewSheetFormController" target="controllers.NewSheetEnglishController">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="controllers.NewSheetMathController" target="controllers.MainWindowController">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="controllers.MainWindowController" target="controllers.NewSheetFormController">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="controllers.NewSheetEnglishController" target="controllers.IController">
+                  <point x="0.0" y="-26.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.8303358613217776" x="582.6886238846309" y="110.7772831007214" />
+              <SelectedNodes />
               <Categories>
+                <Category>Properties</Category>
                 <Category>Constructors</Category>
               </Categories>
               <SCOPE>All</SCOPE>
@@ -169,16 +180,6 @@
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditSheetWindowController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -260,9 +261,9 @@
         <option value="$PROJECT_DIR$/src/main/java/controllers/NewSheetFormController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/DBWindowController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/HelpWindowController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/helpWindow.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/HelpWindowController.java" />
       </list>
     </option>
   </component>
@@ -1176,7 +1177,7 @@
       <workItem from="1487011554279" duration="680000" />
       <workItem from="1487587857587" duration="2075000" />
       <workItem from="1487931661955" duration="5832000" />
-      <workItem from="1488184871909" duration="1153000" />
+      <workItem from="1488184871909" duration="1879000" />
     </task>
     <task id="LOCAL-00001" summary="adding math sheet elements">
       <created>1485687379056</created>
@@ -1360,11 +1361,25 @@
       <option name="project" value="LOCAL" />
       <updated>1487957078259</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="help window added&#10;">
+      <created>1488186060982</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1488186060982</updated>
+    </task>
+    <task id="LOCAL-00028" summary="help window added v2&#10;">
+      <created>1488186088797</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1488186088797</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="308510000" />
+    <option name="totallyTimeSpent" value="309236000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1377,7 +1392,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1386,12 +1401,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46345514" sideWeight="0.5091603" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33554816" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15282393" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18770765" sideWeight="0.49694657" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27099237" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18244275" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1419,8 +1434,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed setters ang getters&#10;" />
-    <MESSAGE value="corrects in graphs schema" />
     <MESSAGE value="more corrects in graphs schema" />
     <MESSAGE value="new DAO classes&#10;" />
     <MESSAGE value="relocate font&#10;" />
@@ -1444,7 +1457,9 @@
     <MESSAGE value="change package of math controllers" />
     <MESSAGE value="back to separate package" />
     <MESSAGE value="added default constructors" />
-    <option name="LAST_COMMIT_MESSAGE" value="added default constructors" />
+    <MESSAGE value="help window added&#10;" />
+    <MESSAGE value="help window added v2&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="help window added v2&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1705,6 +1720,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1883,6 +1899,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1890,6 +1907,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1897,6 +1915,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1932,14 +1951,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/DBWindowController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -1953,60 +1964,6 @@
         <state relative-caret-position="646">
           <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/controllers">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>controllers</OriginalElement>
-          <nodes>
-            <node x="" y="">controllers.NewSheetEnglishController</node>
-            <node x="" y="">controllers.NewSheetPolishController</node>
-            <node x="" y="">controllers.EditSheetWindowController</node>
-            <node x="" y="">controllers.NewSheetMathController</node>
-            <node x="" y="">controllers.MainWindowController</node>
-            <node x="" y="">controllers.DBWindowController</node>
-            <node x="" y="">controllers.NewSheetFormController</node>
-            <node x="" y="">controllers.IController</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.7939929328621903" x="412.0" y="241.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Constructors</Category>
-            <Category>Properties</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/controllers.mathTabsControllers">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>controllers.mathTabsControllers</OriginalElement>
-          <nodes>
-            <node x="" y="">controllers.MainWindowController</node>
-            <node x="" y="">controllers.mathTabsControllers.MathEquationMTabController</node>
-            <node x="" y="">controllers.mathTabsControllers.MathGraphTabController</node>
-            <node x="" y="">controllers.IController</node>
-            <node x="" y="">controllers.mathTabsControllers.MathEquationTabController</node>
-            <node x="" y="">controllers.NewSheetMathController</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.8642857142857143" x="456.0" y="200.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Constructors</Category>
-            <Category>Properties</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
@@ -2089,6 +2046,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/helpWindow.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/controllers.mathTabsControllers">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>controllers.mathTabsControllers</OriginalElement>
+          <nodes>
+            <node x="" y="">controllers.mathTabsControllers.MathEquationMTabController</node>
+            <node x="" y="">controllers.mathTabsControllers.MathGraphTabController</node>
+            <node x="" y="">controllers.mathTabsControllers.MathTextTaskTabController</node>
+            <node x="" y="">controllers.mathTabsControllers.MathGraphMTabController</node>
+            <node x="" y="">controllers.mathTabsControllers.MathEquationTabController</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="194.5" y="123.5" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="159" column="55" selection-start-line="159" selection-start-column="55" selection-end-line="159" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/mainWindow.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2102,30 +2108,113 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/HelpWindowController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="159">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/helpWindow.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="159" column="55" selection-start-line="159" selection-start-column="55" selection-end-line="159" selection-end-column="55" />
-          <folding />
+    <entry file="uml://JAVA/controllers">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>controllers</OriginalElement>
+          <nodes>
+            <node x="473.0" y="101.5">controllers.NewSheetEnglishController</node>
+            <node x="242.95108885524633" y="100.42511936648421">controllers.NewSheetPolishController</node>
+            <node x="808.514380959663" y="181.57496068120648">controllers.EditSheetWindowController</node>
+            <node x="0.0" y="90.0">controllers.NewSheetMathController</node>
+            <node x="455.0595488708334" y="239.60859438686384">controllers.MainWindowController</node>
+            <node x="713.4895615866388" y="103.90866388308979">controllers.HelpWindowController</node>
+            <node x="927.8340487891775" y="105.74877552583294">controllers.DBWindowController</node>
+            <node x="159.81549352648358" y="235.29879056242817">controllers.NewSheetFormController</node>
+            <node x="533.0" y="0.0">controllers.IController</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="controllers.NewSheetEnglishController" target="controllers.MainWindowController">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="controllers.EditSheetWindowController" target="controllers.IController">
+              <point x="0.0" y="-26.0" />
+              <point x="914.7637155914938" y="93.12200956937798" />
+              <point x="549.83223209539" y="90.66852737905369" />
+              <point x="-25.714285714285666" y="15.0" />
+            </edge>
+            <edge source="controllers.NewSheetPolishController" target="controllers.IController">
+              <point x="0.0" y="-26.0" />
+              <point x="345.448049636373" y="61.55062808320196" />
+              <point x="590.8571428571428" y="61.36914052556443" />
+              <point x="12.85714285714289" y="15.0" />
+            </edge>
+            <edge source="controllers.NewSheetFormController" target="controllers.MainWindowController">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="controllers.NewSheetFormController" target="controllers.NewSheetPolishController">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="controllers.NewSheetFormController" target="controllers.IController">
+              <point x="-25.0" y="-26.0" />
+              <point x="234.6253056946547" y="71.07488063351579" />
+              <point x="565.1428571428571" y="70.0" />
+              <point x="-12.85714285714289" y="15.0" />
+            </edge>
+            <edge source="controllers.NewSheetMathController" target="controllers.IController">
+              <point x="0.0" y="-37.5" />
+              <point x="110.0" y="50.0" />
+              <point x="539.4285714285714" y="50.0" />
+              <point x="-38.571428571428555" y="15.0" />
+            </edge>
+            <edge source="controllers.HelpWindowController" target="controllers.IController">
+              <point x="0.0" y="-15.0" />
+              <point x="806.2679425837322" y="75.33426368952684" />
+              <point x="602.4875446191235" y="74.1075225943647" />
+              <point x="25.714285714285666" y="15.0" />
+            </edge>
+            <edge source="controllers.NewSheetPolishController" target="controllers.MainWindowController">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="controllers.NewSheetFormController" target="controllers.NewSheetMathController">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="controllers.DBWindowController" target="controllers.IController">
+              <point x="0.0" y="-26.0" />
+              <point x="1015.9626528442318" y="50.0" />
+              <point x="616.5714285714286" y="50.0" />
+              <point x="38.571428571428555" y="15.0" />
+            </edge>
+            <edge source="controllers.NewSheetFormController" target="controllers.NewSheetEnglishController">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="controllers.NewSheetMathController" target="controllers.MainWindowController">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="controllers.MainWindowController" target="controllers.NewSheetFormController">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="controllers.NewSheetEnglishController" target="controllers.IController">
+              <point x="0.0" y="-26.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8303358613217776" x="582.6886238846309" y="110.7772831007214" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Properties</Category>
+            <Category>Constructors</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>

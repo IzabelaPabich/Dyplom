@@ -11,6 +11,10 @@ import java.sql.SQLException;
 public class HelpWindowController implements IController {
 
 
+    public HelpWindowController() {
+
+    }
+
     @Override
     public void init(String name, Sheet sheet, Scene scene, String sheetPath, MainWindowController controller) throws SQLException, ClassNotFoundException {
 

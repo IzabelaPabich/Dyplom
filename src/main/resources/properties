@@ -1,0 +1,4 @@
+jdbc_driver=org.postgresql.Driver
+conn_str=jdbc:postgresql://localhost:5432/dyplom
+user=postgres
+password=dyplom1234

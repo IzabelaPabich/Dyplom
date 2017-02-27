@@ -1,27 +1,35 @@
 package utils;
 
+import com.sun.org.glassfish.external.probe.provider.annotations.ProbeProvider;
 import com.sun.rowset.CachedRowSetImpl;
 
-import java.beans.*;
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.*;
-import java.sql.Statement;
 
 /**
  * Created by Alebazi on 2016-12-17.
  */
 public class DBUtils {
-    //JDBC Driver
-    private static final String JDBC_DRIVER = "org.postgresql.Driver";
 
-    //Connection String
-    private static final String CONN_STR = "jdbc:postgresql://localhost:5432/dyplom";
+    private static java.util.Properties prop = new java.util.Properties();
+    private static InputStream input = null;
 
     //połączenie
     private static Connection connection = null;
 
     public static void dbConnect() throws SQLException {
+
         try {
-            Class.forName(JDBC_DRIVER);
+            String filename = "properties";
+            input = DBUtils.class.getClassLoader().getResourceAsStream(filename);
+
+            prop.load(input);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            Class.forName(prop.getProperty("jdbc_driver"));
         } catch (ClassNotFoundException e) {
             System.out.println("Gdzie postgresql jdbc driver?");
             e.printStackTrace();
@@ -30,23 +38,31 @@ public class DBUtils {
         System.out.println("Udało się zarejestrować postgresql jdbc driver");
 
         try {
-            connection = DriverManager.getConnection(CONN_STR, "postgres", "alwoskxm4");
+            connection = DriverManager.getConnection(prop.getProperty("conn_str"), prop.getProperty("user"), prop.getProperty("password"));
         } catch (SQLException e) {
             e.printStackTrace();
-            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
             System.exit(0);
         }
 
-        System.out.println("Udało się połączyć z bazą danych");
-    }
+        if (input != null) {
+            try {
+                input.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+            System.out.println("Udało się połączyć z bazą danych");
+        }
 
     public static void dbDisconnect() {
         try {
-            if(connection != null && !connection.isClosed()) {
+            if (connection != null && !connection.isClosed()) {
                 connection.close();
             }
         } catch (SQLException e) {
-            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
             e.printStackTrace();
         }
 

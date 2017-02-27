@@ -18,8 +18,10 @@
               <MenuItem id="closeMenu" fx:id="closeMenuItem" mnemonicParsing="false" onAction="#showClosePopup" text="Zamknij program" />
             </items>
           </Menu>
-          <Menu id="helpMenu" mnemonicParsing="false" text="Pomoc" />
-            <Menu id="aboutMenu" mnemonicParsing="false" text="O programie" />
+          <Menu id="helpMenu" mnemonicParsing="false" text="Pomoc">
+               <items>
+                  <MenuItem fx:id="aboutProgramMenuItem" mnemonicParsing="false" onAction="#showHelpWindow" text="O programie" />
+               </items></Menu>
          </menus>
       </MenuBar>
    </top>

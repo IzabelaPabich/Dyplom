@@ -40,7 +40,7 @@ public class MainWindowController {
     private boolean dbFlag = false;
     private boolean openNewSheetFlag = false;
 
-    @FXML private MenuItem closeMenuItem, manageDBMenuItem, createSheetMenuItem, openSheetMenuItem;
+    @FXML private MenuItem closeMenuItem, manageDBMenuItem, createSheetMenuItem, openSheetMenuItem, aboutProgramMenuItem;
     @FXML private MenuBar menuBar;
     @FXML private Label welcomeLbl1, welcomeLbl2, currSheetNameLbl, manageSheetLbl;
     @FXML private ScrollPane sheetScrollPane;
@@ -155,7 +155,9 @@ public class MainWindowController {
     }
 
     @FXML
-    protected void openHelpWindow() {
+    protected void showHelpWindow() throws SQLException, ClassNotFoundException {
+        dbFlag = true;
+        openWindow("/fxml/helpWindow.fxml", new String());
 
     }
 

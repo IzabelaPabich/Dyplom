@@ -26,17 +26,12 @@ import java.io.*;
 public class FileUtils {
 
     public static void createSheet(Sheet newSheet, File directoryForPDF) throws JAXBException, IOException, SAXException, TransformerException, ConfigurationException {
-        //todo - ogarnąć te ścieżkę
 
         File file = new File("sheets" + File.separator + newSheet.getSheetName() + ".xml");
         file.getParentFile().mkdirs();
         file.createNewFile();
         FileOutputStream fout = new FileOutputStream(file, false);
-        JAXBContext context = JAXBContext.newInstance(newSheet.getClass().getPackage().getName());
-        Marshaller marshaller = context.createMarshaller();
-        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-        marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
-        marshaller.marshal(newSheet, fout);
+        readSheetToXML(newSheet, fout);
         IOUtils.closeQuietly(fout);
 
         String xslFile = new String();
@@ -107,6 +102,14 @@ public class FileUtils {
         Unmarshaller unmarshaller = jc.createUnmarshaller();
         File file = new File("D:sheets" + File.separator + sheetName + ".xml");
         return (Sheet) unmarshaller.unmarshal(file);
+    }
+
+    private static void readSheetToXML(Sheet newSheet, FileOutputStream fout) throws JAXBException {
+        JAXBContext context = JAXBContext.newInstance(newSheet.getClass().getPackage().getName());
+        Marshaller marshaller = context.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+        marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
+        marshaller.marshal(newSheet, fout);
     }
 
     public static void saveTxtFile(Stage stage, String text) {

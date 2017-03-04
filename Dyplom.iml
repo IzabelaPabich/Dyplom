@@ -19,5 +19,6 @@
     <orderEntry type="library" name="Maven: org.apache.pdfbox:fontbox:1.8.13" level="project" />
     <orderEntry type="library" name="Maven: org.apache.pdfbox:jempbox:1.8.13" level="project" />
     <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.1.1" level="project" />
+    <orderEntry type="library" name="com.kenai.nbpwr:org-apache-batik-all:1.7-201002241055" level="project" />
   </component>
 </module>

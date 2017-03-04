@@ -54,7 +54,7 @@
 						<xsl:value-of select="n:addInfo"/>
 					</fo:block>
 					<fo:block font-size="16pt">
-						<xsl:apply-templates select="n:mathTasks"/>
+						<xsl:number/><xsl:apply-templates select="n:mathTasks"/>
 					</fo:block>
 				</fo:flow>
 			</fo:page-sequence>

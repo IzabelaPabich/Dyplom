@@ -10,128 +10,128 @@
     <top>
         <Label fx:id="formName" text="Nazwa formularza" BorderPane.alignment="CENTER" />
     </top>
-   <center>
-      <TabPane fx:id="mathTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
-        <tabs>
-          <Tab fx:id="mainTab" text="Główne ustawienia">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Label layoutX="40.0" layoutY="27.0" text="Wybierz rodzaje ćwiczeń na arkuszu">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Label>
-                        <CheckBox fx:id="graphsOpCheckBox" layoutX="40.0" layoutY="65.0" mnemonicParsing="false" text="Grafy (działania)">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </CheckBox>
-                        <CheckBox fx:id="graphsOpMCheckBox" layoutX="40.0" layoutY="95.0" mnemonicParsing="false" text="Grafy (dzałania ze znakami nierówności)">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </CheckBox>
-                        <CheckBox fx:id="equOpCheckBox" layoutX="40.0" layoutY="125.0" mnemonicParsing="false" text="Równania (działania)">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </CheckBox>
-                        <CheckBox fx:id="equOpMCheckBox" layoutX="40.0" layoutY="155.0" mnemonicParsing="false" text="Równania (działania ze znakami nierówności)">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </CheckBox>
-                        <CheckBox fx:id="textTaskCheckBox" disable="true" layoutX="40.0" layoutY="185.0" mnemonicParsing="false" text="Zadania tekstowe">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </CheckBox>
-                        <Label fx:id="exerciseDescLbl" layoutX="429.0" layoutY="29.0" text="Przykład ćwiczenia:" visible="false">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="40.0" layoutY="237.0" text="Zakres działań:">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Label>
-                        <RadioButton fx:id="tenRadioBtn" layoutX="40.0" layoutY="270.0" mnemonicParsing="false" selected="true" text="1 - 10">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                           <toggleGroup>
-                              <ToggleGroup fx:id="range" />
-                           </toggleGroup>
-                        </RadioButton>
-                        <RadioButton fx:id="twentyRadioBtn" layoutX="40.0" layoutY="300.0" mnemonicParsing="false" text="1 - 20" toggleGroup="$range">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </RadioButton>
-                        <RadioButton fx:id="fiftyRadioBtn" layoutX="162.0" layoutY="270.0" mnemonicParsing="false" text="1 - 50" toggleGroup="$range">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </RadioButton>
-                        <RadioButton fx:id="hundredRadioBtn" layoutX="162.0" layoutY="300.0" mnemonicParsing="false" text="1 - 100" toggleGroup="$range">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </RadioButton>
-                        <Button fx:id="graphsOpExBtn" layoutX="350.0" layoutY="63.0" mnemonicParsing="false" onAction="#showGraphsOpEx" text="Przykład" />
-                        <Button fx:id="graphsOpMExBtn" layoutX="350.0" layoutY="93.0" mnemonicParsing="false" onAction="#showGraphsOpMEx" text="Przykład" />
-                        <Button fx:id="equOpExBtn" layoutX="350.0" layoutY="123.0" mnemonicParsing="false" onAction="#showEquOpEx" text="Przykład" />
-                        <Button fx:id="equOpMExBtn" layoutX="350.0" layoutY="153.0" mnemonicParsing="false" onAction="#showEquOpMEx" text="Przykład" />
-                        <Button fx:id="textTaskExBtn" layoutX="350.0" layoutY="183.0" mnemonicParsing="false" onAction="#showTextTaskEx" text="Przykład" />
-                        <ImageView fx:id="exampleImView" fitHeight="183.0" fitWidth="311.0" layoutX="446.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" visible="false" />
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-           <Tab fx:id="graphsOpTab" closable="false" disable="true" text="Grafy (działania)">
-              <content>
-                 <fx:include fx:id="mathGraphTab" source="mathTabs/mathGraphTab.fxml" />
-              </content>
-           </Tab>
-           <Tab fx:id="graphsOpMTab" closable="false" disable="true" text="Grafy (działania + znaki nierówności)">
-              <content>
-                 <fx:include fx:id="mathGraphMTab" source="mathTabs/mathGraphMTab.fxml" />
-              </content>
-           </Tab>
-           <Tab fx:id="equOpTab" closable="false" disable="true" text="Równania (działania)">
-              <content>
-                 <fx:include fx:id="mathEquationTab" source="mathTabs/mathEquationTab.fxml" />
-              </content>
-           </Tab>
-           <Tab fx:id="equOpMTab" closable="false" disable="true" text="Równania (działa + znaki nierówności">
-              <content>
-                 <fx:include fx:id="mathEquationMTab" source="mathTabs/mathEquationMTab.fxml" />
-              </content>
-           </Tab>
-           <Tab fx:id="textTaskTab" closable="false" disable="true" text="Zadania tekstowe">
-              <content>
-                 <fx:include fx:id="mathTextTaskTab" source="mathTabs/mathTextTaskTab.fxml" />
-              </content>
-           </Tab>
-        </tabs>
-      </TabPane>
-   </center>
-   <bottom>
-      <Pane prefHeight="65.0" prefWidth="857.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="closeMathSheetBtn" layoutX="761.0" layoutY="18.0" mnemonicParsing="false" onAction="#goBackToPart1" text="Anuluj">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Button>
-            <Button fx:id="createMathSheetBtn" layoutX="674.0" layoutY="18.0" mnemonicParsing="false" onAction="#createSheet" text="Wykonaj">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Button>
-         </children>
-      </Pane>
-   </bottom>
+    <center>
+        <TabPane fx:id="mathTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab fx:id="mainTab" text="Główne ustawienia">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="40.0" layoutY="27.0" text="Wybierz rodzaje ćwiczeń na arkuszu">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <CheckBox fx:id="graphsOpCheckBox" layoutX="40.0" layoutY="65.0" mnemonicParsing="false" text="Grafy (działania)">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </CheckBox>
+                                <CheckBox fx:id="graphsOpMCheckBox" layoutX="40.0" layoutY="95.0" mnemonicParsing="false" text="Grafy (dzałania ze znakami nierówności)">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </CheckBox>
+                                <CheckBox fx:id="equOpCheckBox" layoutX="40.0" layoutY="125.0" mnemonicParsing="false" text="Równania (działania)">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </CheckBox>
+                                <CheckBox fx:id="equOpMCheckBox" layoutX="40.0" layoutY="155.0" mnemonicParsing="false" text="Równania (działania ze znakami nierówności)">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </CheckBox>
+                                <CheckBox fx:id="textTaskCheckBox" disable="true" layoutX="40.0" layoutY="185.0" mnemonicParsing="false" text="Zadania tekstowe">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </CheckBox>
+                                <Label fx:id="exerciseDescLbl" layoutX="429.0" layoutY="29.0" text="Przykład ćwiczenia:" visible="false">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="40.0" layoutY="237.0" text="Zakres działań:">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <RadioButton fx:id="tenRadioBtn" layoutX="40.0" layoutY="270.0" mnemonicParsing="false" selected="true" text="1 - 10">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="range" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="twentyRadioBtn" layoutX="40.0" layoutY="300.0" mnemonicParsing="false" text="1 - 20" toggleGroup="$range">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </RadioButton>
+                                <RadioButton fx:id="fiftyRadioBtn" layoutX="162.0" layoutY="270.0" mnemonicParsing="false" text="1 - 50" toggleGroup="$range">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </RadioButton>
+                                <RadioButton fx:id="hundredRadioBtn" layoutX="162.0" layoutY="300.0" mnemonicParsing="false" text="1 - 100" toggleGroup="$range">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </RadioButton>
+                                <Button fx:id="graphsOpExBtn" layoutX="350.0" layoutY="63.0" mnemonicParsing="false" onAction="#showGraphsOpEx" text="Przykład" />
+                                <Button fx:id="graphsOpMExBtn" layoutX="350.0" layoutY="93.0" mnemonicParsing="false" onAction="#showGraphsOpMEx" text="Przykład" />
+                                <Button fx:id="equOpExBtn" layoutX="350.0" layoutY="123.0" mnemonicParsing="false" onAction="#showEquOpEx" text="Przykład" />
+                                <Button fx:id="equOpMExBtn" layoutX="350.0" layoutY="153.0" mnemonicParsing="false" onAction="#showEquOpMEx" text="Przykład" />
+                                <Button fx:id="textTaskExBtn" layoutX="350.0" layoutY="183.0" mnemonicParsing="false" onAction="#showTextTaskEx" text="Przykład" />
+                                <ImageView fx:id="exampleImView" fitHeight="183.0" fitWidth="311.0" layoutX="446.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="graphsOpTab" closable="false" disable="true" text="Grafy (działania)">
+                    <content>
+                        <fx:include fx:id="mathGraphTab" source="mathTabs/mathGraphTab.fxml" />
+                    </content>
+                </Tab>
+                <Tab fx:id="graphsOpMTab" closable="false" disable="true" text="Grafy (działania + znaki nierówności)">
+                    <content>
+                        <fx:include fx:id="mathGraphMTab" source="mathTabs/mathGraphMTab.fxml" />
+                    </content>
+                </Tab>
+                <Tab fx:id="equOpTab" closable="false" disable="true" text="Równania (działania)">
+                    <content>
+                        <fx:include fx:id="mathEquationTab" source="mathTabs/mathEquationTab.fxml" />
+                    </content>
+                </Tab>
+                <Tab fx:id="equOpMTab" closable="false" disable="true" text="Równania (działa + znaki nierówności">
+                    <content>
+                        <fx:include fx:id="mathEquationMTab" source="mathTabs/mathEquationMTab.fxml" />
+                    </content>
+                </Tab>
+                <Tab fx:id="textTaskTab" closable="false" disable="true" text="Zadania tekstowe">
+                    <content>
+                        <fx:include fx:id="mathTextTaskTab" source="mathTabs/mathTextTaskTab.fxml" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+    <bottom>
+        <Pane prefHeight="65.0" prefWidth="857.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="closeMathSheetBtn" layoutX="761.0" layoutY="18.0" mnemonicParsing="false" onAction="#goBackToPart1" text="Anuluj">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="createMathSheetBtn" layoutX="674.0" layoutY="18.0" mnemonicParsing="false" onAction="#createSheet" text="Wykonaj">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+    </bottom>
 </BorderPane>

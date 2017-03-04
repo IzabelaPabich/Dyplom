@@ -163,17 +163,17 @@ public class NewSheetMathController implements IController {
         newSheet = sheet;
         previousScene = scene;
         mathGraphTabController.init();
-        mathGraphMTabController.init();
+        //mathGraphMTabController.init();
         mathEquationTabController.init();
         mathEquationMTabController.init();
-        mathTextTaskTabController.init();
+        //mathTextTaskTabController.init();
 
         //checkbox listeners
         changeTabState(graphsOpCheckBox, graphsOpTab);
-        changeTabState(graphsOpMCheckBox, graphsOpMTab);
+        //changeTabState(graphsOpMCheckBox, graphsOpMTab);
         changeTabState(equOpCheckBox, equOpTab);
         changeTabState(equOpMCheckBox, equOpMTab);
-        changeTabState(textTaskCheckBox, textTaskTab);
+        //changeTabState(textTaskCheckBox, textTaskTab);
     }
 
     private void changeTabState(CheckBox checkBox, Tab tab) {

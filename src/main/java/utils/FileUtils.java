@@ -100,7 +100,7 @@ public class FileUtils {
     public static Sheet readXMLToSheet(String sheetName) throws JAXBException {
         JAXBContext jc = JAXBContext.newInstance(Sheet.class);
         Unmarshaller unmarshaller = jc.createUnmarshaller();
-        File file = new File("D:sheets" + File.separator + sheetName + ".xml");
+        File file = new File("sheets" + File.separator + sheetName + ".xml");
         return (Sheet) unmarshaller.unmarshal(file);
     }
 

@@ -58,7 +58,7 @@ public class NewSheetFormController implements IController {
             case ("Matematyka"): {
                 initSheet(EnumSheetCategory.MATH);
                 NewSheetMathController newSheetMathController = new NewSheetMathController();
-                openSheetFormX((Stage) makeNewFormPart1Btn.getScene().getWindow(), "/fxml/newSheetFormMath.fxml",
+                openSheetFormX((Stage) makeNewFormPart1Btn.getScene().getWindow(), "/fxml/newSheetFormMathX.fxml",
                                     newSheetMathController);
                 break;
             }

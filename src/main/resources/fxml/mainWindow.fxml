@@ -28,14 +28,14 @@
    <center>
       <Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="536.0" prefWidth="867.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="welcomeLbl1" layoutX="6.0" layoutY="14.0" text="Witaj na stronie głównej aplikacji!">
+            <Label fx:id="welcomeLbl1" layoutX="30.0" layoutY="38.0" text="Witaj na stronie głównej aplikacji!" textFill="#2d89c6" underline="true" wrapText="true">
                <font>
-                  <Font size="18.0" />
+                  <Font size="54.0" />
                </font>
             </Label>
-            <Label fx:id="welcomeLbl2" layoutX="16.0" layoutY="48.0" text="Tutaj możesz utworzyć kartę pracy dla swoich uczniów w jednej z trzech kategorii">
+            <Label fx:id="welcomeLbl2" layoutX="95.0" layoutY="143.0" text="Tutaj możesz utworzyć kartę pracy dla swoich uczniów " textFill="#5d1b89">
                <font>
-                  <Font size="14.0" />
+                  <Font size="25.0" />
                </font>
             </Label>
             <Label fx:id="currSheetNameLbl" layoutX="407.0" layoutY="15.0" text="Arkusz: " visible="false">
@@ -48,6 +48,31 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="536.0" prefWidth="878.0" visible="false" />
               </content>
             </ScrollPane>
+            <Label fx:id="welcomeLbl3" layoutX="253.0" layoutY="188.0" text="w jednej z trzech kategorii:" textFill="#5d1b89">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="welcomeLbl4" layoutX="314.0" layoutY="243.0" text="- język polski" textFill="#d32929">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="welcomeLbl5" layoutX="313.0" layoutY="287.0" text="- język angielski" textFill="#1b0f9a">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="welcomeLbl6" layoutX="314.0" layoutY="328.0" text="- matematyka" textFill="#0d6f22">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="welcomeLbl7" layoutX="107.0" layoutY="420.0" text="Wejdź w: Plik -&gt; Nowy arkusz i za chwilę karta pracy będzie gotowa!" textFill="#251057" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </center>

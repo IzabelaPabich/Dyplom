@@ -42,7 +42,8 @@ public class MainWindowController {
 
     @FXML private MenuItem closeMenuItem, manageDBMenuItem, createSheetMenuItem, openSheetMenuItem, aboutProgramMenuItem;
     @FXML private MenuBar menuBar;
-    @FXML private Label welcomeLbl1, welcomeLbl2, currSheetNameLbl, manageSheetLbl;
+    @FXML private Label welcomeLbl1, welcomeLbl2, welcomeLbl3, welcomeLbl4, welcomeLbl5, welcomeLbl6, welcomeLbl7,
+             currSheetNameLbl, manageSheetLbl;
     @FXML private ScrollPane sheetScrollPane;
     @FXML private Button editSheetBtn, nextPageBtn, previousPageBtn, closeSheetBtn;
 
@@ -78,6 +79,11 @@ public class MainWindowController {
             currPage = 0;
             welcomeLbl1.setVisible(false);
             welcomeLbl2.setVisible(false);
+            welcomeLbl3.setVisible(false);
+            welcomeLbl4.setVisible(false);
+            welcomeLbl5.setVisible(false);
+            welcomeLbl6.setVisible(false);
+            welcomeLbl7.setVisible(false);
             sheetScrollPane.setVisible(true);
             manageSheetLbl.setVisible(true);
             editSheetBtn.setVisible(true);
@@ -127,6 +133,11 @@ public class MainWindowController {
     @FXML protected void closeSheet(ActionEvent e) {
         welcomeLbl1.setVisible(true);
         welcomeLbl2.setVisible(true);
+        welcomeLbl3.setVisible(true);
+        welcomeLbl4.setVisible(true);
+        welcomeLbl5.setVisible(true);
+        welcomeLbl6.setVisible(true);
+        welcomeLbl7.setVisible(true);
         sheetScrollPane.setVisible(false);
         manageSheetLbl.setVisible(false);
         editSheetBtn.setVisible(false);

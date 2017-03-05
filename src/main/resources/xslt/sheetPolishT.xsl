@@ -68,7 +68,7 @@
 	<xsl:template match="n:polishWords">
 		<xsl:for-each select="n:polishWord">
 			<fo:block font-size="16pt" space-after="5mm" text-align="left">
-				<xsl:value-of select="n:word"/>
+				<xsl:number/>.  <xsl:value-of select="n:word"/>
 			</fo:block>
 		</xsl:for-each>
 	</xsl:template>

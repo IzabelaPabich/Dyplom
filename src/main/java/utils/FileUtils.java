@@ -4,9 +4,7 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.sheet.Sheet;
-import org.apache.avalon.framework.configuration.Configuration;
 import org.apache.avalon.framework.configuration.ConfigurationException;
-import org.apache.avalon.framework.configuration.DefaultConfigurationBuilder;
 import org.apache.commons.io.IOUtils;
 import org.apache.fop.apps.FopFactory;
 import org.apache.fop.apps.Fop;
@@ -58,10 +56,7 @@ public class FileUtils {
         StreamSource xmlSource = new StreamSource(new File(xml));
         FopFactory fopFactory = FopFactory.newInstance(new File(".").toURI());
 
-
-        DefaultConfigurationBuilder cfgBuilder = new DefaultConfigurationBuilder();
-        Configuration cfg = cfgBuilder.buildFromFile(new File("src/main/resources/font/mycfg.xml"));
-        FopFactoryBuilder fopFactoryBuilder = new FopFactoryBuilder(new File(".").toURI()).setConfiguration(cfg);
+        FopFactoryBuilder fopFactoryBuilder = new FopFactoryBuilder(new File(".").toURI());
         FopFactory fopFactory1 = fopFactoryBuilder.build();
 
 

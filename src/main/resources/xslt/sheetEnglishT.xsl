@@ -67,10 +67,10 @@
 			<fo:block font-size="16pt" space-after="5mm" text-align="left">
 				<xsl:choose>
 				<xsl:when test="@ifToPolish">
-					<xsl:value-of select="concat(n:engWord, ' - ', n:polWord)"/>
+					<xsl:number/>.  <xsl:value-of select="concat(n:engWord, ' - ', n:polWord)"/>
 				</xsl:when>
 				<xsl:when test="@ifToEnglish">
-					<xsl:value-of select="concat(n:polWord, ' - ', n:engWord)"/>
+					<xsl:number/>.  <xsl:value-of select="concat(n:polWord, ' - ', n:engWord)"/>
 				</xsl:when>
 				</xsl:choose>
 			</fo:block>

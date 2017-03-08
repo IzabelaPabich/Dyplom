@@ -49,19 +49,13 @@ public class GraphsDAO {
                 tempGraph.setThirdComp(String.valueOf(rsWords.getInt("THIRD_COMP")));
 
                 operation = new String(rsWords.getString("OPERATION12"));
-                tempGraphMark.setOperation(operation.substring(0,1));
-                tempGraphMark.setValue(operation.substring(1));
-                tempGraph.setOperation12(tempGraphMark);
+                tempGraph.setOperation12(new GraphMark(operation.substring(0,1), operation.substring(1)));
 
                 operation = new String(rsWords.getString("OPERATION23"));
-                tempGraphMark.setOperation(operation.substring(0,1));
-                tempGraphMark.setValue(operation.substring(1));
-                tempGraph.setOperation23(tempGraphMark);
+                tempGraph.setOperation23(new GraphMark(operation.substring(0,1), operation.substring(1)));
 
                 operation = new String(rsWords.getString("OPERATION31"));
-                tempGraphMark.setOperation(operation.substring(0,1));
-                tempGraphMark.setValue(operation.substring(1));
-                tempGraph.setOperation31(tempGraphMark);
+                tempGraph.setOperation31(new GraphMark(operation.substring(0,1), operation.substring(1)));;
 
                 tempGraphs.add(tempGraph);
             }

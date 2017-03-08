@@ -6,12 +6,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import model.DAO.EquationsMDAO;
 import model.mathTables.EquationMTable;
 import model.mathTables.EquationTable;
 import model.sheet.Equation;
 import model.sheet.EquationM;
 import utils.SheetCommonUtils;
+import utils.ViewUtils;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -23,6 +26,7 @@ import java.util.List;
 public class MathEquationMTabController {
 
     private NewSheetMathController newSheetMathController;
+    List<EquationMTable> tableEquations = new ArrayList<>();
 
     @FXML
     private ToggleGroup emChoice = new ToggleGroup();
@@ -31,10 +35,11 @@ public class MathEquationMTabController {
     RadioButton emFromDBRadioBtn, emManualRadioBtn;
 
     @FXML
-    TextField emTxtField;
+    TextField emTxtField, firstComp1TxtField, firstOperationTxtField, firstComp2TxtField, equalsTxtField,
+    secondComp1TxtField, secondComp2TxtField, secondOperationTxtField;
 
     @FXML
-    Button showTableBtn;
+    Button showTableBtn, addEquationMBtn;
 
     @FXML
     TableView equationsMTable;
@@ -42,24 +47,64 @@ public class MathEquationMTabController {
     @FXML TableColumn firstCol1, firstCheckCol1, ICol,ICheckCol, firstCol2, firstCheckCol2, IIICol, IIICheckCol,
             secondCol1, secondCheckCol1, IICol, IICheckCol, secondCol2, secondCheckCol2;
 
+    @FXML
+    ImageView equMLegendImage;
+
     @FXML protected void showTable() throws SQLException, ClassNotFoundException {
         equationsMTable.setVisible(true);
         if(emFromDBRadioBtn.isSelected()) {
             getDataFromDB();
+            initManualTxtFields(true);
+        }
+        if(emManualRadioBtn.isSelected()) {
+            initManualTxtFields(false);
         }
     }
 
+    private void initManualTxtFields(boolean b) {
+        firstComp1TxtField.setDisable(b);
+        firstOperationTxtField.setDisable(b);
+        firstComp2TxtField.setDisable(b);
+        equalsTxtField.setDisable(b);
+        secondComp1TxtField.setDisable(b);
+        secondOperationTxtField.setDisable(b);
+        secondComp2TxtField.setDisable(b);
+        addEquationMBtn.setDisable(b);
+    }
+
     @FXML protected void enableShowTableBtn() {
-        if(!emTxtField.getText().isEmpty() && emTxtField.getText().compareTo("0") != 0
-                && (emFromDBRadioBtn.isSelected() || emManualRadioBtn.isSelected())) {
+        if(((!emTxtField.getText().isEmpty() && emTxtField.getText().compareTo("0") != 0)
+                && (emFromDBRadioBtn.isSelected()) || emManualRadioBtn.isSelected())) {
             showTableBtn.setDisable(false);
         } else {
             showTableBtn.setDisable(true);
         }
     }
 
+    @FXML protected void addEquationM() {
+        if (txtFieldsAreEmpty()) {
+            ViewUtils.showErrorAlert("Uzupełnij wszystkie komponenty równiania!");
+        } else {
+            EquationMTable tempEquation;
+            tempEquation = new EquationMTable(firstComp1TxtField.getText(), firstOperationTxtField.getText(),
+                    firstComp2TxtField.getText(), equalsTxtField.getText(), secondComp1TxtField.getText(),
+                    secondOperationTxtField.getText(), secondComp2TxtField.getText(),
+                    false, false, false, false, false, false, false);
+            tableEquations.add(tempEquation);
+            equationsMTable.setItems(FXCollections.observableArrayList(tableEquations));
+        }
+    }
+
+    private boolean txtFieldsAreEmpty() {
+        return (firstComp1TxtField.getText().isEmpty() || firstComp2TxtField.getText().isEmpty() ||
+                firstOperationTxtField.getText().isEmpty() || equalsTxtField.getText().isEmpty() ||
+                secondComp1TxtField.getText().isEmpty() || secondComp2TxtField.getText().isEmpty() ||
+                secondOperationTxtField.getText().isEmpty());
+    }
+
     public void init() {
         equationsMTable.setPlaceholder(new Label("Brak elementów"));
+        equMLegendImage.setImage(new Image("/mathExamples/equationMLegend.png"));
 
         firstCol1.setCellValueFactory(new PropertyValueFactory<EquationMTable, String>("firstComp1"));
         firstCheckCol1.setCellValueFactory(new PropertyValueFactory<EquationMTable, Boolean>("firstCol1Checked"));
@@ -90,7 +135,6 @@ public class MathEquationMTabController {
         String range = newSheetMathController.getRangeString();
         List<EquationM> equations = EquationsMDAO.searchEquationsMWithAmount(Integer.parseInt(emTxtField.getText()), range);
         if(equations.size() != 0) {
-            List<EquationMTable> tableEquations = new ArrayList<>();
             EquationMTable tempEquation;
             for(int i = 0; i < equations.size(); i++) {
                 tempEquation = new EquationMTable(equations.get(i).getFirstComp1(), equations.get(i).getFirstOperation(),

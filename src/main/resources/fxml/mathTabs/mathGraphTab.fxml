@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -47,5 +48,43 @@
          </columns>
       </TableView>
       <Button fx:id="showTableBtn" disable="true" layoutX="188.0" layoutY="88.0" mnemonicParsing="false" onAction="#showTable" text="Wykonaj" />
+      <ImageView fx:id="graphLegendImage" fitHeight="135.0" fitWidth="221.0" layoutX="37.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="663.0" layoutY="40.0" text="1:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="667.0" layoutY="70.0" text="I:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="665.0" layoutY="100.0" text="2:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="665.0" layoutY="135.0" text="II:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="665.0" layoutY="167.0" text="3:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="663.0" layoutY="201.0" text="III:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstCompTxtField" layoutX="686.0" layoutY="38.0" prefHeight="25.0" prefWidth="39.0" />
+      <TextField fx:id="firstOperationTxtField" layoutX="686.0" layoutY="68.0" prefHeight="25.0" prefWidth="39.0" />
+      <TextField fx:id="secondCompTxtField" layoutX="686.0" layoutY="98.0" prefHeight="25.0" prefWidth="39.0" />
+      <TextField fx:id="secondOperationTxtField" layoutX="686.0" layoutY="133.0" prefHeight="25.0" prefWidth="39.0" />
+      <TextField fx:id="thirdCompTxtField" layoutX="686.0" layoutY="165.0" prefHeight="25.0" prefWidth="39.0" />
+      <TextField fx:id="thirdOperationTxtField" layoutX="686.0" layoutY="199.0" prefHeight="25.0" prefWidth="39.0" />
+      <Button fx:id="addGraphBtn" layoutX="748.0" layoutY="240.0" mnemonicParsing="false" onAction="#addGraph" text="Dodaj graf" />
    </children>
 </AnchorPane>

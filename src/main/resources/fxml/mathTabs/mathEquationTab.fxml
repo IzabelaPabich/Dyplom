@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -28,7 +29,7 @@
       </RadioButton>
       <Label layoutX="30.0" layoutY="145.0" text="Legenda:" />
       <Button fx:id="showTableBtn" disable="true" layoutX="188.0" layoutY="88.0" mnemonicParsing="false" onAction="#showTable" text="Wykonaj" />
-      <TableView fx:id="equationsTable" editable="true" layoutX="313.0" layoutY="23.0" prefHeight="260.0" prefWidth="299.0" visible="false">
+      <TableView fx:id="equationsTable" editable="true" layoutX="313.0" layoutY="23.0" prefHeight="260.0" prefWidth="299.0">
         <columns>
           <TableColumn fx:id="firstCol" prefWidth="30.0" text="1" />
           <TableColumn fx:id="firstCheckCol" prefWidth="28.0" />
@@ -45,5 +46,37 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
+      <ImageView fx:id="equLegendImage" fitHeight="93.0" fitWidth="200.0" layoutX="39.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="636.0" layoutY="26.0" text="1:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="638.0" layoutY="60.0" text="I:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="636.0" layoutY="90.0" text="2:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="636.0" layoutY="120.0" text="II:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="636.0" layoutY="152.0" text="3:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstCompTxtField" disable="true" layoutX="656.0" layoutY="24.0" prefHeight="25.0" prefWidth="48.0" />
+      <TextField fx:id="operationTxtField" disable="true" layoutX="656.0" layoutY="58.0" prefHeight="25.0" prefWidth="48.0" />
+      <TextField fx:id="secondCompTxtField" disable="true" layoutX="656.0" layoutY="88.0" prefHeight="25.0" prefWidth="48.0" />
+      <TextField fx:id="equalTxtField" disable="true" layoutX="656.0" layoutY="118.0" prefHeight="25.0" prefWidth="48.0" />
+      <TextField fx:id="resultTxtField" disable="true" layoutX="656.0" layoutY="150.0" prefHeight="25.0" prefWidth="48.0" />
+      <Button fx:id="addEquationBtn" disable="true" layoutX="717.0" layoutY="186.0" mnemonicParsing="false" onAction="#addEquation" text="Dodaj równanie" />
    </children>
 </AnchorPane>

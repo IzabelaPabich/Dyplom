@@ -80,9 +80,9 @@
                                         <Font size="14.0" />
                                     </font>
                                 </RadioButton>
-                                <Button fx:id="graphsOpExBtnequOpExBtn" layoutX="350.0" layoutY="63.0" mnemonicParsing="false" onAction="#showGraphsOpEx" text="Przykład" />
-                                <Button fx:id="equOpMExBtn" layoutX="350.0" layoutY="93.0" mnemonicParsing="false" onAction="#showGraphsOpMEx" text="Przykład" />
-                                <Button fx:id="graphsOpExBtn" layoutX="350.0" layoutY="123.0" mnemonicParsing="false" onAction="#showEquOpEx" text="Przykład" />
+                                <Button fx:id="graphsOpExBtnequOpExBtn" layoutX="350.0" layoutY="63.0" mnemonicParsing="false" onAction="#showGraphsOpEx" text="Przykład" visible="false" />
+                                <Button fx:id="equOpMExBtn" layoutX="350.0" layoutY="93.0" mnemonicParsing="false" onAction="#showGraphsOpMEx" text="Przykład" visible="false" />
+                                <Button fx:id="graphsOpExBtn" layoutX="350.0" layoutY="123.0" mnemonicParsing="false" onAction="#showEquOpEx" text="Przykład" visible="false" />
                                 <Button fx:id="graphsOpMExBtn" layoutX="350.0" layoutY="153.0" mnemonicParsing="false" onAction="#showEquOpMEx" text="Przykład" visible="false" />
                                 <Button fx:id="textTaskExBtn" layoutX="350.0" layoutY="183.0" mnemonicParsing="false" onAction="#showTextTaskEx" text="Przykład" visible="false" />
                                 <ImageView fx:id="exampleImView" fitHeight="183.0" fitWidth="311.0" layoutX="446.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" visible="false" />

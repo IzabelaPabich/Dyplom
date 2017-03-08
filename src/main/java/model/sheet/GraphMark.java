@@ -39,6 +39,15 @@ public class GraphMark {
     @XmlElement(namespace = "http://example.org/moja")
     protected String value;
 
+    public GraphMark() {
+
+    }
+
+    public GraphMark(String operation, String value) {
+        this.operation = operation;
+        this.value = value;
+    }
+
     /**
      * Gets the value of the operation property.
      * 

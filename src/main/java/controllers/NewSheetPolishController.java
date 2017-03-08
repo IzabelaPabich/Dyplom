@@ -122,7 +122,7 @@ public class NewSheetPolishController implements IController {
             if(fileTextArea.getText().isEmpty()) {
                 ViewUtils.showErrorAlert("Żaden plik z dyktandem nie został wczytany");
             } else {
-                if(!dictationFile.getPath().isEmpty()) {
+                if(dictationFile.getPath() != null) {
                     dictation.setFilepath(dictationFile.getPath());
                 }
                 if (!selectedLetters.isEmpty()) {

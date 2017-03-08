@@ -18,6 +18,7 @@ import javax.xml.transform.*;
 import javax.xml.transform.sax.SAXResult;
 import javax.xml.transform.stream.StreamSource;
 import java.io.*;
+import java.net.URL;
 
 /**
  * Created by Alebazi on 2016-12-17.
@@ -36,13 +37,13 @@ public class FileUtils {
         String xslFile = new String();
         switch(newSheet.getCategory()) {
             case "POLISH":
-                xslFile = "sheetPolishT.xsl";
+                xslFile = "/xslt/sheetPolishT.xsl";
                 break;
             case "ENGLISH":
-                xslFile = "sheetEnglishT.xsl";
+                xslFile = "/xslt/sheetEnglishT.xsl";
                 break;
             case "MATH":
-                xslFile = "sheetMathT.xsl";
+                xslFile = "/xslt/sheetMathT.xsl";
                 break;
         }
         createPDFFromXML("sheets" + File.separator + newSheet.getSheetName() + ".xml", xslFile,
@@ -52,7 +53,7 @@ public class FileUtils {
 
     public static void createPDFFromXML(String xml, String xsl, String pdf) throws IOException, SAXException, TransformerException, ConfigurationException {
 
-        File xsltFile = new File(xsl);
+        StreamSource xslSource = new StreamSource(FileUtils.class.getResourceAsStream(xsl));
         StreamSource xmlSource = new StreamSource(new File(xml));
         FopFactory fopFactory = FopFactory.newInstance(new File(".").toURI());
 
@@ -67,7 +68,7 @@ public class FileUtils {
             Fop fop = fopFactory1.newFop(MimeConstants.MIME_PDF, foUserAgent, out);
 
             TransformerFactory factory = TransformerFactory.newInstance();
-            Transformer transformer = factory.newTransformer(new StreamSource(xsltFile));
+            Transformer transformer = factory.newTransformer(xslSource);
             transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
 
             Result res = new SAXResult(fop.getDefaultHandler());

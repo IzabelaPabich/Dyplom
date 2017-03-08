@@ -33,6 +33,7 @@ public class EditSheetWindowController implements IController {
     private File newDictationFile;
     private Sheet currSheet = new Sheet();
     private String currSheetPath;
+    private MainWindowController mainWindowController;
 
     @FXML
     private TextField sheetNameTxtField, titleSheetTxtField, selectedTxtField, addWordTxtField, deleteWordTxtField,
@@ -109,6 +110,9 @@ public class EditSheetWindowController implements IController {
         FileUtils.createSheet(currSheet, sheetDirectory);
         ViewUtils.showInfoAlert("Zapisano zmiany w pliku: " + currSheet.getSheetName() + ".pdf w folderze:  " + sheetDirectory.toString());
         ((Stage) saveBtn.getScene().getWindow()).close();
+        mainWindowController.setSheetToOpen(new File(new String(currSheetPath + File.separator + currSheet.getSheetName() +".pdf")));
+        mainWindowController.setOpenNewSheetFlag(true);
+        mainWindowController.openExistingSheet();
     }
 
     @FXML protected void cancel(ActionEvent e) {
@@ -169,7 +173,7 @@ public class EditSheetWindowController implements IController {
     public void init(String name, Sheet sheet, Scene scene, String sheetPath, MainWindowController controller) throws SQLException, ClassNotFoundException {
         currSheet = sheet;
         currSheetPath = sheetPath;
-
+        mainWindowController = controller;
         sheetNameTxtField.setText(name);
         if(sheet.getTitle() != null) {
             titleSheetTxtField.setText(sheet.getTitle());

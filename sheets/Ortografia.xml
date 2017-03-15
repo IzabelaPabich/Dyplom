@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sheet xmlns="http://example.org/moja" category="POLISH" sheetName="Ortografia" ifDate="true" ifName="false" ifGrade="true">
+    <title>Nauka ortografii - dodatkowe zadania</title>
+    <letters>
+        <letter>rz</letter>
+        <letter>ż</letter>
+        <letter>u</letter>
+        <letter>ó</letter>
+    </letters>
+    <date>Data: ...................</date>
+    <addInfo>Uzupełnij brakujące rz / ż / u / ó w słowach</addInfo>
+    <polishWords numberOfWords="1">
+        <polishWord>
+            <letter>ó</letter>
+            <word>mr....wka</word>
+        </polishWord>
+    </polishWords>
+    <grade>Ocena: ...................</grade>
+</sheet>

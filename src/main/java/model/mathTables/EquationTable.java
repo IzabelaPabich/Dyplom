@@ -15,6 +15,10 @@ public class EquationTable extends Equation {
     private BooleanProperty IIColChecked;
     private BooleanProperty thirdColChecked;
 
+    public EquationTable() {
+
+    }
+
     public EquationTable(String firstComp, String operation, String secondComp, String equationMark, String result,
                          boolean firstColCheck, boolean IColCheck, boolean secondColCheck, boolean IIColCheck, boolean thirdColCheck) {
         this.firstComp = firstComp;

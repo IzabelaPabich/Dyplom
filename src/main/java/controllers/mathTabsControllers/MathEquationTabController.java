@@ -123,29 +123,10 @@ public class MathEquationTabController {
         List<Equation> finalEquations = new ArrayList<>();
 
         for (int i = 0; i < equationsTable.getItems().size(); i++) {
-            finalEquations.add(eraseFieldsFromEquation((EquationTable) equationsTable.getItems().get(i)));
+            finalEquations.add(SheetCommonUtils.eraseFieldsFromEquation((EquationTable) equationsTable.getItems().get(i)));
         }
 
         return finalEquations;
-    }
-
-    private Equation eraseFieldsFromEquation(EquationTable equationToErase) {
-        Equation eq = new Equation();
-        eq.setFirstComp(eraseComponent(equationToErase.getFirstColChecked(), equationToErase.getFirstComp()));
-        eq.setOperation(eraseComponent(equationToErase.getIColChecked(), equationToErase.getOperation()));
-        eq.setSecondComp(eraseComponent(equationToErase.getSecondColChecked(), equationToErase.getSecondComp()));
-        eq.setEquationMark(eraseComponent(equationToErase.getIIColChecked(), equationToErase.getEquationMark()));
-        eq.setResult(eraseComponent(equationToErase.getThirdColChecked(), equationToErase.getResult()));
-
-        return eq;
-    }
-
-    private String eraseComponent(boolean checkBoxValue, String component) {
-        if (checkBoxValue) {
-            return SheetCommonUtils.replaceMathComponentWithDots();
-        } else {
-            return component;
-        }
     }
 
     public List<EquationTable> getEquationsTable() {

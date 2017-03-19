@@ -29,7 +29,7 @@
          </children>
       </Pane>
    </bottom>
-   <center>
+   <right>
       <Pane prefHeight="404.0" prefWidth="915.0" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="32.0" layoutY="10.0" text="Nazwa arkusza: ">
@@ -142,7 +142,87 @@
             <RadioButton fx:id="engPolRadioBtn" layoutX="777.0" layoutY="252.0" mnemonicParsing="false" text="Ang-Pol" toggleGroup="$group" visible="false" />
             <Button fx:id="addEngBtn" layoutX="854.0" layoutY="275.0" mnemonicParsing="false" onAction="#addEng" text="Dodaj" visible="false" />
             <Button fx:id="deleteEngBtn" layoutX="765.0" layoutY="332.0" mnemonicParsing="false" onAction="#deleteEng" text="Usuń wybrane" visible="false" />
+            <Label fx:id="mathTasksLbl" layoutX="29.0" layoutY="190.0" text="Rodzaje ćwiczeń:" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="equationCheckBox" layoutX="39.0" layoutY="228.0" mnemonicParsing="false" text="Równania" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="equationMCheckBox" layoutX="39.0" layoutY="261.0" mnemonicParsing="false" text="Równiania z nierównościami" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="graphCheckBox" layoutX="39.0" layoutY="292.0" mnemonicParsing="false" text="Grafy" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <TableView fx:id="equationsTable" editable="true" layoutX="371.0" layoutY="13.0" prefHeight="95.0" prefWidth="299.0" visible="false">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn fx:id="firstColE" prefWidth="30.0" text="1" />
+                  <TableColumn fx:id="firstCheckColE" prefWidth="28.0" />
+                  <TableColumn fx:id="IColE" prefWidth="29.0" text="I" />
+                  <TableColumn fx:id="ICheckColE" prefWidth="27.0" />
+                  <TableColumn fx:id="secondColE" prefWidth="30.0" text="2" />
+                  <TableColumn fx:id="secondCheckColE" prefWidth="30.0" />
+                  <TableColumn fx:id="IIColE" prefWidth="31.0" text="II" />
+                  <TableColumn fx:id="IICheckColE" prefWidth="28.0" />
+                  <TableColumn fx:id="thirdColE" prefWidth="29.0" text="3" />
+                  <TableColumn fx:id="thirdCheckColE" prefWidth="25.0" />
+               </columns>
+            </TableView>
+            <TableView fx:id="equationsMTable" editable="true" layoutX="371.0" layoutY="118.0" prefHeight="112.0" prefWidth="424.0" visible="false">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn fx:id="firstCol1" prefWidth="33.0" text="1a" />
+                  <TableColumn fx:id="firstCheckCol1" prefWidth="23.0" />
+                  <TableColumn fx:id="ICol" prefWidth="61.0" text="I" />
+                  <TableColumn fx:id="ICheckCol" prefWidth="27.0" />
+                  <TableColumn fx:id="firstCol2" prefWidth="30.0" text="1b" />
+                  <TableColumn fx:id="firstCheckCol2" prefWidth="30.0" />
+                  <TableColumn fx:id="IIICol" prefWidth="31.0" text="III" />
+                  <TableColumn fx:id="IIICheckCol" prefWidth="28.0" />
+                  <TableColumn fx:id="secondCol1" prefWidth="29.0" text="2a" />
+                  <TableColumn fx:id="secondCheckCol1" prefWidth="25.0" />
+                  <TableColumn fx:id="IICol" prefWidth="75.0" text="II" />
+                  <TableColumn fx:id="IICheckCol" prefWidth="75.0" />
+                  <TableColumn fx:id="secondCol2" prefWidth="75.0" text="2b" />
+                  <TableColumn fx:id="secondCheckCol2" prefWidth="75.0" />
+               </columns>
+            </TableView>
+            <TableView fx:id="graphsTable" editable="true" layoutX="371.0" layoutY="244.0" prefHeight="105.0" prefWidth="333.0" visible="false">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn fx:id="firstColG" prefWidth="30.0" text="1" />
+                  <TableColumn fx:id="firstCheckColG" prefWidth="28.0" />
+                  <TableColumn fx:id="IColG" prefWidth="29.0" text="I" />
+                  <TableColumn fx:id="ICheckColG" prefWidth="27.0" />
+                  <TableColumn fx:id="secondColG" prefWidth="30.0" text="2" />
+                  <TableColumn fx:id="secondCheckColG" prefWidth="30.0" />
+                  <TableColumn fx:id="IIColG" prefWidth="31.0" text="II" />
+                  <TableColumn fx:id="IICheckColG" prefWidth="28.0" />
+                  <TableColumn fx:id="thirdColG" prefWidth="29.0" text="3" />
+                  <TableColumn fx:id="thirdCheckColG" prefWidth="25.0" />
+                  <TableColumn fx:id="IIIColG" prefWidth="75.0" text="III" />
+                  <TableColumn fx:id="IIICheckColG" prefWidth="75.0" />
+               </columns>
+            </TableView>
+            <Button fx:id="equEditBtn" layoutX="702.0" layoutY="81.0" mnemonicParsing="false" onAction="#editEquations" text="Edytuj" visible="false" />
+            <Button fx:id="equMEditBtn" layoutX="820.0" layoutY="205.0" mnemonicParsing="false" onAction="#editEquationsM" text="Edytuj" visible="false" />
+            <Button fx:id="graphEditBtn" layoutX="730.0" layoutY="325.0" mnemonicParsing="false" onAction="#editGraphs" text="Edytuj" visible="false" />
          </children>
       </Pane>
-   </center>
+   </right>
 </BorderPane>

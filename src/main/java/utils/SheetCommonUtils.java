@@ -7,6 +7,9 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import model.DAO.EnglishWordsDAO;
 import model.DAO.PolishWordsDAO;
+import model.mathTables.EquationMTable;
+import model.mathTables.EquationTable;
+import model.mathTables.GraphTable;
 import model.sheet.*;
 import org.apache.avalon.framework.configuration.ConfigurationException;
 import org.xml.sax.SAXException;
@@ -293,6 +296,61 @@ public class SheetCommonUtils {
         ViewUtils.showInfoAlert("Utworzono plik: " + sheet.getSheetName() + ".pdf w folderze:  " + directoryToSave.toString());
         SheetCommonUtils.setNewSheetOnMainWindow(mainController, directoryToSave, sheet.getSheetName());
         ((Stage) createButton.getScene().getWindow()).close();
+    }
+
+    public static Equation eraseFieldsFromEquation(EquationTable equationToErase) {
+        Equation eq = new Equation();
+        eq.setFirstComp(eraseComponent(equationToErase.getFirstColChecked(), equationToErase.getFirstComp()));
+        eq.setOperation(eraseComponent(equationToErase.getIColChecked(), equationToErase.getOperation()));
+        eq.setSecondComp(eraseComponent(equationToErase.getSecondColChecked(), equationToErase.getSecondComp()));
+        eq.setEquationMark(eraseComponent(equationToErase.getIIColChecked(), equationToErase.getEquationMark()));
+        eq.setResult(eraseComponent(equationToErase.getThirdColChecked(), equationToErase.getResult()));
+
+        return eq;
+    }
+
+    public static EquationM eraseFieldsFromEquationM(EquationMTable equationToErase) {
+        EquationM eq = new EquationM();
+        eq.setFirstComp1(eraseComponent(equationToErase.getFirstCol1Checked(), equationToErase.getFirstComp1()));
+        eq.setFirstOperation(eraseComponent(equationToErase.getIColChecked(), equationToErase.getFirstOperation()));
+        eq.setFirstComp2(eraseComponent(equationToErase.getFirstCol2Checked(), equationToErase.getFirstComp2()));
+        eq.setEquationMark(eraseComponent(equationToErase.getIIIColChecked(), equationToErase.getEquationMark()));
+        eq.setSecondComp1(eraseComponent(equationToErase.getSecondCol1Checked(), equationToErase.getSecondComp1()));
+        eq.setSecondOperation(eraseComponent(equationToErase.getIIColChecked(), equationToErase.getSecondOperation()));
+        eq.setSecondComp2(eraseComponent(equationToErase.getSecondCol2Checked(), equationToErase.getSecondComp2()));
+
+        return eq;
+    }
+
+    public static Graph eraseFieldsFromGraph(GraphTable graphToErase) {
+        Graph gr = new Graph();
+        gr.setFirstComp(eraseComponent(graphToErase.getFirstColChecked(), graphToErase.getFirstComp()));
+        gr.setOperation12(eraseGraphMark(graphToErase.getIColChecked(), graphToErase.getOperation12()));
+        gr.setSecondComp(eraseComponent(graphToErase.getSecondColChecked(), graphToErase.getSecondComp()));
+        gr.setOperation23(eraseGraphMark(graphToErase.getIIColChecked(), graphToErase.getOperation23()));
+        gr.setThirdComp(eraseComponent(graphToErase.getThirdColChecked(), graphToErase.getThirdComp()));
+        gr.setOperation31(eraseGraphMark(graphToErase.getIIIColChecked(), graphToErase.getOperation31()));
+
+        return gr;
+    }
+
+    private static GraphMark eraseGraphMark(boolean checkBoxValue, GraphMark graphMark) {
+        if(checkBoxValue) {
+            GraphMark tempMark = new GraphMark();
+            tempMark.setOperation(SheetCommonUtils.replaceMathComponentWithDots());
+            tempMark.setValue("");
+            return tempMark;
+        } else {
+            return graphMark;
+        }
+    }
+
+    private static String eraseComponent(boolean checkBoxValue, String component) {
+        if (checkBoxValue) {
+            return SheetCommonUtils.replaceMathComponentWithDots();
+        } else {
+            return component;
+        }
     }
 
 }

@@ -130,41 +130,10 @@ public class MathGraphTabController {
         List<Graph> finalEquations = new ArrayList<>();
 
         for(int i = 0; i < graphsTable.getItems().size(); i++) {
-            finalEquations.add(eraseFieldsFromEquation((GraphTable) graphsTable.getItems().get(i)));
+            finalEquations.add(SheetCommonUtils.eraseFieldsFromGraph((GraphTable) graphsTable.getItems().get(i)));
         }
 
         return finalEquations;
-    }
-
-    private Graph eraseFieldsFromEquation(GraphTable graphToErase) {
-        Graph gr = new Graph();
-        gr.setFirstComp(eraseComponent(graphToErase.getFirstColChecked(), graphToErase.getFirstComp()));
-        gr.setOperation12(eraseGraphMark(graphToErase.getIColChecked(), graphToErase.getOperation12()));
-        gr.setSecondComp(eraseComponent(graphToErase.getSecondColChecked(), graphToErase.getSecondComp()));
-        gr.setOperation23(eraseGraphMark(graphToErase.getIIColChecked(), graphToErase.getOperation23()));
-        gr.setThirdComp(eraseComponent(graphToErase.getThirdColChecked(), graphToErase.getThirdComp()));
-        gr.setOperation31(eraseGraphMark(graphToErase.getIIIColChecked(), graphToErase.getOperation31()));
-
-        return gr;
-    }
-
-    private GraphMark eraseGraphMark(boolean checkBoxValue, GraphMark graphMark) {
-        if(checkBoxValue) {
-            GraphMark tempMark = new GraphMark();
-            tempMark.setOperation(SheetCommonUtils.replaceMathComponentWithDots());
-            tempMark.setValue("");
-            return tempMark;
-        } else {
-            return graphMark;
-        }
-    }
-
-    private String eraseComponent(boolean checkBoxValue, String component) {
-        if(checkBoxValue) {
-            return SheetCommonUtils.replaceMathComponentWithDots();
-        } else {
-            return component;
-        }
     }
 
     public List<GraphTable> getGraphsTable() {

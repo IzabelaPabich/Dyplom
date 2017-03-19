@@ -6,9 +6,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.DAO.EnglishWordsDAO;
+import model.mathTables.EquationMTable;
+import model.mathTables.EquationTable;
+import model.mathTables.GraphTable;
 import model.sheet.*;
 import org.apache.avalon.framework.configuration.ConfigurationException;
 import org.xml.sax.SAXException;
@@ -39,20 +43,28 @@ public class EditSheetWindowController implements IController {
     private TextField sheetNameTxtField, titleSheetTxtField, selectedTxtField, addWordTxtField, deleteWordTxtField,
                       currFileTxField, polWordTxtField, engWordTxtField;
 
-    @FXML private CheckBox ifNameCheckbox, ifDateCheckbox, ifGradeCheckbox;
+    @FXML private CheckBox ifNameCheckbox, ifDateCheckbox, ifGradeCheckbox, equationCheckBox, equationMCheckBox,
+                graphCheckBox;
 
     @FXML private Label lettersLbl, categoriesLbl, selectedLbl, wordsLbl, withWordsLbl, addWordLbl, deleteWordLbl,
-                        dictationLbl, currFileLbl, addEngWordLbl, polLbl, engLbl, catLbl;
+                        dictationLbl, currFileLbl, addEngWordLbl, polLbl, engLbl, catLbl, mathTasksLbl;
 
     @FXML private ListView thingsList, wordsList;
 
-    @FXML private Button deleteBtn, addWordBtn, deleteWordBtn, saveBtn, cancelBtn, loadFileBtn, addEngBtn, deleteEngBtn;
+    @FXML private Button deleteBtn, addWordBtn, deleteWordBtn, saveBtn, cancelBtn, loadFileBtn, addEngBtn, deleteEngBtn,
+            equEditBtn, equMEditBtn, graphEditBtn;
 
     @FXML private TextArea dictationTxtArea;
 
-    @FXML private TableView wordsTable;
+    @FXML private TableView wordsTable, equationsTable, equationsMTable, graphsTable;
 
     @FXML private TableColumn polWordCol, engWordCol, catWordCol, engPolFlagCol, polEngFlagCol;
+    @FXML private TableColumn firstColE, firstCheckColE, IColE, ICheckColE, secondColE, secondCheckColE, IIColE,
+            IICheckColE, thirdColE, thirdCheckColE;
+    @FXML private TableColumn firstCol1, firstCheckCol1, ICol,ICheckCol, firstCol2, firstCheckCol2, IIICol, IIICheckCol,
+            secondCol1, secondCheckCol1, IICol, IICheckCol, secondCol2, secondCheckCol2;
+    @FXML private TableColumn firstColG, firstCheckColG, IColG, ICheckColG, secondColG, secondCheckColG, IIColG, IICheckColG,
+            thirdColG, thirdCheckColG, IIIColG, IIICheckColG;
 
     @FXML private ComboBox catCombobox;
 
@@ -102,7 +114,7 @@ public class EditSheetWindowController implements IController {
                     setChangedEnglishWords();
                 break;
             case "MATH":
-
+                    setChangedMathTasks();
                 break;
         }
 
@@ -169,6 +181,18 @@ public class EditSheetWindowController implements IController {
         selectedTxtField.setText("");
     }
 
+    @FXML protected void editEquations() {
+
+    }
+
+    @FXML protected void editEquationsM() {
+
+    }
+
+    @FXML protected void editGraphs() {
+
+    }
+
     @Override
     public void init(String name, Sheet sheet, Scene scene, String sheetPath, MainWindowController controller) throws SQLException, ClassNotFoundException {
         currSheet = sheet;
@@ -198,6 +222,9 @@ public class EditSheetWindowController implements IController {
             case "ENGLISH":
                 initEnglishWords(sheet);
                 break;
+            case "MATH":
+                initMathTables(sheet);
+                break;
         }
         wordsList.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if(wordsList.getSelectionModel().getSelectedItem() != null) {
@@ -210,7 +237,7 @@ public class EditSheetWindowController implements IController {
             }
         });
 
-        //table
+        //table -> English Sheet
         polWordCol.setCellValueFactory(new PropertyValueFactory<EngpolWord, String>("polWord"));
         engWordCol.setCellValueFactory(new PropertyValueFactory<EngpolWord, String>("engWord"));
         catWordCol.setCellValueFactory(new PropertyValueFactory<EngpolWord, String>("engCategory"));
@@ -219,6 +246,97 @@ public class EditSheetWindowController implements IController {
         polEngFlagCol.setStyle("-fx-alignment: CENTER;");
         engPolFlagCol.setCellValueFactory(new PropertyValueFactory<EngpolWord, String>("ifToPolish"));
         engPolFlagCol.setStyle("-fx-alignment: CENTER;");
+
+        //table -> Math Sheet Equations
+        equationsTable.setPlaceholder(new Label("Brak elementów"));
+
+        firstColE.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("firstComp"));
+        firstCheckColE.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("firstColChecked"));
+        firstCheckColE.setCellFactory(column -> new CheckBoxTableCell<>());
+        firstCheckColE.setEditable(false);
+        IColE.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("operation"));
+        ICheckColE.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("IColChecked"));
+        ICheckColE.setCellFactory(column -> new CheckBoxTableCell<>());
+        ICheckColE.setEditable(false);
+        secondColE.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("secondComp"));
+        secondCheckColE.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("secondColChecked"));
+        secondCheckColE.setCellFactory(column -> new CheckBoxTableCell<>());
+        secondCheckColE.setEditable(false);
+        IIColE.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("equationMark"));
+        IICheckColE.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("IIColChecked"));
+        IICheckColE.setCellFactory(column -> new CheckBoxTableCell<>());
+        IICheckColE.setEditable(false);
+        thirdColE.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("result"));
+        thirdCheckColE.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("thirdColChecked"));
+        thirdCheckColE.setCellFactory(column -> new CheckBoxTableCell<>());
+        thirdCheckColE.setEditable(false);
+
+        //table -> Math Sheet EquationsM
+        equationsMTable.setPlaceholder(new Label("Brak elementów"));
+
+        firstCol1.setCellValueFactory(new PropertyValueFactory<EquationMTable, String>("firstComp1"));
+        firstCheckCol1.setCellValueFactory(new PropertyValueFactory<EquationMTable, Boolean>("firstCol1Checked"));
+        firstCheckCol1.setCellFactory(column -> new CheckBoxTableCell<>());
+        firstCheckCol1.setEditable(false);
+        ICol.setCellValueFactory(new PropertyValueFactory<EquationMTable, String>("firstOperation"));
+        ICheckCol.setCellValueFactory(new PropertyValueFactory<EquationMTable, Boolean>("IColChecked"));
+        ICheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
+        ICheckCol.setEditable(false);
+        firstCol2.setCellValueFactory(new PropertyValueFactory<EquationMTable, String>("firstComp2"));
+        firstCheckCol2.setCellValueFactory(new PropertyValueFactory<EquationMTable, Boolean>("firstCol2Checked"));
+        firstCheckCol2.setCellFactory(column -> new CheckBoxTableCell<>());
+        firstCheckCol2.setEditable(false);
+
+        IIICol.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("equationMark"));
+        IIICheckCol.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("IIIColChecked"));
+        IIICheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
+        IIICheckCol.setEditable(false);
+
+        secondCol1.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("secondComp1"));
+        secondCheckCol1.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("secondCol1Checked"));
+        secondCheckCol1.setCellFactory(column -> new CheckBoxTableCell<>());
+        secondCheckCol1.setEditable(false);
+        IICol.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("secondOperation"));
+        IICheckCol.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("IIColChecked"));
+        IICheckCol.setCellFactory(column -> new CheckBoxTableCell<>());
+        IICheckCol.setEditable(false);
+        secondCol2.setCellValueFactory(new PropertyValueFactory<EquationTable, String>("secondComp2"));
+        secondCheckCol2.setCellValueFactory(new PropertyValueFactory<EquationTable, Boolean>("secondCol2Checked"));
+        secondCheckCol2.setCellFactory(column -> new CheckBoxTableCell<>());
+        secondCheckCol2.setEditable(false);
+
+        //table -> Math Sheet Graphs
+        graphsTable.setPlaceholder(new Label("Brak elementów"));
+
+        firstColG.setCellValueFactory(new PropertyValueFactory<GraphTable, String>("firstComp"));
+        firstCheckColG.setCellValueFactory(new PropertyValueFactory<GraphTable, Boolean>("firstColChecked"));
+        firstCheckColG.setCellFactory(column -> new CheckBoxTableCell<>());
+        firstCheckColG.setEditable(false);
+
+        IColG.setCellValueFactory(new PropertyValueFactory<GraphTable, String>("operation12String"));
+        ICheckColG.setCellValueFactory(new PropertyValueFactory<GraphTable, Boolean>("IColChecked"));
+        ICheckColG.setCellFactory(column -> new CheckBoxTableCell<>());
+        ICheckColG.setEditable(false);
+
+        secondColG.setCellValueFactory(new PropertyValueFactory<GraphTable, String>("secondComp"));
+        secondCheckColG.setCellValueFactory(new PropertyValueFactory<GraphTable, Boolean>("secondColChecked"));
+        secondCheckColG.setCellFactory(column -> new CheckBoxTableCell<>());
+        secondCheckCol2.setEditable(false);
+
+        IIColG.setCellValueFactory(new PropertyValueFactory<GraphTable, String>("operation23String"));
+        IICheckColG.setCellValueFactory(new PropertyValueFactory<GraphTable, Boolean>("IIColChecked"));
+        IICheckColG.setCellFactory(column -> new CheckBoxTableCell<>());
+        IICheckColG.setEditable(false);
+
+        thirdColG.setCellValueFactory(new PropertyValueFactory<GraphTable, String>("thirdComp"));
+        thirdCheckColG.setCellValueFactory(new PropertyValueFactory<GraphTable, Boolean>("thirdColChecked"));
+        thirdCheckColG.setCellFactory(column -> new CheckBoxTableCell<>());
+        thirdCheckColG.setEditable(false);
+
+        IIIColG.setCellValueFactory(new PropertyValueFactory<GraphTable, String>("operation31String"));
+        IIICheckColG.setCellValueFactory(new PropertyValueFactory<GraphTable, Boolean>("IIIColChecked"));
+        IIICheckColG.setCellFactory(column -> new CheckBoxTableCell<>());
+        IIICheckColG.setEditable(false);
     }
 
     private void setChangedDictation() {
@@ -247,7 +365,36 @@ public class EditSheetWindowController implements IController {
             ViewUtils.showErrorAlert("Lista słów jest pusta");
             return;
         }
+    }
 
+    private void setChangedMathTasks() {
+        if(!equationCheckBox.isSelected()) {
+            currSheet.getMathTasks().setEquation(null);
+        } else {
+            List<Equation> finalEquations = new ArrayList<>();
+            for (int i = 0; i < equationsTable.getItems().size(); i++) {
+                finalEquations.add(SheetCommonUtils.eraseFieldsFromEquation((EquationTable) equationsTable.getItems().get(i)));
+            }
+            currSheet.getMathTasks().setEquation(finalEquations);
+        }
+        if(!equationMCheckBox.isSelected()) {
+            currSheet.getMathTasks().setEquationM(null);
+        } else {
+            List<EquationM> finalEquationsM = new ArrayList<>();
+            for(int i = 0; i < equationsMTable.getItems().size(); i++) {
+                finalEquationsM.add(SheetCommonUtils.eraseFieldsFromEquationM((EquationMTable) equationsMTable.getItems().get(i)));
+            }
+            currSheet.getMathTasks().setEquationM(finalEquationsM);
+        }
+        if(!graphCheckBox.isSelected()) {
+            currSheet.getMathTasks().setGraph(null);
+        } else {
+            List<Graph> finalGraphs = new ArrayList<>();
+            for(int i = 0; i < graphsTable.getItems().size(); i++) {
+                finalGraphs.add(SheetCommonUtils.eraseFieldsFromGraph((GraphTable) graphsTable.getItems().get(i)));
+            }
+            currSheet.getMathTasks().setGraph(finalGraphs);
+        }
     }
 
     private void initEnglishWords(Sheet sheet) throws SQLException, ClassNotFoundException {
@@ -270,6 +417,129 @@ public class EditSheetWindowController implements IController {
         //todo - podmiana kropek na słowa
         wordsTable.setItems(replaceDotsWithWords(sheet));
         catCombobox.setItems(FXCollections.observableArrayList(sheet.getEngCategories().getEngCategory()));
+    }
+
+
+    private void initMathTables(Sheet sheet) {
+        mathTasksLbl.setVisible(true);
+        equEditBtn.setVisible(true);
+        equMEditBtn.setVisible(true);
+        graphEditBtn.setVisible(true);
+        equationCheckBox.setVisible(true);
+        if(sheet.getMathTasks().getEquation() != null) {
+            equationCheckBox.setSelected(true);
+            equEditBtn.setDisable(false);
+            List<Equation> equations = sheet.getMathTasks().getEquation();
+            List<EquationTable> equationsTemp = new ArrayList<>();
+            for(int i = 0; i < equations.size(); i++) {
+                EquationTable tempEquation = new EquationTable("","","","","",false,false,false,false,false);
+                tempEquation.setFirstComp(equations.get(i).getFirstComp());
+                if(equations.get(i).getFirstComp().compareTo("....") == 0) {
+                    tempEquation.setFirstColChecked(true);
+                }
+                tempEquation.setOperation(equations.get(i).getOperation());
+                if(equations.get(i).getOperation().compareTo("....") == 0) {
+                    tempEquation.setIColChecked(true);
+                }
+                tempEquation.setSecondComp(equations.get(i).getSecondComp());
+                if(equations.get(i).getSecondComp().compareTo("....") == 0) {
+                    tempEquation.setSecondColChecked(true);
+                }
+                tempEquation.setEquationMark(equations.get(i).getEquationMark());
+                if(equations.get(i).getEquationMark().compareTo("....") == 0) {
+                    tempEquation.setIIColChecked(true);
+                }
+                tempEquation.setResult(equations.get(i).getResult());
+                if(equations.get(i).getResult().compareTo("....") == 0) {
+                    tempEquation.setThirdColChecked(true);
+                }
+                equationsTemp.add(tempEquation);
+            }
+            equationsTable.setItems(FXCollections.observableArrayList(equationsTemp));
+        }
+        equationMCheckBox.setVisible(true);
+        if(sheet.getMathTasks().getEquationM() != null) {
+            equationMCheckBox.setSelected(true);
+            equMEditBtn.setDisable(false);
+            List<EquationM> equationsM = sheet.getMathTasks().getEquationM();
+            List<EquationMTable> equationsMTemp = new ArrayList<>();
+            for(int i = 0; i < equationsM.size(); i++) {
+                EquationMTable tempEquation = new EquationMTable("","","","","","","",false,false,false,false,false,false,false);
+                tempEquation.setFirstComp1(equationsM.get(i).getFirstComp1());
+                if(equationsM.get(i).getFirstComp1().compareTo("....") == 0) {
+                    tempEquation.setFirstCol1Checked(true);
+                }
+                tempEquation.setFirstOperation(equationsM.get(i).getFirstOperation());
+                if(equationsM.get(i).getFirstOperation().compareTo("....") == 0) {
+                    tempEquation.setIColChecked(true);
+                }
+                tempEquation.setFirstComp2(equationsM.get(i).getFirstComp2());
+                if(equationsM.get(i).getFirstComp2().compareTo("....") == 0) {
+                    tempEquation.setFirstCol2Checked(true);
+                }
+                tempEquation.setEquationMark(equationsM.get(i).getEquationMark());
+                if(equationsM.get(i).getEquationMark().compareTo("....") == 0) {
+                    tempEquation.setIIIColChecked(true);
+                }
+                tempEquation.setSecondComp1(equationsM.get(i).getSecondComp1());
+                if(equationsM.get(i).getSecondComp1().compareTo("....") == 0) {
+                    tempEquation.setSecondCol1Checked(true);
+                }
+                tempEquation.setSecondOperation(equationsM.get(i).getSecondOperation());
+                if(equationsM.get(i).getSecondOperation().compareTo("....") == 0) {
+                    tempEquation.setIIColChecked(true);
+                }
+                tempEquation.setSecondComp2(equationsM.get(i).getSecondComp2());
+                if(equationsM.get(i).getSecondComp2().compareTo("....") == 0) {
+                    tempEquation.setSecondCol2Checked(true);
+                }
+                equationsMTemp.add(tempEquation);
+            }
+            equationsMTable.setItems(FXCollections.observableArrayList(equationsMTemp));
+        }
+        graphCheckBox.setVisible(true);
+        if(sheet.getMathTasks().getGraph() != null) {
+            graphCheckBox.setSelected(true);
+            graphEditBtn.setDisable(false);
+            List<Graph> graphs = sheet.getMathTasks().getGraph();
+            List<GraphTable> graphsTemp = new ArrayList<>();
+            for(int i = 0; i < graphs.size(); i++) {
+                GraphTable tempGraph= new GraphTable("",new GraphMark(),"",new GraphMark(),"",new GraphMark(),
+                        false,false,false,false,false,false);
+                tempGraph.setFirstComp(graphs.get(i).getFirstComp());
+                if(graphs.get(i).getFirstComp().compareTo("....") == 0) {
+                    tempGraph.setFirstColChecked(true);
+                }
+                tempGraph.setOperation12(graphs.get(i).getOperation12());
+                tempGraph.setOperation12String(graphs.get(i).getOperation12().toString());
+                if(graphs.get(i).getOperation12().toString().compareTo("........") == 0) {
+                    tempGraph.setIColChecked(true);
+                }
+                tempGraph.setSecondComp(graphs.get(i).getSecondComp());
+                if(graphs.get(i).getSecondComp().compareTo("....") == 0) {
+                    tempGraph.setSecondColChecked(true);
+                }
+                tempGraph.setOperation23(graphs.get(i).getOperation23());
+                tempGraph.setOperation23String(graphs.get(i).getOperation23().toString());
+                if(graphs.get(i).getOperation23().toString().compareTo("........") == 0) {
+                    tempGraph.setIIColChecked(true);
+                }
+                tempGraph.setThirdComp(graphs.get(i).getThirdComp());
+                if(graphs.get(i).getThirdComp().compareTo("....") == 0) {
+                    tempGraph.setThirdColChecked(true);
+                }
+                tempGraph.setOperation31(graphs.get(i).getOperation31());
+                tempGraph.setOperation31String(graphs.get(i).getOperation31().toString());
+                if(graphs.get(i).getOperation31().toString().compareTo("........") == 0) {
+                    tempGraph.setIIIColChecked(true);
+                }
+                graphsTemp.add(tempGraph);
+            }
+            graphsTable.setItems(FXCollections.observableArrayList(graphsTemp));
+        }
+        equationsTable.setVisible(true);
+        equationsMTable.setVisible(true);
+        graphsTable.setVisible(true);
     }
 
     private ObservableList<EngpolWord> replaceDotsWithWords(Sheet sheet) throws SQLException, ClassNotFoundException {

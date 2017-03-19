@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fac089ce-78fd-491a-b0e9-4d64d1d888ee" name="Default" comment="update main view after editing sheet">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ortografia.pdf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/avalon-framework-api-4.3.1.jar" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/avalon-framework-impl-4.3.1.jar" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/batik-anim-1.7.jar" />
@@ -32,19 +31,15 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/xml-apis-1.3.04.jar" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/xml-apis-ext-1.3.04.jar" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/xmlgraphics-commons-1.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mathExamples/equationLegend.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mathExamples/equationMLegend.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mathExamples/graphLegend.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sheets/Ortografia.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/helpWindowTexts/create_sheet.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/helpWindowTexts/edit_sheet.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/helpWindowTexts/open_sheet.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/helpWindowTexts/program_info.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/helpWindowTexts/sheet_categories.txt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Matma.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sheets/Matma.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/EditSheetWindowController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/EditSheetWindowController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/HelpWindowController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/HelpWindowController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathEquationMTabController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathEquationMTabController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathEquationTabController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathEquationTabController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathGraphTabController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathGraphTabController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/mathTables/EquationTable.java" afterPath="$PROJECT_DIR$/src/main/java/model/mathTables/EquationTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/SheetCommonUtils.java" afterPath="$PROJECT_DIR$/src/main/java/utils/SheetCommonUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/editSheetWindow.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/editSheetWindow.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/helpWindow.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/helpWindow.fxml" />
     </list>
     <ignored path="Dyplom.iws" />
@@ -88,31 +83,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HelpWindowController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/HelpWindowController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/FileUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditSheetWindowController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EditSheetWindowController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1432">
-              <caret line="175" column="42" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="42" />
+            <state relative-caret-position="274">
+              <caret line="396" column="9" selection-start-line="396" selection-start-column="9" selection-end-line="396" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,12 +95,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewSheetFormController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetFormController.java">
+      <file leaf-file-name="MathGraphTabController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathGraphTabController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="45" selection-end-column="9" />
+            <state relative-caret-position="51">
+              <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="133" selection-end-column="9" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewSheetMathController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="109" column="76" selection-start-line="109" selection-start-column="76" selection-end-line="109" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SheetCommonUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/SheetCommonUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="70">
+              <caret line="324" column="17" selection-start-line="324" selection-start-column="17" selection-end-line="324" selection-end-column="17" />
+              <folding>
+                <element signature="e#11831#11832#0" expanded="true" />
+                <element signature="e#11864#11865#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,7 +161,6 @@
         <option value="$PROJECT_DIR$/src/main/java/model/sheet/EngpolWord.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/sheet/PolishWords.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/sheet/Equation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/mathTables/EquationTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/NewSheetEnglishController.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/mathTables/EquationMTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/DAOCommonUtils.java" />
@@ -173,7 +170,6 @@
         <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathEquationTabController.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/sheet/MathTasks.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/mathTables/GraphTable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/SheetCommonUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabs/MathGraphTabController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/MathEquationMTabController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/MathEquationTabController.java" />
@@ -188,20 +184,22 @@
         <option value="$PROJECT_DIR$/src/main/resources/properties" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/newSheetMath.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/DBUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/NewSheetPolishController.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/FileUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathEquationMTabController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathEquationTabController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathGraphTabController.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/sheet/GraphMark.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/DAO/GraphsDAO.java" />
         <option value="$PROJECT_DIR$/src/main/resources/propertiesHelpWindow" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/HelpWindowController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/mathTables/EquationTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathEquationTabController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathEquationMTabController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathGraphTabController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/SheetCommonUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java" />
       </list>
     </option>
   </component>
@@ -285,6 +283,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -436,7 +435,67 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fxml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dyplom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dyplom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fxml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mathTabs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dyplom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dyplom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -518,7 +577,89 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="sheet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dyplom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dyplom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mathTables" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dyplom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dyplom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="DAO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dyplom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dyplom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -580,7 +721,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -1140,7 +1280,8 @@
       <workItem from="1488625193582" duration="13629000" />
       <workItem from="1488989412366" duration="11199000" />
       <workItem from="1489527143270" duration="69000" />
-      <workItem from="1489599207310" duration="2930000" />
+      <workItem from="1489599207310" duration="3814000" />
+      <workItem from="1489918519065" duration="9111000" />
     </task>
     <task id="LOCAL-00001" summary="adding math sheet elements">
       <created>1485687379056</created>
@@ -1408,11 +1549,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488999386894</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="helpWindow and examples in math tabs">
+      <created>1489602204453</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1489602204453</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="360000000" />
+    <option name="totallyTimeSpent" value="369995000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1433,19 +1581,20 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46345514" sideWeight="0.5091603" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08549618" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24086379" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24584718" sideWeight="0.49694657" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.086259544" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23920266" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1910299" sideWeight="0.49694657" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43687707" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24580152" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18549618" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38538206" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3754153" sideWeight="0.4908397" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42524916" sideWeight="0.4908397" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1453,7 +1602,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38538206" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1468,7 +1616,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change xsd int -&gt; string (because of replacing with dots)" />
     <MESSAGE value="replacing components with dots in equations + common method for saving sheet" />
     <MESSAGE value="saving math equations in xml and pdf&#10;" />
     <MESSAGE value="equationsM added (tableview, dao select with amount, initialization in main math controller)" />
@@ -1493,14 +1640,15 @@
     <MESSAGE value="transformation from resource" />
     <MESSAGE value="update main view after editing sheet" />
     <MESSAGE value="own math rows" />
-    <option name="LAST_COMMIT_MESSAGE" value="own math rows" />
+    <MESSAGE value="helpWindow and examples in math tabs" />
+    <option name="LAST_COMMIT_MESSAGE" value="helpWindow and examples in math tabs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java</url>
-          <line>234</line>
+          <line>352</line>
           <properties />
           <option name="timeStamp" value="81" />
         </line-breakpoint>
@@ -1536,21 +1684,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/utils/SheetCommonUtils.java</url>
-          <line>249</line>
+          <line>252</line>
           <properties />
           <option name="timeStamp" value="131" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java</url>
-          <line>108</line>
+          <line>120</line>
           <properties />
           <option name="timeStamp" value="138" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java</url>
-          <line>74</line>
-          <properties />
-          <option name="timeStamp" value="139" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathEquationTabController.java</url>
@@ -1558,8 +1700,20 @@
           <properties />
           <option name="timeStamp" value="142" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java</url>
+          <line>252</line>
+          <properties />
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java</url>
+          <line>505</line>
+          <properties />
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="147" />
+      <option name="time" value="152" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1568,233 +1722,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://JAVA/model">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>model</OriginalElement>
-          <nodes>
-            <node x="228.6039886039885" y="170.0">model.sheet.PolishWords</node>
-            <node x="668.6039886039885" y="170.0">model.sheet.EngCategories</node>
-            <node x="450.6039886039885" y="170.0">model.mathTables.EquationTable</node>
-            <node x="711.1800213675212" y="80.0">model.sheet.Equation</node>
-            <node x="579.6039886039885" y="170.0">model.sheet.Letters</node>
-            <node x="909.6039886039885" y="170.0">model.mathTables.EquationMTable</node>
-            <node x="1045.4245014245014" y="80.0">model.sheet.Graph</node>
-            <node x="133.62499999999994" y="80.0">model.sheet.PolishWord</node>
-            <node x="452.49999999999994" y="0.0">model.sheet.GraphMark</node>
-            <node x="10.5" y="80.0">model.sheet.EngpolWord</node>
-            <node x="103.60398860398851" y="170.0">model.sheet.EngpolWords</node>
-            <node x="471.9789886039885" y="270.0">model.sheet.Sheet</node>
-            <node x="348.6039886039885" y="170.0">model.sheet.Dictation</node>
-            <node x="1071.1745014245014" y="170.0">model.mathTables.GraphTable</node>
-            <node x="906.0966880341879" y="80.0">model.sheet.EquationM</node>
-            <node x="340.71428571428567" y="88.2857142857143">model.sheet.FlagType</node>
-            <node x="449.4789886039885" y="390.0">model.sheet.ObjectFactory</node>
-            <node x="799.6039886039885" y="170.0">model.sheet.MathTasks</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="model.sheet.ObjectFactory" target="model.sheet.Dictation">
-              <point x="-8.307692307692264" y="-15.0" />
-              <point x="495.17129629629625" y="320.0" />
-              <point x="371.2289886039885" y="320.0" />
-              <point x="371.2289886039885" y="250.0" />
-              <point x="369.1039886039885" y="250.0" />
-              <point x="-20.5" y="15.0" />
-            </edge>
-            <edge source="model.sheet.ObjectFactory" target="model.sheet.EngpolWords">
-              <point x="-24.923076923076906" y="-15.0" />
-              <point x="478.5559116809116" y="340.0" />
-              <point x="129.8539886039885" y="340.0" />
-              <point x="-26.25" y="15.0" />
-            </edge>
-            <edge source="model.sheet.Graph" target="model.sheet.GraphMark">
-              <point x="0.0" y="-15.0" />
-              <point x="1078.4245014245014" y="55.0" />
-              <point x="522.25" y="55.0" />
-              <point x="23.25" y="15.0" />
-            </edge>
-            <edge source="model.mathTables.GraphTable" target="model.sheet.Graph">
-              <point x="0.0" y="-15.0" />
-              <point x="1118.1745014245014" y="150.0" />
-              <point x="1100.4245014245014" y="150.0" />
-              <point x="22.0" y="15.0" />
-            </edge>
-            <edge source="model.sheet.EngpolWords" target="model.sheet.EngpolWord">
-              <point x="0.0" y="-15.0" />
-              <point x="156.1039886039885" y="140.0" />
-              <point x="85.5" y="140.0" />
-              <point x="25.0" y="15.0" />
-            </edge>
-            <edge source="model.sheet.Sheet" target="model.sheet.EngpolWords">
-              <point x="-26.25" y="-15.0" />
-              <point x="477.2289886039885" y="240.0" />
-              <point x="182.3539886039885" y="240.0" />
-              <point x="26.25" y="15.0" />
-            </edge>
-            <edge source="model.mathTables.EquationMTable" target="model.sheet.EquationM">
-              <point x="0.0" y="-15.0" />
-              <point x="969.6039886039885" y="130.0" />
-              <point x="952.0966880341879" y="130.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="model.sheet.ObjectFactory" target="model.sheet.Sheet">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="model.sheet.Sheet" target="model.sheet.Letters">
-              <point x="5.25" y="-15.0" />
-              <point x="508.7289886039885" y="230.0" />
-              <point x="596.8539886039885" y="230.0" />
-              <point x="-17.25" y="15.0" />
-            </edge>
-            <edge source="model.sheet.ObjectFactory" target="model.sheet.EngpolWord">
-              <point x="-41.53846153846155" y="-15.0" />
-              <point x="461.94052706552696" y="360.0" />
-              <point x="24.846153846153754" y="360.0" />
-              <point x="24.846153846153754" y="150.0" />
-              <point x="35.5" y="150.0" />
-              <point x="-25.0" y="15.0" />
-            </edge>
-            <edge source="model.mathTables.EquationTable" target="model.sheet.Equation">
-              <point x="0.0" y="-15.0" />
-              <point x="505.1039886039885" y="150.0" />
-              <point x="724.6800213675212" y="150.0" />
-              <point x="-27.0" y="15.0" />
-            </edge>
-            <edge source="model.sheet.ObjectFactory" target="model.sheet.Graph">
-              <point x="49.84615384615381" y="-15.0" />
-              <point x="553.3251424501423" y="370.0" />
-              <point x="1060.6745014245014" y="370.0" />
-              <point x="1060.6745014245014" y="150.0" />
-              <point x="1078.4245014245014" y="150.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="model.sheet.PolishWords" target="model.sheet.PolishWord">
-              <point x="0.0" y="-15.0" />
-              <point x="278.6039886039885" y="150.0" />
-              <point x="204.87499999999994" y="150.0" />
-              <point x="23.75" y="15.0" />
-            </edge>
-            <edge source="model.sheet.Sheet" target="model.sheet.EngCategories">
-              <point x="15.75" y="-15.0" />
-              <point x="519.2289886039885" y="240.0" />
-              <point x="696.1039886039885" y="240.0" />
-              <point x="-27.5" y="15.0" />
-            </edge>
-            <edge source="model.sheet.Sheet" target="model.sheet.PolishWords">
-              <point x="-15.75" y="-15.0" />
-              <point x="487.7289886039885" y="230.0" />
-              <point x="303.6039886039885" y="230.0" />
-              <point x="25.0" y="15.0" />
-            </edge>
-            <edge source="model.sheet.ObjectFactory" target="model.sheet.GraphMark">
-              <point x="-49.84615384615381" y="-15.0" />
-              <point x="453.6328347578347" y="370.0" />
-              <point x="0.0" y="370.0" />
-              <point x="0.0" y="55.0" />
-              <point x="475.74999999999994" y="55.0" />
-              <point x="-23.25" y="15.0" />
-            </edge>
-            <edge source="model.sheet.MathTasks" target="model.sheet.Graph">
-              <point x="30.0" y="-15.0" />
-              <point x="874.6039886039885" y="140.0" />
-              <point x="1056.4245014245014" y="140.0" />
-              <point x="-22.0" y="15.0" />
-            </edge>
-            <edge source="model.sheet.Sheet" target="model.sheet.Dictation">
-              <point x="-5.25" y="-15.0" />
-              <point x="498.2289886039885" y="220.0" />
-              <point x="410.1039886039885" y="220.0" />
-              <point x="20.5" y="15.0" />
-            </edge>
-            <edge source="model.sheet.ObjectFactory" target="model.sheet.PolishWord">
-              <point x="-33.23076923076917" y="-15.0" />
-              <point x="470.24821937321934" y="350.0" />
-              <point x="93.10398860398851" y="350.0" />
-              <point x="93.10398860398851" y="150.0" />
-              <point x="157.37499999999994" y="150.0" />
-              <point x="-23.75" y="15.0" />
-            </edge>
-            <edge source="model.sheet.ObjectFactory" target="model.sheet.Equation">
-              <point x="24.923076923076906" y="-15.0" />
-              <point x="528.4020655270654" y="340.0" />
-              <point x="789.1039886039885" y="340.0" />
-              <point x="789.1039886039885" y="150.0" />
-              <point x="751.6800213675212" y="150.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="model.sheet.ObjectFactory" target="model.sheet.Letters">
-              <point x="8.307692307692264" y="-15.0" />
-              <point x="511.7866809116808" y="320.0" />
-              <point x="632.4789886039885" y="320.0" />
-              <point x="632.4789886039885" y="230.0" />
-              <point x="631.3539886039885" y="230.0" />
-              <point x="17.25" y="15.0" />
-            </edge>
-            <edge source="model.sheet.MathTasks" target="model.sheet.EquationM">
-              <point x="0.0" y="-15.0" />
-              <point x="844.6039886039885" y="130.0" />
-              <point x="921.4300213675212" y="130.0" />
-              <point x="-30.666666666666657" y="15.0" />
-            </edge>
-            <edge source="model.sheet.MathTasks" target="model.sheet.Equation">
-              <point x="-30.0" y="-15.0" />
-              <point x="814.6039886039885" y="140.0" />
-              <point x="778.6800213675212" y="140.0" />
-              <point x="27.0" y="15.0" />
-            </edge>
-            <edge source="model.sheet.ObjectFactory" target="model.sheet.EngCategories">
-              <point x="16.61538461538464" y="-15.0" />
-              <point x="520.0943732193732" y="330.0" />
-              <point x="751.1039886039885" y="330.0" />
-              <point x="27.5" y="15.0" />
-            </edge>
-            <edge source="model.sheet.ObjectFactory" target="model.sheet.PolishWords">
-              <point x="-16.61538461538464" y="-15.0" />
-              <point x="486.86360398860387" y="330.0" />
-              <point x="253.6039886039885" y="330.0" />
-              <point x="-25.0" y="15.0" />
-            </edge>
-            <edge source="model.sheet.ObjectFactory" target="model.sheet.MathTasks">
-              <point x="33.23076923076928" y="-15.0" />
-              <point x="536.7097578347577" y="350.0" />
-              <point x="867.1039886039885" y="350.0" />
-              <point x="22.5" y="15.0" />
-            </edge>
-            <edge source="model.sheet.Sheet" target="model.sheet.MathTasks">
-              <point x="26.25" y="-15.0" />
-              <point x="529.7289886039885" y="250.0" />
-              <point x="822.1039886039885" y="250.0" />
-              <point x="-22.5" y="15.0" />
-            </edge>
-            <edge source="model.sheet.ObjectFactory" target="model.sheet.EquationM">
-              <point x="41.53846153846155" y="-15.0" />
-              <point x="545.0174501424501" y="360.0" />
-              <point x="1043.0989138176637" y="360.0" />
-              <point x="1043.0989138176637" y="130.0" />
-              <point x="982.7633547008545" y="130.0" />
-              <point x="30.666666666666686" y="15.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.903035413153457" x="256.0" y="224.0" />
-          <SelectedNodes>
-            <node>model.sheet.FlagType</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/DAOCommonUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/sheet/PolishWord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1264">
@@ -1814,17 +1741,6 @@
         <state relative-caret-position="935">
           <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/editSheetWindow.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1105">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/newSheetFormPart1.fxml">
@@ -1967,13 +1883,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/sheet/Sheet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="400" column="0" selection-start-line="400" selection-start-column="0" selection-end-line="400" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/javafx-src.zip!/javafx/scene/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -1988,14 +1897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/mathTabs/mathEquationTab.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2007,25 +1908,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathEquationMTabController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/mathTables/GraphTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6">
           <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathGraphTabController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="115" column="39" selection-start-line="115" selection-start-column="39" selection-end-line="115" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2060,57 +1946,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/DAO/GraphsDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="46" column="80" selection-start-line="46" selection-start-column="80" selection-end-line="46" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/sheet/GraphMark.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathEquationTabController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="90" column="55" selection-start-line="90" selection-start-column="55" selection-end-line="90" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/propertiesHelpWindow">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/propertiesHelpWindow" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetFormController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="476">
           <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="45" selection-end-column="9" />
           <folding />
         </state>
@@ -2120,24 +1966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
           <caret line="280" column="36" selection-start-line="280" selection-start-column="36" selection-end-line="280" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1432">
-          <caret line="175" column="42" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/SheetCommonUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="248" column="37" selection-start-line="248" selection-start-column="36" selection-end-line="248" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -2154,25 +1982,140 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
           <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-          <folding>
-            <element signature="e#4380#4381#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/FileUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/HelpWindowController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
+        <state relative-caret-position="189">
           <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/sheet/Sheet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="328" column="0" selection-start-line="328" selection-start-column="0" selection-end-line="328" selection-end-column="0" />
+          <folding>
+            <element signature="e#8723#8724#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/editSheetWindow.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3459">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MainWindowController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="172" column="5" selection-start-line="172" selection-start-column="5" selection-end-line="172" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/mathTables/EquationTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding>
+            <element signature="e#2695#2696#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/sheet/GraphMark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/DAO/GraphsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="46" column="80" selection-start-line="46" selection-start-column="80" selection-end-line="46" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/sheet/Equation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1799">
+          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+          <folding>
+            <element signature="e#3989#3990#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/NewSheetMathController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="109" column="76" selection-start-line="109" selection-start-column="76" selection-end-line="109" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathEquationTabController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="121" column="36" selection-start-line="121" selection-start-column="36" selection-end-line="121" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathEquationMTabController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="154" column="9" selection-start-line="150" selection-start-column="8" selection-end-line="154" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/SheetCommonUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="324" column="17" selection-start-line="324" selection-start-column="17" selection-end-line="324" selection-end-column="17" />
+          <folding>
+            <element signature="e#11831#11832#0" expanded="true" />
+            <element signature="e#11864#11865#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/mathTabsControllers/MathGraphTabController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="133" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EditSheetWindowController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="396" column="9" selection-start-line="396" selection-start-column="9" selection-end-line="396" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -151,31 +151,10 @@ public class MathEquationMTabController {
         List<EquationM> finalEquations = new ArrayList<>();
 
         for(int i = 0; i < equationsMTable.getItems().size(); i++) {
-            finalEquations.add(eraseFieldsFromEquation((EquationMTable) equationsMTable.getItems().get(i)));
+            finalEquations.add(SheetCommonUtils.eraseFieldsFromEquationM((EquationMTable) equationsMTable.getItems().get(i)));
         }
 
         return finalEquations;
-    }
-
-    private EquationM eraseFieldsFromEquation(EquationMTable equationToErase) {
-        EquationM eq = new EquationM();
-        eq.setFirstComp1(eraseComponent(equationToErase.getFirstCol1Checked(), equationToErase.getFirstComp1()));
-        eq.setFirstOperation(eraseComponent(equationToErase.getIColChecked(), equationToErase.getFirstOperation()));
-        eq.setFirstComp2(eraseComponent(equationToErase.getFirstCol2Checked(), equationToErase.getFirstComp2()));
-        eq.setEquationMark(eraseComponent(equationToErase.getIIIColChecked(), equationToErase.getEquationMark()));
-        eq.setSecondComp1(eraseComponent(equationToErase.getSecondCol1Checked(), equationToErase.getSecondComp1()));
-        eq.setSecondOperation(eraseComponent(equationToErase.getIIColChecked(), equationToErase.getSecondOperation()));
-        eq.setSecondComp2(eraseComponent(equationToErase.getSecondCol2Checked(), equationToErase.getSecondComp2()));
-
-        return eq;
-    }
-
-    private String eraseComponent(boolean checkBoxValue, String component) {
-        if(checkBoxValue) {
-            return SheetCommonUtils.replaceMathComponentWithDots();
-        } else {
-            return component;
-        }
     }
 
     public void setMainController(NewSheetMathController controller) {

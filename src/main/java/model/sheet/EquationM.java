@@ -229,4 +229,29 @@ public class EquationM {
         this.secondComp2 = value;
     }
 
+    public String toString() {
+        return firstComp1 + " " + firstOperation + " " + firstComp2 + " " + equationMark + " " + secondComp1 +
+                " " + secondOperation + " " + secondComp2;
+    }
+
+    @Override
+    public boolean equals(Object v) {
+        boolean retVal = false;
+
+        if(v instanceof EquationM) {
+            EquationM toCheck = (EquationM) v;
+            if(this.getFirstComp1().compareTo(toCheck.getFirstComp1()) == 0
+                && this.getFirstOperation().compareTo(toCheck.getFirstOperation()) == 0
+                && this.getFirstComp2().compareTo(toCheck.getFirstComp2()) == 0
+                && this.getEquationMark().compareTo(toCheck.getEquationMark()) == 0
+                && this.getSecondComp1().compareTo(toCheck.getSecondComp1()) == 0
+                && this.getSecondOperation().compareTo(toCheck.getSecondOperation()) == 0
+                && this.getSecondComp2().compareTo(toCheck.getSecondComp2()) == 0){
+                retVal = true;
+            }
+        }
+
+        return retVal;
+    }
+
 }

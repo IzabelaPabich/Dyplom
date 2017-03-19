@@ -147,17 +147,17 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <CheckBox fx:id="equationCheckBox" layoutX="39.0" layoutY="228.0" mnemonicParsing="false" text="Równania" visible="false">
+            <CheckBox fx:id="equationCheckBox" disable="true" layoutX="39.0" layoutY="228.0" mnemonicParsing="false" text="Równania" visible="false">
                <font>
                   <Font size="14.0" />
                </font>
             </CheckBox>
-            <CheckBox fx:id="equationMCheckBox" layoutX="39.0" layoutY="261.0" mnemonicParsing="false" text="Równiania z nierównościami" visible="false">
+            <CheckBox fx:id="equationMCheckBox" disable="true" layoutX="39.0" layoutY="261.0" mnemonicParsing="false" text="Równiania z nierównościami" visible="false">
                <font>
                   <Font size="14.0" />
                </font>
             </CheckBox>
-            <CheckBox fx:id="graphCheckBox" layoutX="39.0" layoutY="292.0" mnemonicParsing="false" text="Grafy" visible="false">
+            <CheckBox fx:id="graphCheckBox" disable="true" layoutX="39.0" layoutY="292.0" mnemonicParsing="false" text="Grafy" visible="false">
                <font>
                   <Font size="14.0" />
                </font>
@@ -219,9 +219,9 @@
                   <TableColumn fx:id="IIICheckColG" prefWidth="75.0" />
                </columns>
             </TableView>
-            <Button fx:id="equEditBtn" layoutX="702.0" layoutY="81.0" mnemonicParsing="false" onAction="#editEquations" text="Edytuj" visible="false" />
-            <Button fx:id="equMEditBtn" layoutX="820.0" layoutY="205.0" mnemonicParsing="false" onAction="#editEquationsM" text="Edytuj" visible="false" />
-            <Button fx:id="graphEditBtn" layoutX="730.0" layoutY="325.0" mnemonicParsing="false" onAction="#editGraphs" text="Edytuj" visible="false" />
+            <Button fx:id="equEditBtn" disable="true" layoutX="702.0" layoutY="81.0" mnemonicParsing="false" onAction="#editEquations" text="Edytuj" visible="false" />
+            <Button fx:id="equMEditBtn" disable="true" layoutX="820.0" layoutY="205.0" mnemonicParsing="false" onAction="#editEquationsM" text="Edytuj" visible="false" />
+            <Button fx:id="graphEditBtn" disable="true" layoutX="730.0" layoutY="325.0" mnemonicParsing="false" onAction="#editGraphs" text="Edytuj" visible="false" />
          </children>
       </Pane>
    </right>

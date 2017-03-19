@@ -7,13 +7,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import model.DAO.CategoriesDAO;
-import model.DAO.EnglishWordsDAO;
-import model.DAO.LettersDAO;
-import model.DAO.PolishWordsDAO;
-import model.sheet.EngpolWord;
-import model.sheet.PolishWord;
-import model.sheet.Sheet;
+import model.DAO.*;
+import model.mathTables.EquationMTable;
+import model.mathTables.EquationTable;
+import model.mathTables.GraphTable;
+import model.sheet.*;
 import utils.ViewUtils;
 
 import java.sql.SQLException;
@@ -29,6 +27,9 @@ public class DBWindowController implements IController {
     private List<String> letters;
     private List<PolishWord> polishWords;
     private List<EngpolWord> englishWords;
+    private List<Equation> equations;
+    private List<EquationM> equationsM;
+    private List<Graph> graphs;
 
     @FXML
     Tab polTab, engTab, catTab, mathTab;
@@ -38,18 +39,26 @@ public class DBWindowController implements IController {
 
     @FXML
     Button closeBtn, deletePolWordBtn, addPolWordBtn, deleteEngWordBtn, addEngWordBtn, deleteCatBtn, addCatBtn,
-            deleteLetterBtn, addLetterBtn;
+            deleteLetterBtn, addLetterBtn, deleteEquationBtn, deleteEquationMBtn, deleteGraphBtn,
+            addEquationBtn, addEquationMBtn, addGraphBtn;
 
     @FXML
     TextField selectedPolWordTxtField, selectedWordLetterTxtField, addPolWordTxtField, selectedOnPolTxtField, selectedOnEngTxtField,
             selectedCatTxtField, addOnPolTxtField, addOnEngTxtField, selectedCategoryTxtField, addCategoryTxtField, selectedLetterTxtField,
             addLetterTxtField;
+    @FXML TextField firstCompTxtField, operationTxtField, secondCompTxtField, resultTxtField, equalTxtField;
+    @FXML TextField firstComp1TxtField, firstOperationTxtField, firstComp2TxtField, equalsTxtField, secondComp1TxtField,
+        secondOperationTxtField, secondComp2TxtField;
+    @FXML TextField firstCompTxtFieldG, firstOperationTxtFieldG, secondCompTxtFieldG, secondOperationTxtFieldG,
+            thirdCompTxtFieldG, thirdOperationTxtFieldG;
 
     @FXML
-    TableView polWordsTable, engWordsTable;
+    TableView polWordsTable, engWordsTable, equationTable, equationMTable, graphTable;
 
     @FXML
-    TableColumn polWordCol, letterCol, onPolCol, onEngCol, catCol;
+    TableColumn polWordCol, letterCol, onPolCol, onEngCol, catCol, firstCompE, operationE, secondCompE, equationMarkE, resultE,
+    firstComp1, firstOperation, firstComp2, equationMark, secondComp1, secondOperation, secondComp2,
+    firstCompG, operation12, secondCompG, operation23, thirdCompG, operation31;
 
     @FXML
     ComboBox lettersCombobox, addCatCombobox;
@@ -169,42 +178,101 @@ public class DBWindowController implements IController {
         selectedLetterTxtField.setText("");
     }
 
-    @FXML
-    protected void initEngWords(ActionEvent e) {
-        engWordsTable.setItems(FXCollections.observableArrayList(englishWords));
+    @FXML protected void addEquation() {
+        Equation newEquation = new Equation();
+        newEquation.setFirstComp(firstCompTxtField.getText());
+        newEquation.setOperation(operationTxtField.getText());
+        newEquation.setSecondComp(secondCompTxtField.getText());
+        newEquation.setEquationMark(equalTxtField.getText());
+        newEquation.setResult(resultTxtField.getText());
+        if(!equationTable.getItems().contains(newEquation)) {
+            EquationsDAO.insertEquation(newEquation);
+            ViewUtils.showInfoAlert("Równanie " + newEquation.toString() +  " zostało dodane do bazy");
+            equationTable.getItems().add(newEquation);
+        } else {
+            ViewUtils.showInfoAlert("Równianie " + newEquation.toString() + " już istnieje w bazie");
+        }
     }
 
-    @FXML
-    protected void initCategories(ActionEvent e) {
-        categoriesListV.setItems(FXCollections.observableArrayList(categories));
+    @FXML protected void deleteEquation() {
+        EquationsDAO.deleteEquation((Equation) equationTable.getSelectionModel().getSelectedItem());
+        ViewUtils.showInfoAlert("Równianie " + equationTable.getSelectionModel().getSelectedItem().toString() +
+        " zostało usunięte z bazy");
+        equationTable.getItems().remove(equationTable.getSelectionModel().getSelectedItem());
     }
 
-    @FXML
-    protected void initLetters(ActionEvent e) {
-        lettersListV.setItems(FXCollections.observableArrayList(letters));
+    @FXML protected void addEquationM() {
+        EquationM newEquation = new EquationM();
+        newEquation.setFirstComp1(firstComp1TxtField.getText());
+        newEquation.setFirstOperation(firstOperationTxtField.getText());
+        newEquation.setFirstComp2(firstComp2TxtField.getText());
+        newEquation.setEquationMark(equalsTxtField.getText());
+        newEquation.setSecondComp1(secondComp1TxtField.getText());
+        newEquation.setSecondOperation(secondOperationTxtField.getText());
+        newEquation.setSecondComp2(secondComp2TxtField.getText());
+        if(!equationMTable.getItems().contains(newEquation)) {
+            EquationsMDAO.insertEquationM(newEquation);
+            ViewUtils.showInfoAlert("Równanie " + newEquation.toString() +  " zostało dodane do bazy");
+            equationMTable.getItems().add(newEquation);
+        } else {
+            ViewUtils.showInfoAlert("Równianie " + newEquation.toString() + " już istnieje w bazie");
+        }
     }
 
-    @FXML
-    protected void initPolWords(ActionEvent e) {
-        polWordsTable.setItems(FXCollections.observableArrayList(polishWords));
+    @FXML protected void deleteEquationM() {
+        EquationsMDAO.deleteEquationM((EquationM) equationMTable.getSelectionModel().getSelectedItem());
+        ViewUtils.showInfoAlert("Równianie " + equationMTable.getSelectionModel().getSelectedItem().toString() +
+                " zostało usunięte z bazy");
+        equationMTable.getItems().remove(equationMTable.getSelectionModel().getSelectedItem());
     }
+
+    @FXML protected void addGraph() {
+        Graph newGraph = new Graph();
+        newGraph.setFirstComp(firstCompTxtFieldG.getText());
+        newGraph.setOperation12(new GraphMark(firstOperationTxtFieldG.getText().substring(0, 1),
+                firstOperationTxtFieldG.getText().substring(1)));
+        newGraph.setSecondComp(secondCompTxtFieldG.getText());
+        newGraph.setOperation23(new GraphMark(secondOperationTxtFieldG.getText().substring(0, 1),
+                secondOperationTxtFieldG.getText().substring(1)));
+        newGraph.setThirdComp(thirdCompTxtFieldG.getText());
+        newGraph.setOperation31(new GraphMark(thirdOperationTxtFieldG.getText().substring(0, 1),
+                thirdOperationTxtFieldG.getText().substring(1)));
+        if(!graphTable.getItems().contains(newGraph)) {
+            GraphsDAO.insertGraph(newGraph);
+            ViewUtils.showInfoAlert("Graf został dodany do bazy");
+            graphTable.getItems().add(newGraph);
+        } else {
+            ViewUtils.showInfoAlert("Graf już istnieje w bazie");
+        }
+    }
+
+    @FXML protected void deleteGraph() {
+        GraphsDAO.deleteGraph((Graph) graphTable.getSelectionModel().getSelectedItem());
+        ViewUtils.showInfoAlert("Graf został usunięty z bazy");
+        graphTable.getItems().remove(graphTable.getSelectionModel().getSelectedItem());
+    }
+
 
     @Override
     public void init(String name, Sheet sheet, Scene scene, String sheetPath, MainWindowController mainWindowController)
             throws SQLException, ClassNotFoundException {
-        configureTableColums();
+        configureTableColumns();
         setListeners();
-        //todo-pobranie wszystkiego z bazy
         polishWords = PolishWordsDAO.getAllPolishWords();
         englishWords = EnglishWordsDAO.getAllEnglishWords();
         letters = LettersDAO.searchLetters();
         categories = CategoriesDAO.searchCategories();
-        List<String> ewe = new ArrayList<>();
+        equations = EquationsDAO.getAllEquations();
+        equationsM = EquationsMDAO.getAllEquationsM();
+        graphs = GraphsDAO.getAllGraphs();
 
         polWordsTable.setItems(FXCollections.observableArrayList(polishWords));
         engWordsTable.setItems(FXCollections.observableArrayList(englishWords));
         categoriesListV.setItems(FXCollections.observableArrayList(categories));
         lettersListV.setItems(FXCollections.observableArrayList(letters));
+        equationTable.setItems(FXCollections.observableArrayList(equations));
+        equationMTable.setItems(FXCollections.observableArrayList(equationsM));
+        graphTable.setItems(FXCollections.observableArrayList(graphs));
 
 
         if (polWordsTable.getSelectionModel().getSelectedItems().isEmpty()) {
@@ -246,7 +314,7 @@ public class DBWindowController implements IController {
         });
     }
 
-    private void configureTableColums() {
+    private void configureTableColumns() {
         //table english
         onPolCol.setCellValueFactory(new PropertyValueFactory<EngpolWord, String>("polWord"));
         onEngCol.setCellValueFactory(new PropertyValueFactory<EngpolWord, String>("engWord"));
@@ -256,5 +324,29 @@ public class DBWindowController implements IController {
         //table polish
         polWordCol.setCellValueFactory(new PropertyValueFactory<PolishWord, String>("word"));
         letterCol.setCellValueFactory(new PropertyValueFactory<PolishWord, String>("letter"));
+
+        //equations
+        firstCompE.setCellValueFactory(new PropertyValueFactory<Equation, String>("firstComp"));
+        operationE.setCellValueFactory(new PropertyValueFactory<Equation, String>("operation"));
+        secondCompE.setCellValueFactory(new PropertyValueFactory<Equation, String>("secondComp"));
+        equationMarkE.setCellValueFactory(new PropertyValueFactory<Equation, String>("equationMark"));
+        resultE.setCellValueFactory(new PropertyValueFactory<Equation, String>("result"));
+
+        //equationsM
+        firstComp1.setCellValueFactory(new PropertyValueFactory<EquationM, String>("firstComp1"));
+        firstOperation.setCellValueFactory(new PropertyValueFactory<EquationM, String>("firstOperation"));
+        firstComp2.setCellValueFactory(new PropertyValueFactory<EquationM, String>("firstComp2"));
+        equationMark.setCellValueFactory(new PropertyValueFactory<EquationM, String>("equationMark"));
+        secondComp1.setCellValueFactory(new PropertyValueFactory<EquationM, String>("secondComp1"));
+        secondOperation.setCellValueFactory(new PropertyValueFactory<EquationM, String>("secondOperation"));
+        secondComp2.setCellValueFactory(new PropertyValueFactory<EquationM, String>("secondComp2"));
+
+        //graphs
+        firstCompG.setCellValueFactory(new PropertyValueFactory<Graph, String>("firstComp"));
+        operation12.setCellValueFactory(new PropertyValueFactory<Graph, String>("operation12String"));
+        secondCompG.setCellValueFactory(new PropertyValueFactory<Graph, String>("secondComp"));
+        operation23.setCellValueFactory(new PropertyValueFactory<Graph, String>("operation23String"));
+        thirdCompG.setCellValueFactory(new PropertyValueFactory<Graph, String>("thirdComp"));
+        operation31.setCellValueFactory(new PropertyValueFactory<Graph, String>("operation31String"));
     }
 }

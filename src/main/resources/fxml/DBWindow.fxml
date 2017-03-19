@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DBWindowController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DBWindowController">
    <center>
-      <TabPane fx:id="DBTabPane" prefHeight="380.0" prefWidth="680.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+      <TabPane fx:id="DBTabPane" prefHeight="380.0" prefWidth="708.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
           <Tab fx:id="polTab" closable="false" text="Polskie słówka">
             <content>
@@ -137,6 +138,194 @@
                         <TextField fx:id="addLetterTxtField" layoutX="229.0" layoutY="163.0" prefHeight="25.0" prefWidth="79.0" />
                         <Button fx:id="deleteLetterBtn" layoutX="326.0" layoutY="80.0" mnemonicParsing="false" onAction="#deleteLetter" text="Usuń z bazy" />
                         <Button fx:id="addLetterBtn" layoutX="326.0" layoutY="163.0" mnemonicParsing="false" onAction="#addLetter" text="Dodaj do bazy" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Równania">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="28.0" layoutY="24.0" text="Wszystkie równania w bazie">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="equationTable" layoutX="28.0" layoutY="57.0" prefHeight="280.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="firstCompE" prefWidth="39.0" text="1" />
+                            <TableColumn fx:id="operationE" prefWidth="41.0" text="I" />
+                              <TableColumn fx:id="secondCompE" prefWidth="39.0" text="2" />
+                              <TableColumn fx:id="equationMarkE" prefWidth="36.0" text="II" />
+                              <TableColumn fx:id="resultE" prefWidth="44.0" text="3" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="deleteEquationBtn" layoutX="266.0" layoutY="73.0" mnemonicParsing="false" onAction="#deleteEquation" text="Usuń wybrane (podświetlone) z bazy" />
+                        <Label layoutX="266.0" layoutY="133.0" text="Dodaj nowe:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="addEquationBtn" layoutX="407.0" layoutY="292.0" mnemonicParsing="false" onAction="#addEquation" text="Dodaj równanie" />
+                        <TextField fx:id="resultTxtField" layoutX="335.0" layoutY="292.0" prefHeight="25.0" prefWidth="48.0" />
+                        <TextField fx:id="equalTxtField" layoutX="335.0" layoutY="257.0" prefHeight="25.0" prefWidth="48.0" />
+                        <TextField fx:id="secondCompTxtField" layoutX="335.0" layoutY="226.0" prefHeight="25.0" prefWidth="48.0" />
+                        <TextField fx:id="operationTxtField" layoutX="335.0" layoutY="195.0" prefHeight="25.0" prefWidth="48.0" />
+                        <TextField fx:id="firstCompTxtField" layoutX="335.0" layoutY="163.0" prefHeight="25.0" prefWidth="48.0" />
+                        <Label layoutX="300.0" layoutY="294.0" text="3:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="300.0" layoutY="259.0" text="II:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="300.0" layoutY="228.0" text="2:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="302.0" layoutY="197.0" text="I:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="300.0" layoutY="166.0" text="1:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Równania z nierównością">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="equationMTable" layoutX="28.0" layoutY="68.0" prefHeight="268.0" prefWidth="302.0">
+                          <columns>
+                            <TableColumn fx:id="firstComp1" prefWidth="46.0" text="1a" />
+                            <TableColumn fx:id="firstOperation" prefWidth="39.0" text="I" />
+                              <TableColumn fx:id="firstComp2" prefWidth="41.0" text="1b" />
+                              <TableColumn fx:id="equationMark" prefWidth="44.0" text="III" />
+                              <TableColumn fx:id="secondComp1" prefWidth="43.0" text="2a" />
+                              <TableColumn fx:id="secondOperation" prefWidth="45.0" text="II" />
+                              <TableColumn fx:id="secondComp2" prefWidth="43.0" text="2b" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="28.0" layoutY="36.0" text="Wszystkie równania z nierównościami w bazie">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="deleteEquationMBtn" layoutX="352.0" layoutY="68.0" mnemonicParsing="false" onAction="#deleteEquationM" text="Usuń wybrane (podświetlone) z bazy" />
+                        <Label layoutX="357.0" layoutY="273.0" text="II:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="353.0" layoutY="300.0" text="2b:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="secondComp2TxtField" layoutX="391.0" layoutY="297.0" prefHeight="25.0" prefWidth="50.0" />
+                        <TextField fx:id="equalsTxtField" layoutX="391.0" layoutY="204.0" prefHeight="25.0" prefWidth="50.0" />
+                        <Label layoutX="356.0" layoutY="113.0" prefHeight="17.0" prefWidth="18.0" text="1a:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="firstOperationTxtField" layoutX="391.0" layoutY="145.0" prefHeight="25.0" prefWidth="50.0" />
+                        <Label layoutX="356.0" layoutY="240.0" text="2a:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="addEquationMBtn" layoutX="462.0" layoutY="297.0" mnemonicParsing="false" onAction="#addEquationM" text="Dodaj równanie" />
+                        <Label layoutX="352.0" layoutY="175.0" text="1b:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="firstComp1TxtField" layoutX="391.0" layoutY="110.0" prefHeight="25.0" prefWidth="50.0" />
+                        <Label layoutX="354.0" layoutY="206.0" text="III:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="secondOperationTxtField" layoutX="391.0" layoutY="270.0" prefHeight="25.0" prefWidth="50.0" />
+                        <Label layoutX="358.0" layoutY="147.0" text="I:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="secondComp1TxtField" layoutX="391.0" layoutY="237.0" prefHeight="25.0" prefWidth="50.0" />
+                        <TextField fx:id="firstComp2TxtField" layoutX="391.0" layoutY="173.0" prefHeight="25.0" prefWidth="50.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Grafy">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="graphTable" layoutX="31.0" layoutY="64.0" prefHeight="273.0" prefWidth="276.0">
+                          <columns>
+                            <TableColumn fx:id="firstCompG" prefWidth="46.0" text="1" />
+                            <TableColumn fx:id="operation12" prefWidth="47.0" text="I" />
+                              <TableColumn fx:id="secondCompG" prefWidth="46.0" text="2" />
+                              <TableColumn fx:id="operation23" prefWidth="45.0" text="II" />
+                              <TableColumn fx:id="thirdCompG" prefWidth="46.0" text="3" />
+                              <TableColumn fx:id="operation31" prefWidth="45.0" text="III" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="31.0" layoutY="34.0" text="Wszystkie grafy w bazie">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="deleteGraphBtn" layoutX="322.0" layoutY="90.0" mnemonicParsing="false" onAction="#deleteGraph" text="Usuń wybrane (podświetlone) z bazy" />
+                        <Label layoutX="338.0" layoutY="226.0" text="II:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="337.0" layoutY="194.0" text="2:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="firstOperationTxtFieldG" layoutX="362.0" layoutY="165.0" prefHeight="25.0" prefWidth="39.0" />
+                        <TextField fx:id="thirdOperationTxtFieldG" layoutX="361.0" layoutY="291.0" prefHeight="25.0" prefWidth="39.0" />
+                        <Label layoutX="338.0" layoutY="166.0" prefHeight="20.0" prefWidth="10.0" text="I:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="firstCompTxtFieldG" layoutX="361.0" layoutY="137.0" prefHeight="25.0" prefWidth="39.0" />
+                        <TextField fx:id="thirdCompTxtFieldG" layoutX="361.0" layoutY="257.0" prefHeight="25.0" prefWidth="39.0" />
+                        <TextField fx:id="secondCompTxtFieldG" layoutX="362.0" layoutY="193.0" prefHeight="25.0" prefWidth="39.0" />
+                        <Button fx:id="addGraphBtn" layoutX="427.0" layoutY="291.0" mnemonicParsing="false" onAction="#addGraph" text="Dodaj graf" />
+                        <TextField fx:id="secondOperationTxtFieldG" layoutX="361.0" layoutY="225.0" prefHeight="25.0" prefWidth="39.0" />
+                        <Label layoutX="337.0" layoutY="258.0" text="3:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="337.0" layoutY="138.0" text="1:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="335.0" layoutY="291.0" text="III:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
               </content>

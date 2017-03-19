@@ -173,4 +173,26 @@ public class Equation {
         this.result = value;
     }
 
+    public String toString() {
+        return firstComp + " " + operation + " " + secondComp + " " + equationMark + " " + result;
+    }
+
+    @Override
+    public boolean equals(Object v) {
+        boolean retVal = false;
+
+        if(v instanceof Equation) {
+            Equation toCheck = (Equation) v;
+            if(this.getFirstComp().compareTo(toCheck.getFirstComp()) == 0
+                && this.getOperation().compareTo(toCheck.getOperation()) == 0
+                && this.getSecondComp().compareTo(toCheck.getSecondComp()) == 0
+                && this.getEquationMark().compareTo(toCheck.getEquationMark()) == 0
+                && this.getResult().compareTo(toCheck.getResult()) == 0){
+                retVal = true;
+            }
+        }
+
+        return retVal;
+    }
+
 }

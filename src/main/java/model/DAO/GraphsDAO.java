@@ -39,8 +39,8 @@ public class GraphsDAO {
         Random random = new Random();
         int currRandom;
         List<Graph> graphs = new ArrayList<>();
-        while(rsWords.next()) {
-            if(DAOCommonUtils.checkIfInRange(rsWords, range)) {
+        while (rsWords.next()) {
+            if (DAOCommonUtils.checkIfInRange(rsWords, range)) {
                 tempGraph = new Graph();
                 tempGraphMark = new GraphMark();
                 String operation;
@@ -49,18 +49,18 @@ public class GraphsDAO {
                 tempGraph.setThirdComp(String.valueOf(rsWords.getInt("THIRD_COMP")));
 
                 operation = new String(rsWords.getString("OPERATION12"));
-                tempGraph.setOperation12(new GraphMark(operation.substring(0,1), operation.substring(1)));
+                tempGraph.setOperation12(new GraphMark(operation.substring(0, 1), operation.substring(1)));
 
                 operation = new String(rsWords.getString("OPERATION23"));
-                tempGraph.setOperation23(new GraphMark(operation.substring(0,1), operation.substring(1)));
+                tempGraph.setOperation23(new GraphMark(operation.substring(0, 1), operation.substring(1)));
 
                 operation = new String(rsWords.getString("OPERATION31"));
-                tempGraph.setOperation31(new GraphMark(operation.substring(0,1), operation.substring(1)));;
+                tempGraph.setOperation31(new GraphMark(operation.substring(0, 1), operation.substring(1)));
 
                 tempGraphs.add(tempGraph);
             }
         }
-        if(tempGraphs.size() < amount) {
+        if (tempGraphs.size() < amount) {
             ViewUtils.showErrorAlert("Nie ma tylu grafów w bazie");
         } else {
             for (int i = 0; i < amount; i++) {
@@ -71,5 +71,76 @@ public class GraphsDAO {
         }
 
         return graphs;
+    }
+
+    public static List<Graph> getAllGraphs() throws ClassNotFoundException, SQLException {
+        String selectStmt = "SELECT DISTINCT * FROM graphs";
+
+        try {
+            ResultSet rsWords = DBUtils.dbExecuteQuery(selectStmt);
+
+            List<Graph> graphs = getGraphsFromResultSet(rsWords);
+
+            return graphs;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw e;
+        }
+    }
+
+    private static List<Graph> getGraphsFromResultSet(ResultSet rsWords) throws SQLException {
+        List<Graph> tempGraphs = new ArrayList<>();
+        Graph tempGraph;
+        List<Graph> graphs = new ArrayList<>();
+        while (rsWords.next()) {
+            tempGraph = new Graph();
+            String operation;
+            tempGraph.setFirstComp(String.valueOf(rsWords.getInt("FIRST_COMP")));
+            tempGraph.setSecondComp(String.valueOf(rsWords.getInt("SECOND_COMP")));
+            tempGraph.setThirdComp(String.valueOf(rsWords.getInt("THIRD_COMP")));
+
+            operation = new String(rsWords.getString("OPERATION12"));
+            tempGraph.setOperation12(new GraphMark(operation.substring(0, 1), operation.substring(1)));
+
+            operation = new String(rsWords.getString("OPERATION23"));
+            tempGraph.setOperation23(new GraphMark(operation.substring(0, 1), operation.substring(1)));
+
+            operation = new String(rsWords.getString("OPERATION31"));
+            tempGraph.setOperation31(new GraphMark(operation.substring(0, 1), operation.substring(1)));
+
+            graphs.add(tempGraph);
+        }
+
+        return graphs;
+    }
+
+    public static void deleteGraph(Graph equation) {
+        String deleteStmt = "DELETE FROM graphs WHERE first_comp='" + equation.getFirstComp() +
+                "' AND operation12='" + equation.getOperation12() + "'AND second_comp='" + equation.getSecondComp()
+                + "' AND operation23='" + equation.getOperation23() + "' AND third_comp='" + equation.getThirdComp()
+                + "' AND operation31='" + equation.getOperation31() + "'";
+
+        try {
+            DBUtils.dbExecuteUpdate(deleteStmt);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void insertGraph(Graph newGraph) {
+        String insertStmt = "INSERT INTO graphs (FIRST_COMP, OPERATION12, SECOND_COMP, OPERATION23, THIRD_COMP, OPERATION31) " +
+                "VALUES ('"+newGraph.getFirstComp()+"', '"+newGraph.getOperation12String()+"', '"
+                +newGraph.getSecondComp()+"', '"+newGraph.getOperation23String()+"', '"
+                +newGraph.getThirdComp()+"', '"+newGraph.getOperation31String()+"');";
+
+        try {
+            DBUtils.dbExecuteUpdate(insertStmt);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

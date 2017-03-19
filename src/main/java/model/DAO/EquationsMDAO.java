@@ -61,6 +61,71 @@ public class EquationsMDAO {
         }
         return equations;
     }
+
+    public static List<EquationM> getAllEquationsM() throws ClassNotFoundException, SQLException {
+        String selectStmt = "SELECT DISTINCT * FROM equations_m";
+
+        try {
+            ResultSet rsWords = DBUtils.dbExecuteQuery(selectStmt);
+
+            List<EquationM> equations = getEquationsMFromResultSet(rsWords);
+
+            return equations;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw e;
+        }
+    }
+
+    private static List<EquationM> getEquationsMFromResultSet(ResultSet rsWords) throws SQLException {
+        List<EquationM> tempEquations = new ArrayList<>();
+        EquationM tempEquation;
+        List<EquationM> equations = new ArrayList<>();
+        while (rsWords.next()) {
+            tempEquation = new EquationM();
+            tempEquation.setFirstComp1(String.valueOf(rsWords.getInt("FIRST_COMP1")));
+            tempEquation.setFirstOperation(rsWords.getString("FIRST_OPERATION"));
+            tempEquation.setFirstComp2(String.valueOf(rsWords.getInt("FIRST_COMP2")));
+            tempEquation.setEquationMark(rsWords.getString("EQUATION_MARK"));
+            tempEquation.setSecondComp1(String.valueOf(rsWords.getInt("SECOND_COMP1")));
+            tempEquation.setSecondOperation(rsWords.getString("SECOND_OPERATION"));
+            tempEquation.setSecondComp2(String.valueOf(rsWords.getInt("SECOND_COMP2")));
+            equations.add(tempEquation);
+
+        }
+        return equations;
+    }
+
+    public static void deleteEquationM(EquationM equation) {
+        String deleteStmt = "DELETE FROM equations_m WHERE first_comp1='" + equation.getFirstComp1() +
+                "' AND first_operation='" + equation.getFirstOperation() + "'AND first_comp2='" + equation.getFirstComp2()
+                + "' AND equation_mark='" + equation.getEquationMark() + "' AND second_comp1='" + equation.getSecondComp1()
+                + "' AND second_operation='" + equation.getSecondOperation() + "' AND second_comp2='" + equation.getSecondComp2()
+                + "'";
+
+        try {
+            DBUtils.dbExecuteUpdate(deleteStmt);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void insertEquationM(EquationM newEquation) {
+        String insertStmt = "INSERT INTO equations_m (FIRST_COMP1, FIRST_OPERATION, FIRST_COMP2, EQUATION_MARK, SECOND_COMP1, SECOND_OPERATION, SECOND_COMP2 ) " +
+                "VALUES ('"+newEquation.getFirstComp1()+"', '"+newEquation.getFirstOperation()+"', '"
+                +newEquation.getFirstComp2()+"', '"+newEquation.getEquationMark()+"', '"+newEquation.getSecondComp1()
+                +newEquation.getSecondOperation()+"', '"+newEquation.getSecondComp2()+"');";
+
+        try {
+            DBUtils.dbExecuteUpdate(insertStmt);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 

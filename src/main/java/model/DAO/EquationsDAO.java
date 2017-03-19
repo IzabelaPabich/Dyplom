@@ -61,4 +61,65 @@ public class EquationsDAO {
 
         return equations;
     }
+
+    public static List<Equation> getAllEquations() throws ClassNotFoundException, SQLException {
+        String selectStmt = "SELECT DISTINCT * FROM equations";
+
+        try {
+            ResultSet rsWords = DBUtils.dbExecuteQuery(selectStmt);
+
+            List<Equation> equations = getEquationsFromResultSet(rsWords);
+
+            return equations;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw e;
+        }
+    }
+
+    private static List<Equation> getEquationsFromResultSet(ResultSet rsWords) throws SQLException {
+        List<Equation> tempEquations = new ArrayList<>();
+        Equation tempEquation;
+        List<Equation> equations = new ArrayList<>();
+        while(rsWords.next()) {
+           tempEquation = new Equation();
+           tempEquation.setFirstComp(String.valueOf(rsWords.getInt("FIRST_COMP")));
+           tempEquation.setOperation(rsWords.getString("OPERATION"));
+           tempEquation.setSecondComp(String.valueOf(rsWords.getInt("SECOND_COMP")));
+           tempEquation.setEquationMark(rsWords.getString("EQUATION_MARK"));
+           tempEquation.setResult(String.valueOf(rsWords.getInt("RESULT")));
+           equations.add(tempEquation);
+        }
+
+        return equations;
+    }
+
+    public static void deleteEquation(Equation equation) {
+        String deleteStmt = "DELETE FROM equations WHERE first_comp='" + equation.getFirstComp() +
+                "' AND operation='" + equation.getOperation() + "'AND second_comp='" + equation.getSecondComp()
+                + "' AND equation_mark='" + equation.getEquationMark() + "' AND result='" + equation.getResult()
+                + "'";
+
+        try {
+            DBUtils.dbExecuteUpdate(deleteStmt);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void insertEquation(Equation newEquation) {
+        String insertStmt = "INSERT INTO equations (FIRST_COMP, OPERATION, SECOND_COMP, EQUATION_MARK, RESULT) " +
+                "VALUES ('"+newEquation.getFirstComp()+"', '"+newEquation.getOperation()+"', '"
+                +newEquation.getSecondComp()+"', '"+newEquation.getEquationMark()+"', '"+newEquation.getResult()+"');";
+
+        try {
+            DBUtils.dbExecuteUpdate(insertStmt);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

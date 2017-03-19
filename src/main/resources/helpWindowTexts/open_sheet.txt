@@ -1,1 +1,1 @@
-Otwieranie
+Aby otworzyc arkusz nalezy wybrac w menu opcje "Otworz arkusz" a nastepnie wybrac odpowiedni plik, ktory chcemy otworzyc.

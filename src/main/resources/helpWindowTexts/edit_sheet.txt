@@ -1,1 +1,1 @@
-Edycja
+Edycja utworzonego arkusza moze odbyc sie po poprzednim otworzeniu go opcja "Otworz arkusz" wybranej z menu. Nastepnie wybieramy przycisk "Edytuj arkusz" w oknie glownym.

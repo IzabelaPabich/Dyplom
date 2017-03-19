@@ -1,1 +1,9 @@
-Kategorie
+Aplikacja moze utworzyc karte pracy w jednej w trzech kategorii:
+1. Jezyk polski
+ a. Slowka - Lista slow z wymazanymi literami do wypelniania
+ b. Dyktando - Tekst z lukami w slowach
+2. Jezyk angielski - tlumaczenie slowek i zwrotow z jezyka polskiego na angielski i odwrotnie
+3. Matematyka
+ a. Rowniania
+ b. Rownania z nierownoscia
+ c. Grafy

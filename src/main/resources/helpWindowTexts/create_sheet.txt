@@ -1,1 +1,2 @@
-Tworzenie
+Aby utworzyc nowy arkusza nalezy wybrac w menu opcje "Utworz arkusz" a potem postepowac zgodnie z pojawiajacymi sie oknami.
+Nazwa arkusza oraz tytul sa obowiazkowymi polami do wypelniania. Pozostale opcje sa opcjonalne.

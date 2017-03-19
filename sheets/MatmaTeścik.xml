@@ -8,83 +8,32 @@
             <operation>+</operation>
             <secondComp>6</secondComp>
             <equationMark>=</equationMark>
-            <result>....</result>
+            <result>........</result>
         </equation>
         <equation>
             <firstComp>2</firstComp>
             <operation>+</operation>
             <secondComp>5</secondComp>
             <equationMark>=</equationMark>
-            <result>....</result>
+            <result>........</result>
         </equation>
         <equationM>
-            <firstComp1>....</firstComp1>
+            <firstComp1>........</firstComp1>
             <firstOperation>+</firstOperation>
             <firstComp2>2</firstComp2>
             <equationMark>=</equationMark>
-            <secondComp1>....</secondComp1>
+            <secondComp1>........</secondComp1>
             <secondOperation>-</secondOperation>
             <secondComp2>2</secondComp2>
         </equationM>
         <equationM>
-            <firstComp1>....</firstComp1>
+            <firstComp1>........</firstComp1>
             <firstOperation>-</firstOperation>
             <firstComp2>7</firstComp2>
             <equationMark>&lt;</equationMark>
-            <secondComp1>....</secondComp1>
+            <secondComp1>........</secondComp1>
             <secondOperation>-</secondOperation>
             <secondComp2>4</secondComp2>
         </equationM>
-        <graph>
-            <firstComp>....</firstComp>
-            <operation12>
-                <operation>-</operation>
-                <value>1</value>
-            </operation12>
-            <secondComp>9</secondComp>
-            <operation23>
-                <operation>-</operation>
-                <value>1</value>
-            </operation23>
-            <thirdComp>....</thirdComp>
-            <operation31>
-                <operation>-</operation>
-                <value>1</value>
-            </operation31>
-        </graph>
-        <graph>
-            <firstComp>8</firstComp>
-            <operation12>
-                <operation>....</operation>
-                <value>....</value>
-            </operation12>
-            <secondComp>5</secondComp>
-            <operation23>
-                <operation>....</operation>
-                <value>....</value>
-            </operation23>
-            <thirdComp>1</thirdComp>
-            <operation31>
-                <operation>+</operation>
-                <value>7</value>
-            </operation31>
-        </graph>
-        <graph>
-            <firstComp>1</firstComp>
-            <operation12>
-                <operation>-</operation>
-                <value>3</value>
-            </operation12>
-            <secondComp>....</secondComp>
-            <operation23>
-                <operation>-</operation>
-                <value>3</value>
-            </operation23>
-            <thirdComp>4</thirdComp>
-            <operation31>
-                <operation>....</operation>
-                <value>....</value>
-            </operation31>
-        </graph>
     </mathTasks>
 </sheet>

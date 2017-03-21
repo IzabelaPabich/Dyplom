@@ -426,7 +426,7 @@ public class EditSheetWindowController implements IController {
         equMEditBtn.setVisible(true);
         graphEditBtn.setVisible(true);
         equationCheckBox.setVisible(true);
-        if(sheet.getMathTasks().getEquation() != null) {
+        if(sheet.getMathTasks().getEquation().size() != 0) {
             equationCheckBox.setSelected(true);
             equEditBtn.setDisable(false);
             List<Equation> equations = sheet.getMathTasks().getEquation();
@@ -458,7 +458,7 @@ public class EditSheetWindowController implements IController {
             equationsTable.setItems(FXCollections.observableArrayList(equationsTemp));
         }
         equationMCheckBox.setVisible(true);
-        if(sheet.getMathTasks().getEquationM() != null) {
+        if(sheet.getMathTasks().getEquationM().size() != 0) {
             equationMCheckBox.setSelected(true);
             equMEditBtn.setDisable(false);
             List<EquationM> equationsM = sheet.getMathTasks().getEquationM();
@@ -498,7 +498,7 @@ public class EditSheetWindowController implements IController {
             equationsMTable.setItems(FXCollections.observableArrayList(equationsMTemp));
         }
         graphCheckBox.setVisible(true);
-        if(sheet.getMathTasks().getGraph() != null) {
+        if(sheet.getMathTasks().getGraph().size() != 0) {
             graphCheckBox.setSelected(true);
             graphEditBtn.setDisable(false);
             List<Graph> graphs = sheet.getMathTasks().getGraph();

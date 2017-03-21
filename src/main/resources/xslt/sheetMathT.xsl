@@ -75,6 +75,7 @@
 			</fo:block>
 		</xsl:for-each>
 		<xsl:for-each select="n:graph">
+		<fo:block  page-break-inside="avoid">
 			<fo:table>
 			<fo:table-column column-width="10mm"/>
             <fo:table-column column-width="10mm"/>
@@ -126,7 +127,7 @@
                     </fo:table-cell>
 					<fo:table-cell padding="1mm" text-align="center">
                         <fo:block>
-                            <fo:external-graphic src="url(operation12.png)" width="100%" content-height="100%" content-width="scale-to-fit"
+                            <fo:external-graphic src="url('src/main/resources/xslt/operation12.png')" width="100%" content-height="100%" content-width="scale-to-fit"
 													scaling="uniform"/>
                         </fo:block>
                     </fo:table-cell>
@@ -152,7 +153,7 @@
                     </fo:table-cell>
 					<fo:table-cell padding="1mm" text-align="center">
                         <fo:block>
-							<fo:external-graphic src="url(operation31.png)" width="100%" content-height="100%" content-width="scale-down-to-fit"
+							<fo:external-graphic src="url('src/main/resources/xslt/operation31.png')" width="100%" content-height="100%" content-width="scale-down-to-fit"
 												scaling="uniform"/>
                         </fo:block>
                     </fo:table-cell>
@@ -163,7 +164,7 @@
                     </fo:table-cell>
 					<fo:table-cell padding="1mm" text-align="center">
                         <fo:block>
-                            <fo:external-graphic src="url(operation23.png)" width="100%" content-height="100%" content-width="scale-down-to-fit"
+                            <fo:external-graphic src="url('src/main/resources/xslt/operation23.png')" width="100%" content-height="100%" content-width="scale-down-to-fit"
 												scaling="uniform"/>
                         </fo:block>
                     </fo:table-cell>
@@ -235,6 +236,7 @@
 			
 			</fo:table>
 			<xsl:text> </xsl:text>
+			</fo:block>
 		</xsl:for-each>
 	</xsl:template>
 

@@ -55,10 +55,6 @@ public class Graph {
     @XmlElement(namespace = "http://example.org/moja", required = true)
     protected GraphMark operation31;
 
-    protected String operation12String;
-    protected String operation23String;
-    protected String operation31String;
-
 
     /**
      * Gets the value of the firstComp property.
@@ -98,7 +94,6 @@ public class Graph {
      */
     public void setOperation12(GraphMark value) {
         this.operation12 = value;
-        operation12String = operation12.toString();
     }
 
     /**
@@ -139,7 +134,6 @@ public class Graph {
      */
     public void setOperation23(GraphMark value) {
         this.operation23 = value;
-        operation23String = operation23.toString();
     }
 
     /**
@@ -180,7 +174,6 @@ public class Graph {
      */
     public void setOperation31(GraphMark value) {
         this.operation31 = value;
-        operation31String = operation31.toString();
     }
 
     public String getOperation12String() {

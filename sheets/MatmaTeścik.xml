@@ -17,23 +17,5 @@
             <equationMark>=</equationMark>
             <result>........</result>
         </equation>
-        <equationM>
-            <firstComp1>........</firstComp1>
-            <firstOperation>+</firstOperation>
-            <firstComp2>2</firstComp2>
-            <equationMark>=</equationMark>
-            <secondComp1>........</secondComp1>
-            <secondOperation>-</secondOperation>
-            <secondComp2>2</secondComp2>
-        </equationM>
-        <equationM>
-            <firstComp1>........</firstComp1>
-            <firstOperation>-</firstOperation>
-            <firstComp2>7</firstComp2>
-            <equationMark>&lt;</equationMark>
-            <secondComp1>........</secondComp1>
-            <secondOperation>-</secondOperation>
-            <secondComp2>4</secondComp2>
-        </equationM>
     </mathTasks>
 </sheet>
